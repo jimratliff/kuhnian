@@ -1,14 +1,18 @@
 /*!
-Theme Name: Kuhn
-Theme URI: https://github.com/mor10/kuhn
-Author: Morten Rand-Hendriksen
-Author URI: https://mor10.com
-Description: Kuhn is a hyper-opinionated WordPress theme using CSS Grid and Flexbox for layouts.
-Version: 1.0.5
+Theme Name: Kuhn-CSSvars
+Theme URI: https://github.com/jimratliff/kuhn-cssvars
+Author: Jim Ratliff
+Author URI: https://nuanceabounds.org
+Description: Kuhn-CSSvars is a fork of version: 1.0.5 of Morten Rand-Hendriksen's Kuhn WordPress
+theme <https://github.com/mor10/kuhn>. Kuhn-CSSvars is a limited refactoring of Kuhn, creating for each eligible Sass variable a corresponding CSS variable that is thereby exposed to the customizer of the theme (e.g., via a child theme of a custom-CSS plugin).
+Version: 0.0.1
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: kuhn
+Text Domain: kuhncssvars
 Tags:
+
+Author-Original: Morten Rand-Hendriksen
+Author-Original URI: https://mor10.com
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
