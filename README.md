@@ -55,7 +55,9 @@ Note the the CSS variable `--color__background-button` has survived into the sit
 
 As a result of the refactoring, the downstream user could easily change the button background color by the rule:
 ```
---color__background-button: magenta;
+:root {
+    --color__background-button: magenta;
+}
 ```
 
 ## Limitations
