@@ -1,0 +1,38 @@
+/*	New partial, specific to the Kuhn-CSSvars fork, to hold the new CSS variables  */
+:root {
+/***	Refactors partial _colors.scss ****/
+/*	Specific colors */
+	--color-grey-black:		hsl(210, 10%, 15%)	;
+	--color-grey-dark:		hsl(210, 10%, 27%)	;
+	--color-grey-light:		hsl(0, 0%, 80%)		;
+	--color-grey-x-light:	hsl(0, 0%, 95%)		;
+/*	Background color assignments */
+	--color-background-body:		#fff	;
+	--color-background-screen:		#f1f1f1	;
+	--color-background-hr:			#ccc	;
+	--color-background-button:		#e6e6e6	;
+	--color-background-pre:			#eee	;
+	--color-background-ins:			#fff9c0	;
+/*	Text color assignments */
+	--color-text-screen:			#21759b	;
+	--color-text-input:				#666	;
+	--color-text-input-focus:		#111	;
+/*	Border color assignments */
+	--color-border-button:			#ccc #ccc #bbb	;
+	--color-border-button-hover:	#ccc #bbb #aaa	;
+	--color-border-button-focus:	#aaa #bbb #bbb	;
+	--color-border-input:			#ccc			;
+	--color-border-abbr:			#666			;
+/*	Link color assignments */
+	--color-link:			var(--color-grey-black);
+	--color-link-visited:	var(--color-grey-dark);
+	--color-link-hover:		var(--color-grey-black);
+	--color-text-main:		var(--color-grey-black);
+/***	Refactors partial _typography.scss ****/
+	--font-main:				'Rubik', sans-serif			;
+	--font-meta:				'Roboto Mono', sans-serif	;
+	--font-code:				Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace	;
+	--font-pre:					"Courier 10 Pitch", Courier, monospace							;
+	--font-line-height-body:	1.5	;
+	--font-line-height-pre:		1.6	;
+}
