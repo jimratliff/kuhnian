@@ -1,27 +1,63 @@
+/*
 $color__grey_black: hsl(210, 10%, 15%);
 $color__grey_dark: hsl(210, 10%, 27%);
 $color__grey_light: hsl(0, 0%, 80%);
 $color__grey_x_light: hsl(0, 0%, 95%);
+*/
 
+$color__grey_black:		var(--color-grey-black)		;
+$color__grey_dark:		var(--color-grey-dark)		;
+$color__grey_light:		var(--color-grey-light)		;
+$color__grey_x_light:	var(--color-grey-x-light)	;
+
+/*
 $color__background-body: #fff;
 $color__background-screen: #f1f1f1;
 $color__background-hr: #ccc;
 $color__background-button: #e6e6e6;
 $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
+*/
 
+$color__background-body:	var(--color-background-body)	;
+$color__background-screen:	var(--color-background-screen)	;
+$color__background-hr:		var(--color-background-hr)		;
+$color__background-button:	var(--color-background-button)	;
+$color__background-pre:		var(--color-background-pre)		;
+$color__background-ins:		var(--color-background-ins)		;
+
+/*
 $color__text-screen: #21759b;
 $color__text-input: #666;
 $color__text-input-focus: #111;
+*/
+
+$color__text-screen:		var(--color-text-screen)		;
+$color__text-input:			var(--color-text-input)			;
+$color__text-input-focus:	var(--color-text-input-focus)	;
+
+/*
 $color__link: $color__grey_black;
 $color__link-visited: $color__grey_dark;
 $color__link-hover: $color__grey_black;
 $color__text-main: $color__grey_black;
+*/
 
+$color__link:			var(--color-link)			;
+$color__link-visited:	var(--color-link-visited)	;
+$color__link-hover:		var(--color-link-hover)		;
+$color__text-main:		var(--color-text-main)		;
+
+/*
 $color__border-button: #ccc #ccc #bbb;
 $color__border-button-hover: #ccc #bbb #aaa;
 $color__border-button-focus: #aaa #bbb #bbb;
 $color__border-input: #ccc;
 $color__border-abbr: #666;
+*/
 
-
+$color__border-button:			var(--color-border-button)			;
+$color__border-button-hover:	var(--color-border-button-hover)	;
+$color__border-button-focus:	var(--color-border-button-focus)	;
+$color__border-input:			var(--color-border-input)			;
+$color__border-abbr:			var(--color-border-abbr)			;
