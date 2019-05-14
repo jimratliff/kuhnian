@@ -71,6 +71,11 @@ In particular, you cannot use `var(--somecssvariable)`
 
 (See Lea Verou, "[CSS Variables: `var(--subtitle)`,](https://www.youtube.com/watch?v=2an6-WVPuJU)" YouTube, October 5, 2016, starting at 2:23 and later at 8:05.)
 
+## Usage
+See the [wiki](https://github.com/jimratliff/kuhn-cssvars/wiki) for this repository, and specifically:
+- [The correspondence between new CSS variables and original Sass variables](https://github.com/jimratliff/kuhn-cssvars/wiki/The-correspondence-between-new-CSS-variables-and-original-Sass-variables) for a table listing (a) the original Sass variable name, (b) the corresponding CSS variable name, and (c) the value associated with each Sass and/or CSS variable name.
+- [Example custom CSS to change the formatting by assigning values to the CSS variable](https://github.com/jimratliff/kuhn-cssvars/wiki/Example-custom-CSS-to-change-the-formatting-by-assigning-values-to-the-CSS-variable/_edit)] for an example of how to enter assignments of CSS variables in the custom-CSS field in the Admin panel or other custom-CSS plugin.
+
 
 ## Licenses and External Assets
 Kuhn-CSSvars is distributed under the terms of the GNU GPL v2
@@ -83,8 +88,5 @@ Kuhn-CSSvars is distributed under the terms of the GNU GPL v2
 ### 1.0.0 May 13, 2019
 - Release of v. 1.0.0, the fully refactored version. No additional changes are anticipated, because my goal here was only to show how *existing* Sass variables can be supplemented with CSS variables. (I will fork *this* version, under a new name, and continue related refactoring to make customization by child-theme designers and WordPress admins easier.)
 
-## Usage
-See the [wiki](https://github.com/jimratliff/kuhn-cssvars/wiki) for this repository, and specifically:
-- [The correspondence between new CSS variables and original Sass variables](https://github.com/jimratliff/kuhn-cssvars/wiki/The-correspondence-between-new-CSS-variables-and-original-Sass-variables) for a table listing (a) the original Sass variable name, (b) the corresponding CSS variable name, and (c) the value associated with each Sass and/or CSS variable name.
-- [Example custom CSS to change the formatting by assigning values to the CSS variable](https://github.com/jimratliff/kuhn-cssvars/wiki/Example-custom-CSS-to-change-the-formatting-by-assigning-values-to-the-CSS-variable/_edit)] for an example of how to enter assignments of CSS variables in the custom-CSS field in the Admin panel or other custom-CSS plugin.
+
 
