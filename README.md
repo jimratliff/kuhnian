@@ -79,3 +79,6 @@ Kuhn-CSSvars is distributed under the terms of the GNU GPL v2
 
 ### 0.0.1 May 13, 2019
 - Fork of Kuhn
+
+### 1.0.0 May 13, 2019
+- Release of v. 1.0.0, the fully refactored version. No additional changes are anticipated, because my goal here was only to show how *existing* Sass variables can be supplemented with CSS variables. (I will fork *this* version, under a new name, and continue related refactoring to make customization by child-theme designers and WordPress admins easier.)
