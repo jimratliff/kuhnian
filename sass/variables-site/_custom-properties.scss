@@ -10,22 +10,36 @@
 	--font-line-height-pre:		1.6	;
 /***	New CSS variables beyond any Sass variables defined in Kuhn ****/
 /*	Font families	*/
-	--khn-font-family-serif:				"PT Serif", "Times New Roman", serif		;
-	--khn-font-family-sans-serif:			"PT Sans", Arial, Helvetica, sans-serif		;
-	--khn-font-family-sans-serif-alt:		"Open Sans", Arial, Helvetica, sans-serif	;
-	--khn-font-family-cursive:				"Petit Formal Script", cursive				;
-	--khn-font-family-body:					var(--khn-font-family-serif)			;
-	--khn-font-family-headings:				var(--khn-font-family-sans-serif)		;
-	--khn-font-family-entry-header:			var(--khn-font-family-sans-serif)		;
+	--khn-font-family-serif:							"PT Serif", "Times New Roman", serif		;
+	--khn-font-family-sans-serif:						"PT Sans", Arial, Helvetica, sans-serif		;
+	--khn-font-family-sans-serif-alt:					"Open Sans", Arial, Helvetica, sans-serif	;
+	--khn-font-family-cursive:							"Petit Formal Script", cursive				;
+	--khn-font-family-body:								var(--khn-font-family-serif)		;
+	--khn-font-family-headings:							var(--khn-font-family-sans-serif)	;
+
 	--khn-font-family-generic-elements:		var(--khn-font-family-sans-serif)		;
 	--khn-font-family-menus:				var(--khn-font-family-sans-serif-alt)	;
 	--khn-font-family-site-logo:			var(--khn-font-family-cursive)			;
 /*	Lengths for paragraphs */
-	--khn-length-font-size-base:				16px	;
+	--khn-font-size-base:				16px	;
 	--khn-scalar-line-height-base:				1.5		;
 /*	Lengths for paragraphs */
-	--khn-length-font-size-paragraph:			16px	;
+	--khn-font-size-paragraph:			1em	;
 	--khn-scalar-line-height-paragraph:			1.5		;
 	--khn-length-indent-paragraph:				1.0em	;
 	--khn-length-margin-bottom-paragraph:		0.6em	;
+/*	Lengths for entry-title */
+	--khn-font-size-entry-title:			1.3em	;
+	
+/*	Styling of post/page article titles */
+/*	Post-article titles appear both on single-post pages and archive pages; Page-article titles appear, I think, only on the page itself (not including menus, etc.)
+*	I want (a) a post-article title on a single-post page to be styled identically to (b) a page-article title on that page.
+*/
+/*	For post-article or page-article title on its own page */
+	--khn-font-family-article-title-on-its-page:	var(--khn-font-family-serif);
+	--khn-font-size-article-title-on-its-page:		3em							;
+/*	For post-article's title on an archive page */
+	--khn-font-family-post-title-on-archive-page:	var(--khn-font-family-serif);
+	--khn-font-size-post-title-on-archive-page:		1.3em						;
+
 }
