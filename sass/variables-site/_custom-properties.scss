@@ -15,13 +15,17 @@
 	--khn-font-family-sans-serif-alt:		"Open Sans", Arial, Helvetica, sans-serif	;
 	--khn-font-family-cursive:				"Petit Formal Script", cursive				;
 	--khn-font-family-body:					var(--khn-font-family-serif)			;
-	--khn-font-family-headers:				var(--khn-font-family-sans-serif)		;
+	--khn-font-family-headings:				var(--khn-font-family-sans-serif)		;
+	--khn-font-family-entry-header:			var(--khn-font-family-sans-serif)		;
 	--khn-font-family-generic-elements:		var(--khn-font-family-sans-serif)		;
 	--khn-font-family-menus:				var(--khn-font-family-sans-serif-alt)	;
 	--khn-font-family-site-logo:			var(--khn-font-family-cursive)			;
 /*	Lengths for paragraphs */
-	--khn-length-base-font-size:				16px	;
-	--khn-scalar-base-line-height:				1.5		;
-	--khn-length-indent:						1.0em	;
-	--khn-length-base-margin-bottom:			0.6em	;
+	--khn-length-font-size-base:				16px	;
+	--khn-scalar-line-height-base:				1.5		;
+/*	Lengths for paragraphs */
+	--khn-length-font-size-paragraph:			16px	;
+	--khn-scalar-line-height-paragraph:			1.5		;
+	--khn-length-indent-paragraph:				1.0em	;
+	--khn-length-margin-bottom-paragraph:		0.6em	;
 }
