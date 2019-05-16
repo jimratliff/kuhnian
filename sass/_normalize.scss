@@ -26,6 +26,11 @@ summary {
 	display: block;
 }
 
+a,
+a:-webkit-any-link {
+	text-decoration:	none	;
+}
+
 audio,
 canvas,
 progress,
