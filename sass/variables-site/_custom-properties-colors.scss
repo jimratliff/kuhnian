@@ -28,13 +28,6 @@
 	--color-link-visited:	var(--color-grey-dark);
 	--color-link-hover:		var(--color-grey-black);
 	--color-text-main:		var(--color-grey-black);
-/***	Refactors partial _typography.scss ****/
-	--font-main:				'Rubik', sans-serif			;
-	--font-meta:				'Roboto Mono', sans-serif	;
-	--font-code:				Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace	;
-	--font-pre:					"Courier 10 Pitch", Courier, monospace							;
-	--font-line-height-body:	1.5	;
-	--font-line-height-pre:		1.6	;
 /***	New CSS variables beyond any Sass variables defined in Kuhn ****/
 /*	Theme colors */
 	--khn-color-theme-primary:					#88187F		;
