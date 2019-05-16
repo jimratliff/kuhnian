@@ -36,14 +36,15 @@
 *	I want (a) a post-article title on a single-post page to be styled identically to (b) a page-article title on that page.
 */
 /*	For post-article or page-article title on its own page */
-	--khn-font-family-article-title-on-its-page:		var(--khn-font-family-serif);
-	--khn-font-size-article-title-on-its-page:			3em							;
-	--khn-color-text-article-title-on-its-page:			black							;
-	--khn-text-transform-article-title-on-its-page:		none						;
+	--khn-font-family-article-title-on-its-page:			var(--khn-font-family-serif);
+	--khn-font-size-article-title-on-its-page:				2.25em						;
+	--khn-font-size-article-title-on-its-page-medscreen:	2.5em						;
+	--khn-color-text-article-title-on-its-page:				black						;
+	--khn-text-transform-article-title-on-its-page:			none						;
 /*	For post-article's title on an archive page */
-	--khn-font-family-post-title-on-archive-page:		var(--khn-font-family-serif);
-	--khn-font-size-post-title-on-archive-page:			1.3em						;
-	--khn-color-text-post-title-on-archive-page:		black						;
-	--khn-text-transform-post-title-on-archive-page:	none						;
+	--khn-font-family-post-title-on-archive-page:			var(--khn-font-family-serif);
+	--khn-font-size-post-title-on-archive-page:				1.3em						;
+	--khn-color-text-post-title-on-archive-page:			black						;
+	--khn-text-transform-post-title-on-archive-page:		none						;
 
 }
