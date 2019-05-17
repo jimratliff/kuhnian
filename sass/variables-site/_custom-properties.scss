@@ -9,14 +9,21 @@
 
 /***	New CSS variables beyond any Sass variables defined in Kuhn ****/
 
+/***	PARAGRAPH SETTINGS	***/
+	--khn-font-size-paragraph:				1em		;
+	--khn-line-height-paragraph:			1.5		;
+	--khn-length-indent-paragraph:			1.0em	;
+	--khn-length-margin-top-paragraph:		0		;
+	--khn-length-margin-bottom-paragraph:	0.6em	;
+
 /*	Lengths for paragraphs */
 	--khn-font-size-base:				16px	;
 	--khn-scalar-line-height-base:		1.5		;
 /*	Lengths for paragraphs */
-	--khn-font-size-paragraph:			1em	;
-	--khn-scalar-line-height-paragraph:			1.5		;
-	--khn-length-indent-paragraph:				1.0em	;
-	--khn-length-margin-bottom-paragraph:		0.6em	;
+	
+	
+
+	
 /*	Lengths for entry-title */
 	--khn-font-size-entry-title:			1.3em	;
 	
