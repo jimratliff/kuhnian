@@ -1,6 +1,39 @@
 p {
-	margin-top: .5em;
-	margin-bottom: 1em;
+/*	By default, all paragraphs are indented, unless reversed on other grounds */
+/*	margin-top: .5em; */
+/*	margin-bottom: 1em; */
+	margin-top:		var(--khn-length-margin-top-paragraph)		;
+	margin-bottom:	var(--khn-length-margin-bottom-paragraph)	;
+	text-indent:	var(--khn-length-indent-paragraph)			;
+	line-height:	var(--khn-line-height-paragraph)			;
+}
+
+/*	Reverse indentation if <p> immediately follows a blockquote, or any h# element.
+	The :first-child and :first-of-type selectors are used for the case where a paragraph is the first paragraph but doesn't immediately follow a blockquote or heading. Possibly :first-child is implied by :first-of-type, but no harm (so, belt and suspenders!).)
+*/
+blockquote > p,
+p:first-child,
+p:first-of-type,
+h1 + p,
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p,
+h6 + p {
+	text-indent:		0	;
+}
+
+/*	Note: I stay away from "!important" in general, but this seems an appropriate case */
+/*	Force indentation when .force-indent class is specified for paragraph */
+p.force-indent,
+p.jdr-force-indent {
+	text-indent:	var(--khn-length-indent-paragraph)	!important	;
+}
+
+/*	Force no indentation when .force-noindent class is specified for paragraph */
+p.force-noindent,
+p.jdr-force-noindent {
+	text-indent:	0									!important	;
 }
 
 dfn, cite, em, i {
@@ -42,7 +75,7 @@ pre {
 
 code, kbd, tt, var {
 	font-family: $font__code;
-	@include font-size(0.9375);
+/*	@include font-size(0.9375); */
 }
 
 abbr, acronym {
