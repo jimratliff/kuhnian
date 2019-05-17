@@ -43,10 +43,17 @@ $color__link-hover: $color__grey_black;
 $color__text-main: $color__grey_black;
 */
 
+/*
 $color__link:			var(--color-link)			;
 $color__link-visited:	var(--color-link-visited)	;
 $color__link-hover:		var(--color-link-hover)		;
 $color__text-main:		var(--color-text-main)		;
+*/
+
+$color__link:			var(--khn-color-link-unvisited)	;
+$color__link-visited:	var(--khn-color-link-visited)	;
+$color__link-hover:		var(--khn-color-link-hover)		;
+$color__text-main:		var(--khn-color-link-active)	;
 
 /*
 $color__border-button: #ccc #ccc #bbb;
