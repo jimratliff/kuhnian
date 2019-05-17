@@ -1,0 +1,20 @@
+/*
+$font__main: 'Rubik', sans-serif;
+$font__meta: 'Roboto Mono', sans-serif;
+$font__code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$font__pre: "Courier 10 Pitch", Courier, monospace;
+$font__line-height-body: 1.5;
+$font__line-height-pre: 1.6;
+*/
+
+/*$font__main:				var(--font-main)			;*/
+/*$font__meta:				var(--font-meta)			;*/
+/*$font__code:				var(--font-code)			;*/
+/*$font__pre:				var(--font-pre)				;*/
+$font__main:				var(--khn-font-family-body)		;
+$font__meta:				var(--khn-font-family-metadata)	;
+$font__code:				var(--khn-font-family-code)		;
+$font__pre:					var(--khn-font-family-pre)		;
+
+$font__line-height-body:	var(--font-line-height-body)	;
+$font__line-height-pre:		var(--font-line-height-pre)		;
