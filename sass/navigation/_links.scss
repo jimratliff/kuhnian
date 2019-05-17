@@ -1,23 +1,43 @@
 a {
-	color: $color__link;
+	color:				var(--khn-color-link-unvisited)				;
+	background-color:	var(--khn-color-background-link-unvisited)	;
+	text-decoration:	var(--khn-text-decoration-link-unvisited)	;
+	outline:			var(--khn-outline-link-unvisited)			;
 
 	&:visited {
-		color: $color__link-visited;
+/*		color: $color__link-visited; */
+		color: 				var(--khn-color-link-visited)				;
+		background-color:	var(--khn-color-background-link-visited)	;
+		text-decoration:	var(--khn-text-decoration-link-visited)		;
+		outline:			var(--khn-outline-link-visited)				;
 	}
+	
 	&:hover,
-	&:focus,
-	&:active {
-		color: $color__link-hover;
-	}
 	&:focus {
-		outline: thin dotted $color__grey_black;
+/*		color: $color__link-hover;		*/
+		color: 				var(--khn-color-link-hover)					;
+		background-color:	var(--khn-color-background-link-hover)	;
+		text-decoration:	var(--khn-text-decoration-link-hover)	;
 	}
-	&:hover,
+	
 	&:active {
-		outline: 0;
+		color: 				var(--khn-color-link-active)			;
+		background-color:	var(--khn-color-background-link-active)	;
+		text-decoration:	var(--khn-text-decoration-link-active)	;
+		outline:			var(--khn-outline-link-active)			;
+	}
+	
+	&:hover {
+		outline:			var(--khn-outline-link-hover)			;
+	}
+		
+	&:focus {
+/*		outline: thin dotted $color__grey_black;	*/
+		outline:			var(--khn-outline-link-focus)			;
 	}
 }
 
+/*
 .page-content,
 .entry-content,
 .entry-summary,
@@ -34,3 +54,4 @@ a {
 		}
 	}
 }
+*/
