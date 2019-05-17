@@ -1,25 +1,14 @@
 /*	New partial, specific to the Kuhn-CSSvars fork, and to Kuhnian, to hold the new CSS variables  */
 @import "custom-properties-colors";
+@import "custom-properties-font-families";
 :root {
-/***	Refactors partial _typography.scss ****/
-	--font-main:				'Rubik', sans-serif			;
-	--font-meta:				'Roboto Mono', sans-serif	;
-	--font-code:				Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace	;
-	--font-pre:					"Courier 10 Pitch", Courier, monospace							;
-	--font-line-height-body:	1.5	;
-	--font-line-height-pre:		1.6	;
-/***	New CSS variables beyond any Sass variables defined in Kuhn ****/
-/*	Font families	*/
-	--khn-font-family-serif:							"PT Serif", "Times New Roman", serif		;
-	--khn-font-family-sans-serif:						"PT Sans", Arial, Helvetica, sans-serif		;
-	--khn-font-family-sans-serif-alt:					"Open Sans", Arial, Helvetica, sans-serif	;
-	--khn-font-family-cursive:							"Petit Formal Script", cursive				;
-	--khn-font-family-body:								var(--khn-font-family-serif)		;
-	--khn-font-family-headings:							var(--khn-font-family-sans-serif)	;
+/*	--font-line-height-body:	1.5	; */
+	--font-line-height-body:	var(--khn-scalar-line-height-base)	;
+	--font-line-height-pre:		1.6	;	
 
-	--khn-font-family-generic-elements:		var(--khn-font-family-sans-serif)		;
-	--khn-font-family-menus:				var(--khn-font-family-sans-serif-alt)	;
-	--khn-font-family-site-logo:			var(--khn-font-family-cursive)			;
+
+/***	New CSS variables beyond any Sass variables defined in Kuhn ****/
+
 /*	Lengths for paragraphs */
 	--khn-font-size-base:				16px	;
 	--khn-scalar-line-height-base:		1.5		;
@@ -35,16 +24,24 @@
 /*	Post-article titles appear both on single-post pages and archive pages; Page-article titles appear, I think, only on the page itself (not including menus, etc.)
 *	I want (a) a post-article title on a single-post page to be styled identically to (b) a page-article title on that page.
 */
+	--khn-margin-entry-title:								0.125em 0 0.25em			;
+	--khn-scalar-line-height-article-title:					1.2							;
 /*	For post-article or page-article title on its own page */
 	--khn-font-family-article-title-on-its-page:			var(--khn-font-family-serif);
 	--khn-font-size-article-title-on-its-page:				2.25em						;
+	--khn-scalar-line-height-article-title-on-its-page:		var(--khn-scalar-line-height-article-title);
 	--khn-font-size-article-title-on-its-page-medscreen:	2.5em						;
-	--khn-color-text-article-title-on-its-page:				black						;
+	--khn-color-text-article-title-on-its-page:				var(--khn-color-theme-tertiary)	;
+	--khn-text-align-article-title-on-its-page:				center						;
 	--khn-text-transform-article-title-on-its-page:			none						;
+	--khn-text-decoration-article-title-on-its-page:		none						;
 /*	For post-article's title on an archive page */
 	--khn-font-family-post-title-on-archive-page:			var(--khn-font-family-serif);
 	--khn-font-size-post-title-on-archive-page:				1.3em						;
-	--khn-color-text-post-title-on-archive-page:			black						;
+	--khn-scalar-line-height-title-on-archive-page:			var(--khn-scalar-line-height-article-title);
+	--khn-color-text-post-title-on-archive-page:			var(--khn-color-theme-tertiary)	;
+	--khn-text-align-post-title-on-archive-page:			center						;
 	--khn-text-transform-post-title-on-archive-page:		none						;
+	--khn-text-decoration-post-title-on-archive-page:		none						;
 
 }
