@@ -3,11 +3,14 @@ button,
 input,
 select,
 textarea {
-	color: $color__text-main;
-	font-family: $font__main;
+/*	color: $color__text-main; */
+/*	font-family: $font__main;	*/
+/*	line-height: $font__line-height-body; */
+	color: var(--khn-color-text-default);
+	font-family: var(--khn-font-family-body);
 	@include font-size(1.1);
 	font-weight: 300;
-	line-height: $font__line-height-body;
+	line-height: var(--khn-scalar-line-height-base);
 
 	@media screen and (min-width: $query__small) {
 		@include font-size(1.25);
