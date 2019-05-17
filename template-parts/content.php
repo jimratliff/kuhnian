@@ -9,22 +9,29 @@
 
 ?>
 
+<!--$kuhnian_display_featured_image_on_posts is a flag: whether to display featured image
+	on posts.
+	This should be moved somewhere for easier customization.
+-->
+<?php $kuhnian_display_featured_image_on_posts = FALSE ; ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-	<?php
-	if ( has_post_thumbnail() ) { ?>
-	<figure class="featured-image">
-		<?php if (!is_singular()) { ?>
-		<a href="<?php echo esc_url( get_permalink() ) ?>" rel="bookmark">
-			<?php
-			$thumbnail_alt = 'Go to ' . get_the_title();
-			the_post_thumbnail('kuhn-index', 'alt=' . $thumbnail_alt);
-			?>
-		</a>
-		<?php } else {
-			the_post_thumbnail('kuhn-index');
-		} ?>
-	</figure><!-- .featured-image full-bleed -->
+	<?php 
+		if ( has_post_thumbnail() ) {
+			if (!is_singular()) {    // NOT a single; e.g., it's an archive page
+	?>								<!--Create a figure with image linked to the post-->
+				<figure class="featured-image">
+					<a href="<?php echo esc_url( get_permalink() ) ?>" rel="bookmark">
+						<?php $thumbnail_alt = 'Go to ' . get_the_title(); the_post_thumbnail('kuhn-index', 'alt=' . $thumbnail_alt);?>
+					</a>
+				</figure>
+			<?php } else {			// IS a single post
+				if ($kuhnian_display_featured_image_on_posts) { ?>
+					<figure class="featured-image">
+						<?php the_post_thumbnail('kuhn-index'); ?>
+					</figure>
+				<?php } else {} 
+			}?>
+	<!-- </figure> --><!-- .featured-image full-bleed -->
 	<?php } ?>
 
 	<header class="entry-header">
