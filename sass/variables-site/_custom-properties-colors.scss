@@ -63,4 +63,31 @@
 	--khn-color-text-h4:						var(--khn-color-theme-tawnyish)				;
 	--khn-color-text-h5:						var(--khn-color-theme-dark-violetish)		;
 	--khn-color-text-h6:						var(--khn-color-theme-dark-magentaish)		;
+/*	Link colors (and text-decoration)*/
+/*	See https://html.spec.whatwg.org/multipage/rendering.html#phrasing-content-3 */
+	--color-link-default-unvisited:			#0000EE ;
+	--color-link-default-visited:			#551A8B ;
+	--color-link-default-hover:				#FFFF00 ;
+	--color-link-default-active:			#FF0000 ;
+	
+	--khn-color-link-unvisited:				var(--color-link-default-unvisited)		;
+	--khn-color-link-visited:				var(--color-link-default-visited)		;
+	--khn-color-link-hover:					var(--khn-color-theme-primary-contrast)	;
+	--khn-color-link-active:				var(--color-link-default-active)		;
+
+	--khn-color-background-link-unvisited:		transparent						;
+	--khn-color-background-link-visited:		transparent						;
+	--khn-color-background-link-hover:			var(--khn-color-theme-primary)	;
+	--khn-color-background-link-active:			transparent						;
+
+	--khn-text-decoration-link-unvisited:		none	;
+	--khn-text-decoration-link-visited:			none	;
+	--khn-text-decoration-link-hover:			none	;
+	--khn-text-decoration-link-active:			none	;
+	
+	--khn-outline-link-unvisited:		none	;
+	--khn-outline-link-visited:			none	;
+	--khn-outline-link-hover:			none	;
+	--khn-outline-link-focus:			none	;
+	--khn-outline-link-active:			none	;
 }
