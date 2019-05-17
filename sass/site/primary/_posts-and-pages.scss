@@ -52,11 +52,12 @@ body:not(.archive-view) {
 				}
 
 				@media screen and (min-width: $query__wide) {
-					grid-template-areas:
+/*					grid-template-areas:
 						"header header header header"
 						"featimg featimg featimg featimg"
 						"meta content content content"
 						"footer footer footer footer";
+
 
 					.entry-meta {
 						margin-top: 2.1em;
@@ -80,9 +81,10 @@ body:not(.archive-view) {
 						}
 					}
 
+
 					.extra {
 						display: inline;
-					}
+					}*/
 				}
 			}
 
