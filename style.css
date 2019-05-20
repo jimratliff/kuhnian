@@ -1,15 +1,15 @@
 @charset "UTF-8";
 /*!
-Theme Name: Kuhn-CSSvars
-Theme URI: https://github.com/jimratliff/kuhn-cssvars
+Theme Name: Kuhnian
+Theme URI: https://github.com/jimratliff/kuhnian
 Author: Jim Ratliff
 Author URI: https://nuanceabounds.org
-Description: Kuhn-CSSvars is a fork of version: 1.0.5 of Morten Rand-Hendriksen's Kuhn WordPress
-theme <https://github.com/mor10/kuhn>. Kuhn-CSSvars is a limited refactoring of Kuhn, creating for each eligible Sass variable a corresponding CSS variable that is thereby exposed to the customizer of the theme (e.g., via a child theme of a custom-CSS plugin).
-Version: 1.0
+Description: Kuhnian derives from version: 1.0.5 of Morten Rand-Hendriksen's responsive
+WordPress theme Kuhn <https://github.com/mor10/kuhn>, which employs CSS Grid.
+Version: 0.2
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: kuhncssvars
+Text Domain: kuhnian
 Tags:
 
 Author-Original: Morten Rand-Hendriksen
@@ -18,7 +18,7 @@ Author-Original URI: https://mor10.com
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
 
-See https://github.com/jimratliff/kuhn-cssvars/blob/master/README.md for more.
+See https://github.com/jimratliff/kuhnian/blob/master/README.md for more.
 
 Kuhn is based on Underscores http://underscores.me/, (C) 2012-2016 Automattic, Inc.
 Underscores is distributed under the terms of the GNU GPL v2 or later.
@@ -47,8 +47,9 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Captions
 	## Galleries
 --------------------------------------------------------------*/
-/*	New partial, specific to the Kuhn-CSSvars fork, to hold the new CSS variables  */
-/* line 2, sass/variables-site/_custom-properties.scss */
+/*	New partial, specific to the Kuhn-CSSvars fork, and to Kuhnian, to hold the new CSS variables  */
+/*	New partial, specific to the Kuhn-CSSvars fork, and to Kuhnian, to hold the new CSS variables  */
+/* line 2, sass/variables-site/_custom-properties-colors.scss */
 :root {
   /***	Refactors partial _colors.scss ****/
   /*	Specific colors */
@@ -78,13 +79,147 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   --color-link-visited: var(--color-grey-dark);
   --color-link-hover: var(--color-grey-black);
   --color-text-main: var(--color-grey-black);
+  /***	New CSS variables beyond any Sass variables defined in Kuhn ****/
+  /*	Theme colors */
+  --khn-color-theme-primary: #88187F ;
+  --khn-color-theme-secondary: #18882b ;
+  --khn-color-theme-tertiary: #885418 ;
+  --khn-color-theme-whitish: white ;
+  --khn-color-theme-grayish: #777 ;
+  --khn-color-theme-dark-grayish: #222 ;
+  --khn-color-theme-primary-contrast: white ;
+  --khn-color-theme-secondary-contrast: white ;
+  --khn-color-theme-tertiary-contrast: white ;
+  --khn-color-theme-whitish-contrast: var(--khn-color-theme-dark-grayish) ;
+  /*	Other colors */
+  --khn-color-theme-dark-blueish: #575797 ;
+  --khn-color-theme-new-midnight-blueish: #0202AB ;
+  --khn-color-theme-pelorousish: #1990b8 ;
+  --khn-color-theme-forest-greenish: #2f9c0a ;
+  --khn-color-theme-pigment-greenish: #009a4d ;
+  --khn-color-theme-tawnyish: #cd6700 ;
+  --khn-color-theme-dark-violetish: #7800cd ;
+  --khn-color-theme-dark-magentaish: #9a009a ;
+  /*	Text colors */
+  --khn-color-text-default: var(--khn-color-theme-dark-grayish) ;
+  --khn-color-text-subdued: var(--khn-color-theme-grayish) ;
+  --khn-color-code-meta: var(--khn-color-theme-dark-blueish) ;
+  --khn-color-code: var(--khn-color-theme-new-midnight-blueish) ;
+  --khn-color-code-token-keyword: var(--khn-color-theme-pelorousish) ;
+  --khn-color-code-token-function-selector: var(--khn-color-theme-forest-greenish) ;
+  --khn-color-output: black ;
+  --khn-color-text-h1: black ;
+  --khn-color-text-h2: mediumblue ;
+  --khn-color-text-h3: var(--khn-color-theme-pigment-greenish) ;
+  --khn-color-text-h4: var(--khn-color-theme-tawnyish) ;
+  --khn-color-text-h5: var(--khn-color-theme-dark-violetish) ;
+  --khn-color-text-h6: var(--khn-color-theme-dark-magentaish) ;
+  /*	Link colors (and text-decoration)*/
+  /*	See https://html.spec.whatwg.org/multipage/rendering.html#phrasing-content-3 */
+  --color-link-default-unvisited: #0000EE ;
+  --color-link-default-visited: #551A8B ;
+  --color-link-default-hover: #FFFF00 ;
+  --color-link-default-active: #FF0000 ;
+  --khn-color-link-unvisited: var(--color-link-default-unvisited) ;
+  --khn-color-link-visited: var(--color-link-default-visited) ;
+  --khn-color-link-hover: var(--khn-color-theme-primary-contrast) ;
+  --khn-color-link-active: var(--color-link-default-active) ;
+  --khn-color-background-link-unvisited: transparent ;
+  --khn-color-background-link-visited: transparent ;
+  --khn-color-background-link-hover: var(--khn-color-theme-primary) ;
+  --khn-color-background-link-active: transparent ;
+  --khn-text-decoration-link-unvisited: none ;
+  --khn-text-decoration-link-visited: none ;
+  --khn-text-decoration-link-hover: none ;
+  --khn-text-decoration-link-active: none ;
+  --khn-outline-link-unvisited: none ;
+  --khn-outline-link-visited: none ;
+  --khn-outline-link-hover: none ;
+  --khn-outline-link-focus: none ;
+  --khn-outline-link-active: none ; }
+
+/*	New partial, specific to the Kuhn-CSSvars fork, and to Kuhnian, to hold the new CSS variables  */
+/* line 2, sass/variables-site/_custom-properties-font-families.scss */
+:root {
   /***	Refactors partial _typography.scss ****/
-  --font-main: 'Rubik', sans-serif ;
-  --font-meta: 'Roboto Mono', sans-serif ;
-  --font-code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace ;
-  --font-pre: "Courier 10 Pitch", Courier, monospace ;
-  --font-line-height-body: 1.5 ;
-  --font-line-height-pre: 1.6 ; }
+  /*	--font-main:				'Rubik', sans-serif			;	*/
+  /*	--font-meta:				'Roboto Mono', sans-serif	;	*/
+  /*	--font-code:				Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace	; */
+  /*	--font-pre:					"Courier 10 Pitch", Courier, monospace	; */
+  --font-main: var(--khn-font-family-sans-serif) ;
+  --font-meta: var(--khn-font-family-metadata) ;
+  --font-code: var(--khn-font-family-code) ;
+  --font-pre: var(--khn-font-family-pre) ;
+  /***	New CSS variables beyond any Sass variables defined in Kuhn ****/
+  /*	Font families	*/
+  --khn-font-family-serif: "PT Serif", "Times New Roman", serif ;
+  --khn-font-family-sans-serif: "PT Sans", Arial, Helvetica, sans-serif ;
+  --khn-font-family-sans-serif-alt: "Open Sans", Arial, Helvetica, sans-serif ;
+  --khn-font-family-code: "PT Mono", monospace ;
+  --khn-font-family-pre: "PT Mono", monospace ;
+  --khn-font-family-cursive: "Petit Formal Script", cursive ;
+  --khn-font-family-body: var(--khn-font-family-serif) ;
+  --khn-font-family-headings: var(--khn-font-family-sans-serif) ;
+  --khn-font-family-generic-elements: var(--khn-font-family-sans-serif) ;
+  --khn-font-family-metadata: var(--khn-font-family-sans-serif) ;
+  --khn-font-family-menus: var(--khn-font-family-sans-serif-alt) ;
+  --khn-font-family-site-logo: var(--khn-font-family-cursive) ; }
+
+/*
+	Text domain as GUID for later global search-and-replace
+	39777124-e777-4818-91fd-2a96fff8ed73
+*/
+/* line 10, sass/variables-site/_custom-properties.scss */
+:root {
+  /*	--font-line-height-body:	1.5	; */
+  --font-line-height-body: var(--khn-scalar-line-height-base) ;
+  --font-line-height-pre: 1.6 ;
+  /***	New CSS variables beyond any Sass variables defined in Kuhn ****/
+  /***	PARAGRAPH SETTINGS	***/
+  --khn-font-size-paragraph: 1em ;
+  --khn-line-height-paragraph: 1.5 ;
+  --khn-length-indent-paragraph: 1.0em ;
+  --khn-length-margin-top-paragraph: 0 ;
+  --khn-length-margin-bottom-paragraph: 0.6em ;
+  /*	Lengths for paragraphs */
+  --khn-font-size-base: 16px ;
+  --khn-scalar-line-height-base: 1.5 ;
+  /*	Lengths for paragraphs */
+  /*	Lengths for entry-title */
+  --khn-font-size-entry-title: 1.3em ;
+  /*	Styling of post/page article titles */
+  /*	Post-article titles appear both on single-post pages and archive pages; Page-article titles appear, I think, only on the page itself (not including menus, etc.)
+  *	I want (a) a post-article title on a single-post page to be styled identically to (b) a page-article title on that page.
+  */
+  --khn-margin-entry-title: 0.125em 0 0.25em ;
+  --khn-scalar-line-height-article-title: 1.2 ;
+  /*	For post-article or page-article title on its own page */
+  --khn-font-family-article-title-on-its-page: var(--khn-font-family-serif);
+  --khn-font-size-article-title-on-its-page: 2.25em ;
+  --khn-scalar-line-height-article-title-on-its-page: var(--khn-scalar-line-height-article-title);
+  --khn-font-size-article-title-on-its-page-medscreen: 2.5em ;
+  --khn-color-text-article-title-on-its-page: var(--khn-color-theme-tertiary) ;
+  --khn-text-align-article-title-on-its-page: center ;
+  --khn-text-transform-article-title-on-its-page: none ;
+  --khn-text-decoration-article-title-on-its-page: none ;
+  /*	For post-article's title on an archive page */
+  --khn-font-family-post-title-on-archive-page: var(--khn-font-family-serif);
+  --khn-font-size-post-title-on-archive-page: 1.3em ;
+  --khn-scalar-line-height-title-on-archive-page: var(--khn-scalar-line-height-article-title);
+  --khn-color-text-post-title-on-archive-page: var(--khn-color-theme-tertiary) ;
+  --khn-text-align-post-title-on-archive-page: center ;
+  --khn-text-transform-post-title-on-archive-page: none ;
+  --khn-text-decoration-post-title-on-archive-page: none ;
+  /*	Margins */
+  /* Margins for entry-meta */
+  --khn-margins-entry-meta: 1em 0em 1em ;
+  --khn-margins-entry-meta-medium-screen: var(--khn-margins-entry-meta) ;
+  /*	Display */
+  /*	"Leave a comment": In order to display, choose "inherit" */
+  --khn-display-comments-link: none ;
+  /*	Content */
+  /*	Separator between elements in entry-meta (byline, etc.) */
+  --khn-content-entry-meta-separator: " ★ " ; }
 
 /*
 $color__grey_black: hsl(210, 10%, 15%);
@@ -112,6 +247,12 @@ $color__link-hover: $color__grey_black;
 $color__text-main: $color__grey_black;
 */
 /*
+$color__link:			var(--color-link)			;
+$color__link-visited:	var(--color-link-visited)	;
+$color__link-hover:		var(--color-link-hover)		;
+$color__text-main:		var(--color-text-main)		;
+*/
+/*
 $color__border-button: #ccc #ccc #bbb;
 $color__border-button-hover: #ccc #bbb #aaa;
 $color__border-button-focus: #aaa #bbb #bbb;
@@ -126,22 +267,27 @@ $font__pre: "Courier 10 Pitch", Courier, monospace;
 $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
 */
+/*$font__main:				var(--font-main)			;*/
+/*$font__meta:				var(--font-meta)			;*/
+/*$font__code:				var(--font-code)			;*/
+/*$font__pre:				var(--font-pre)				;*/
 /*--------------------------------------------------------------
 # Normalize
 --------------------------------------------------------------*/
 /* line 1, sass/_normalize.scss */
 html {
   font-family: sans-serif;
+  font-size: var(--khn-font-size-base);
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-/* line 9, sass/_normalize.scss */
+/* line 10, sass/_normalize.scss */
 body {
   margin: 0; }
 
-/* line 13, sass/_normalize.scss */
+/* line 14, sass/_normalize.scss */
 article,
 aside,
 details,
@@ -156,7 +302,12 @@ section,
 summary {
   display: block; }
 
-/* line 28, sass/_normalize.scss */
+/* line 29, sass/_normalize.scss */
+a,
+a:-webkit-any-link {
+  text-decoration: none; }
+
+/* line 34, sass/_normalize.scss */
 audio,
 canvas,
 progress,
@@ -164,53 +315,53 @@ video {
   display: inline-block;
   vertical-align: baseline; }
 
-/* line 36, sass/_normalize.scss */
+/* line 42, sass/_normalize.scss */
 audio:not([controls]) {
   display: none;
   height: 0; }
 
-/* line 41, sass/_normalize.scss */
+/* line 47, sass/_normalize.scss */
 [hidden],
 template {
   display: none; }
 
-/* line 46, sass/_normalize.scss */
+/* line 52, sass/_normalize.scss */
 a {
   background-color: transparent; }
 
-/* line 50, sass/_normalize.scss */
+/* line 56, sass/_normalize.scss */
 a:active,
 a:hover {
   outline: 0; }
 
-/* line 55, sass/_normalize.scss */
+/* line 61, sass/_normalize.scss */
 abbr[title] {
   border-bottom: 1px dotted; }
 
-/* line 59, sass/_normalize.scss */
+/* line 65, sass/_normalize.scss */
 b,
 strong {
   font-weight: bold; }
 
-/* line 64, sass/_normalize.scss */
+/* line 70, sass/_normalize.scss */
 dfn {
   font-style: italic; }
 
-/* line 68, sass/_normalize.scss */
+/* line 74, sass/_normalize.scss */
 h1 {
   font-size: 2em;
   margin: 0.67em 0; }
 
-/* line 73, sass/_normalize.scss */
+/* line 79, sass/_normalize.scss */
 mark {
   background: #ff0;
   color: #000; }
 
-/* line 78, sass/_normalize.scss */
+/* line 84, sass/_normalize.scss */
 small {
   font-size: 80%; }
 
-/* line 82, sass/_normalize.scss */
+/* line 88, sass/_normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -218,36 +369,36 @@ sup {
   position: relative;
   vertical-align: baseline; }
 
-/* line 90, sass/_normalize.scss */
+/* line 96, sass/_normalize.scss */
 sup {
   top: -0.5em; }
 
-/* line 94, sass/_normalize.scss */
+/* line 100, sass/_normalize.scss */
 sub {
   bottom: -0.25em; }
 
-/* line 98, sass/_normalize.scss */
+/* line 104, sass/_normalize.scss */
 img {
   border: 0; }
 
-/* line 102, sass/_normalize.scss */
+/* line 108, sass/_normalize.scss */
 svg:not(:root) {
   overflow: hidden; }
 
-/* line 106, sass/_normalize.scss */
+/* line 112, sass/_normalize.scss */
 figure {
   margin: 1em 40px; }
 
-/* line 110, sass/_normalize.scss */
+/* line 116, sass/_normalize.scss */
 hr {
   box-sizing: content-box;
   height: 0; }
 
-/* line 115, sass/_normalize.scss */
+/* line 121, sass/_normalize.scss */
 pre {
   overflow: auto; }
 
-/* line 119, sass/_normalize.scss */
+/* line 125, sass/_normalize.scss */
 code,
 kbd,
 pre,
@@ -255,7 +406,7 @@ samp {
   font-family: monospace, monospace;
   font-size: 1em; }
 
-/* line 127, sass/_normalize.scss */
+/* line 133, sass/_normalize.scss */
 button,
 input,
 optgroup,
@@ -265,16 +416,16 @@ textarea {
   font: inherit;
   margin: 0; }
 
-/* line 137, sass/_normalize.scss */
+/* line 143, sass/_normalize.scss */
 button {
   overflow: visible; }
 
-/* line 141, sass/_normalize.scss */
+/* line 147, sass/_normalize.scss */
 button,
 select {
   text-transform: none; }
 
-/* line 146, sass/_normalize.scss */
+/* line 152, sass/_normalize.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -282,62 +433,62 @@ input[type="submit"] {
   -webkit-appearance: button;
   cursor: pointer; }
 
-/* line 154, sass/_normalize.scss */
+/* line 160, sass/_normalize.scss */
 button[disabled],
 html input[disabled] {
   cursor: default; }
 
-/* line 159, sass/_normalize.scss */
+/* line 165, sass/_normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
   padding: 0; }
 
-/* line 165, sass/_normalize.scss */
+/* line 171, sass/_normalize.scss */
 input {
   line-height: normal; }
 
-/* line 169, sass/_normalize.scss */
+/* line 175, sass/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
   padding: 0; }
 
-/* line 175, sass/_normalize.scss */
+/* line 181, sass/_normalize.scss */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   height: auto; }
 
-/* line 180, sass/_normalize.scss */
+/* line 186, sass/_normalize.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }
 
-/* line 185, sass/_normalize.scss */
+/* line 191, sass/_normalize.scss */
 fieldset {
   border: 1px solid #c0c0c0;
   margin: 0 2px;
   padding: 0.35em 0.625em 0.75em; }
 
-/* line 191, sass/_normalize.scss */
+/* line 197, sass/_normalize.scss */
 legend {
   border: 0;
   padding: 0; }
 
-/* line 196, sass/_normalize.scss */
+/* line 202, sass/_normalize.scss */
 textarea {
   overflow: auto; }
 
-/* line 200, sass/_normalize.scss */
+/* line 206, sass/_normalize.scss */
 optgroup {
   font-weight: bold; }
 
-/* line 204, sass/_normalize.scss */
+/* line 210, sass/_normalize.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0; }
 
-/* line 209, sass/_normalize.scss */
+/* line 215, sass/_normalize.scss */
 td,
 th {
   padding: 0; }
@@ -351,12 +502,15 @@ button,
 input,
 select,
 textarea {
-  color: var(--color-text-main);
-  font-family: var(--font-main);
+  /*	color: $color__text-main; */
+  /*	font-family: $font__main;	*/
+  /*	line-height: $font__line-height-body; */
+  color: var(--khn-color-text-default);
+  font-family: var(--khn-font-family-body);
   font-size: 17.6px;
   font-size: 1.1rem;
   font-weight: 300;
-  line-height: var(--font-line-height-body); }
+  line-height: var(--khn-scalar-line-height-base); }
   @media screen and (min-width: 600px) {
     /* line 1, sass/typography/_typography.scss */
     body,
@@ -399,21 +553,54 @@ h6 {
 
 /* line 1, sass/typography/_copy.scss */
 p {
-  margin-top: .5em;
-  margin-bottom: 1em; }
+  /*	By default, all paragraphs are indented, unless reversed on other grounds */
+  /*	margin-top: .5em; */
+  /*	margin-bottom: 1em; */
+  margin-top: var(--khn-length-margin-top-paragraph);
+  margin-bottom: var(--khn-length-margin-bottom-paragraph);
+  text-indent: var(--khn-length-indent-paragraph);
+  line-height: var(--khn-line-height-paragraph); }
 
-/* line 6, sass/typography/_copy.scss */
+/*	Reverse indentation if <p> immediately follows a blockquote, or any h# element.
+	The :first-child and :first-of-type selectors are used for the case where a paragraph is the first paragraph but doesn't immediately follow a blockquote or heading. Possibly :first-child is implied by :first-of-type, but no harm (so, belt and suspenders!).)
+*/
+/* line 14, sass/typography/_copy.scss */
+blockquote > p,
+p:first-child,
+p:first-of-type,
+h1 + p,
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p,
+h6 + p {
+  text-indent: 0; }
+
+/*	Note: I stay away from "!important" in general, but this seems an appropriate case */
+/*	Force indentation when .force-indent class is specified for paragraph */
+/* line 28, sass/typography/_copy.scss */
+p.force-indent,
+p.jdr-force-indent {
+  text-indent: var(--khn-length-indent-paragraph) !important; }
+
+/*	Force no indentation when .force-noindent class is specified for paragraph */
+/* line 34, sass/typography/_copy.scss */
+p.force-noindent,
+p.jdr-force-noindent {
+  text-indent: 0 !important; }
+
+/* line 39, sass/typography/_copy.scss */
 dfn, cite, em, i {
   font-style: italic; }
 
-/* line 10, sass/typography/_copy.scss */
+/* line 43, sass/typography/_copy.scss */
 blockquote {
   position: relative;
   margin: 0 0 1em;
   background: var(--color-background-pre);
   padding: 1em 2em .5em 5em;
   font-style: italic; }
-  /* line 17, sass/typography/_copy.scss */
+  /* line 50, sass/typography/_copy.scss */
   blockquote:before {
     position: absolute;
     top: -.2em;
@@ -423,14 +610,14 @@ blockquote {
     line-height: 100%;
     color: white; }
 
-/* line 28, sass/typography/_copy.scss */
+/* line 61, sass/typography/_copy.scss */
 address {
   margin: 0 0 1.5em; }
 
-/* line 32, sass/typography/_copy.scss */
+/* line 65, sass/typography/_copy.scss */
 pre {
   background: var(--color-background-pre);
-  font-family: var(--font-pre);
+  font-family: var(--khn-font-family-pre);
   font-size: 15px;
   font-size: 0.9375rem;
   line-height: var(--font-line-height-pre);
@@ -439,23 +626,23 @@ pre {
   overflow: auto;
   padding: 1.6em; }
 
-/* line 43, sass/typography/_copy.scss */
+/* line 76, sass/typography/_copy.scss */
 code, kbd, tt, var {
-  font-family: var(--font-code);
-  font-size: 15px;
-  font-size: 0.9375rem; }
+  font-family: var(--khn-font-family-code);
+  /*	I removed the following font-size modification because it assumes the <code> text lies inline with body text; however, it can lie in a heading */
+  /*	@include font-size(0.9375); */ }
 
-/* line 48, sass/typography/_copy.scss */
+/* line 82, sass/typography/_copy.scss */
 abbr, acronym {
   border-bottom: 1px dotted var(--color-border-abbr);
   cursor: help; }
 
-/* line 53, sass/typography/_copy.scss */
+/* line 87, sass/typography/_copy.scss */
 mark, ins {
   background: var(--color-background-ins);
   text-decoration: none; }
 
-/* line 58, sass/typography/_copy.scss */
+/* line 92, sass/typography/_copy.scss */
 big {
   font-size: 125%; }
 
@@ -652,38 +839,55 @@ textarea {
 --------------------------------------------------------------*/
 /* line 1, sass/navigation/_links.scss */
 a {
-  color: var(--color-link); }
-  /* line 4, sass/navigation/_links.scss */
-  a:visited {
-    color: var(--color-link-visited); }
+  color: var(--khn-color-link-unvisited);
+  background-color: var(--khn-color-background-link-unvisited);
+  text-decoration: var(--khn-text-decoration-link-unvisited);
+  outline: var(--khn-outline-link-unvisited); }
   /* line 7, sass/navigation/_links.scss */
-  a:hover, a:focus, a:active {
-    color: var(--color-link-hover); }
-  /* line 12, sass/navigation/_links.scss */
-  a:focus {
-    outline: thin dotted var(--color-grey-black); }
+  a:visited {
+    /*		color: $color__link-visited; */
+    color: var(--khn-color-link-visited);
+    background-color: var(--khn-color-background-link-visited);
+    text-decoration: var(--khn-text-decoration-link-visited);
+    outline: var(--khn-outline-link-visited); }
   /* line 15, sass/navigation/_links.scss */
-  a:hover, a:active {
-    outline: 0; }
-
-/* line 26, sass/navigation/_links.scss */
-.page-content a,
-.entry-content a,
-.entry-summary a,
-.comment-content a {
-  text-decoration: none;
-  border-bottom: 3px solid var(--color-grey-black); }
+  a:hover, a:focus {
+    /*		color: $color__link-hover;		*/
+    color: var(--khn-color-link-hover);
+    background-color: var(--khn-color-background-link-hover);
+    text-decoration: var(--khn-text-decoration-link-hover); }
+  /* line 23, sass/navigation/_links.scss */
+  a:active {
+    color: var(--khn-color-link-active);
+    background-color: var(--khn-color-background-link-active);
+    text-decoration: var(--khn-text-decoration-link-active);
+    outline: var(--khn-outline-link-active); }
   /* line 30, sass/navigation/_links.scss */
-  .page-content a:focus, .page-content a:hover,
-  .entry-content a:focus,
-  .entry-content a:hover,
-  .entry-summary a:focus,
-  .entry-summary a:hover,
-  .comment-content a:focus,
-  .comment-content a:hover {
-    color: var(--color-grey-black);
-    border-bottom-width: 5px; }
+  a:hover {
+    outline: var(--khn-outline-link-hover); }
+  /* line 34, sass/navigation/_links.scss */
+  a:focus {
+    /*		outline: thin dotted $color__grey_black;	*/
+    outline: var(--khn-outline-link-focus); }
 
+/*
+.page-content,
+.entry-content,
+.entry-summary,
+.comment-content {
+
+	a {
+		text-decoration: none;
+		border-bottom: 3px solid $color__grey_black;
+
+		&:focus,
+		&:hover {
+			color: $color__grey_black;
+			border-bottom-width: 5px;
+		}
+	}
+}
+*/
 /*--------------------------------------------------------------
 ## Content Navigation
 --------------------------------------------------------------*/
@@ -693,7 +897,7 @@ a {
 .post-navigation,
 .paging-navigation {
   padding: 2em 0;
-  font-family: var(--font-meta);
+  font-family: var(--khn-font-family-metadata);
   font-size: 90%;
   text-align: left;
   overflow: hidden; }
@@ -803,7 +1007,7 @@ a {
   border-bottom-color: white; }
 
 /*--------------------------------------------------------------
-## Sociam Media Navigation
+## Social Media Navigation
 --------------------------------------------------------------*/
 /* line 1, sass/navigation/_social-navigation.scss */
 .social-menu {
@@ -1070,7 +1274,7 @@ a {
 .rss-date,
 .widget_rss cite {
   color: #333;
-  font-family: var(--font-meta);
+  font-family: var(--khn-font-family-metadata);
   font-size: .8em; }
 
 /* line 189, sass/site/secondary/_widgets.scss */
@@ -1306,7 +1510,7 @@ a {
 .page-title {
   width: 100%;
   margin: 0;
-  font-family: var(--font-meta);
+  font-family: var(--khn-font-family-metadata);
   font-size: 1.6em;
   line-height: 1.3em;
   color: var(--color-grey-black);
@@ -1314,7 +1518,7 @@ a {
 
 /* line 18, sass/site/archive/_archive.scss */
 .archive-description {
-  font-family: var(--font-meta);
+  font-family: var(--khn-font-family-metadata);
   font-size: 90%; }
 
 /* line 25, sass/site/archive/_archive.scss */
@@ -1467,7 +1671,7 @@ Header Menu
 /* line 1, sass/site/header/_header-menu.scss */
 .main-navigation {
   display: block;
-  font-family: var(--font-meta);
+  font-family: var(--khn-font-family-metadata);
   font-size: 90%;
   clear: left; }
   /* line 7, sass/site/header/_header-menu.scss */
@@ -1518,7 +1722,7 @@ Header Menu
     width: 100%;
     padding: .5em 0;
     text-decoration: none;
-    color: var(--color-text-main); }
+    color: var(--khn-color-link-active); }
   /* line 86, sass/site/header/_header-menu.scss */
   .main-navigation a:hover,
   .main-navigation a:focus {
@@ -1552,7 +1756,7 @@ button.dropdown-toggle {
   font-size: 80%;
   text-transform: uppercase;
   color: white;
-  background-color: var(--color-text-main);
+  background-color: var(--khn-color-link-active);
   border: none;
   border-radius: 0; }
 
@@ -1665,157 +1869,178 @@ body:not(.archive-view) .site-main {
       /* line 50, sass/site/primary/_posts-and-pages.scss */
       body:not(.archive-view) .post .entry-meta,
       body:not(.archive-view) .page .entry-meta {
-        margin: -1em 0 1em; } }
+        /*					margin: -1em 0 1em;	*/
+        margin: var(--khn-margins-entry-meta-medium-screen); } }
     @media screen and (min-width: 61.875em) and (min-width: 1300px) {
       /* line 37, sass/site/primary/_posts-and-pages.scss */
       body:not(.archive-view) .post,
       body:not(.archive-view) .page {
-        grid-template-areas: "header header header header" "featimg featimg featimg featimg" "meta content content content" "footer footer footer footer"; }
-        /* line 61, sass/site/primary/_posts-and-pages.scss */
-        body:not(.archive-view) .post .entry-meta,
-        body:not(.archive-view) .page .entry-meta {
-          margin-top: 2.1em; }
-        /* line 65, sass/site/primary/_posts-and-pages.scss */
-        body:not(.archive-view) .post .byline,
-        body:not(.archive-view) .post .posted-on,
-        body:not(.archive-view) .post .comments-link,
-        body:not(.archive-view) .post .edit-link,
-        body:not(.archive-view) .page .byline,
-        body:not(.archive-view) .page .posted-on,
-        body:not(.archive-view) .page .comments-link,
-        body:not(.archive-view) .page .edit-link {
-          display: block;
-          margin-bottom: 1em; }
-          /* line 72, sass/site/primary/_posts-and-pages.scss */
-          body:not(.archive-view) .post .byline:before, body:not(.archive-view) .post .byline:after,
-          body:not(.archive-view) .post .posted-on:before,
-          body:not(.archive-view) .post .posted-on:after,
-          body:not(.archive-view) .post .comments-link:before,
-          body:not(.archive-view) .post .comments-link:after,
-          body:not(.archive-view) .post .edit-link:before,
-          body:not(.archive-view) .post .edit-link:after,
-          body:not(.archive-view) .page .byline:before,
-          body:not(.archive-view) .page .byline:after,
-          body:not(.archive-view) .page .posted-on:before,
-          body:not(.archive-view) .page .posted-on:after,
-          body:not(.archive-view) .page .comments-link:before,
-          body:not(.archive-view) .page .comments-link:after,
-          body:not(.archive-view) .page .edit-link:before,
-          body:not(.archive-view) .page .edit-link:after {
-            margin: 0;
-            content: ""; }
-          /* line 78, sass/site/primary/_posts-and-pages.scss */
-          body:not(.archive-view) .post .byline a,
-          body:not(.archive-view) .post .posted-on a,
-          body:not(.archive-view) .post .comments-link a,
-          body:not(.archive-view) .post .edit-link a,
-          body:not(.archive-view) .page .byline a,
-          body:not(.archive-view) .page .posted-on a,
-          body:not(.archive-view) .page .comments-link a,
-          body:not(.archive-view) .page .edit-link a {
-            display: block; }
-        /* line 83, sass/site/primary/_posts-and-pages.scss */
-        body:not(.archive-view) .post .extra,
-        body:not(.archive-view) .page .extra {
-          display: inline; } }
+        /*					grid-template-areas:
+        						"header header header header"
+        						"featimg featimg featimg featimg"
+        						"meta content content content"
+        						"footer footer footer footer";
+        
+        
+        					.entry-meta {
+        						margin-top: 2.1em;
+        					}
+        
+        					.byline,
+        					.posted-on,
+        					.comments-link,
+        					.edit-link {
+        						display: block;
+        						margin-bottom: 1em;
+        
+        						&:before,
+        						&:after {
+        							margin: 0;
+        							content: "";
+        						}
+        
+        						a {
+        							display: block;
+        						}
+        					}
+        
+        
+        					.extra {
+        						display: inline;
+        					}*/ } }
   @media screen and (min-width: 61.875em) {
-    /* line 89, sass/site/primary/_posts-and-pages.scss */
+    /* line 92, sass/site/primary/_posts-and-pages.scss */
     body:not(.archive-view) .entry-header {
       grid-area: header; }
-    /* line 93, sass/site/primary/_posts-and-pages.scss */
+    /* line 96, sass/site/primary/_posts-and-pages.scss */
     body:not(.archive-view) .entry-meta {
       grid-area: meta; }
-    /* line 97, sass/site/primary/_posts-and-pages.scss */
+    /* line 100, sass/site/primary/_posts-and-pages.scss */
     body:not(.archive-view) .featured-image {
       grid-area: featimg; }
-    /* line 101, sass/site/primary/_posts-and-pages.scss */
+    /* line 104, sass/site/primary/_posts-and-pages.scss */
     body:not(.archive-view) .entry-content {
       grid-area: content;
       max-width: 100%; }
-    /* line 106, sass/site/primary/_posts-and-pages.scss */
+    /* line 109, sass/site/primary/_posts-and-pages.scss */
     body:not(.archive-view) .entry-footer {
       grid-area: footer; }
-    /* line 110, sass/site/primary/_posts-and-pages.scss */
+    /* line 113, sass/site/primary/_posts-and-pages.scss */
     body:not(.archive-view) .post-navigation {
       grid-area: nav; }
-    /* line 114, sass/site/primary/_posts-and-pages.scss */
+    /* line 117, sass/site/primary/_posts-and-pages.scss */
     body:not(.archive-view) .comments-area {
       grid-area: comments; } } }
 
-/* line 125, sass/site/primary/_posts-and-pages.scss */
+/* line 128, sass/site/primary/_posts-and-pages.scss */
 .cat-links {
   margin-bottom: .5em;
-  font-family: var(--font-meta);
+  font-family: var(--khn-font-family-metadata);
   font-size: 80%; }
-  /* line 130, sass/site/primary/_posts-and-pages.scss */
+  /* line 133, sass/site/primary/_posts-and-pages.scss */
   .cat-links a {
     text-decoration: none;
     text-transform: uppercase;
     border-bottom: 3px solid transparent; }
-    /* line 135, sass/site/primary/_posts-and-pages.scss */
+    /* line 138, sass/site/primary/_posts-and-pages.scss */
     .cat-links a:focus, .cat-links a:hover {
       border-bottom-color: black; }
 
-/* line 142, sass/site/primary/_posts-and-pages.scss */
+/* line 145, sass/site/primary/_posts-and-pages.scss */
 .entry-title {
-  margin: .125em 0 .25em;
-  font-size: 2.5em;
-  line-height: 1.2em;
-  text-transform: uppercase; }
+  /*	margin: .125em 0 .25em; */
+  /*	font-size: 2.5em; */
+  /*	line-height: 1.2em; */
+  /*	text-transform: uppercase;	*/
+  margin: var(--khn-margin-entry-title);
+  font-family: var(--khn-font-family-article-title-on-its-page);
+  font-size: var(--khn-font-size-article-title-on-its-page);
+  color: var(--khn-color-text-article-title-on-its-page);
+  line-height: var(--khn-scalar-line-height-article-title-on-its-page);
+  text-align: var(--khn-text-align-article-title-on-its-page);
+  text-transform: var(--khn-text-transform-article-title-on-its-page);
+  text-decoration: var(--khn-text-decoration-article-title-on-its-page); }
   @media screen and (min-width: 61.875em) {
-    /* line 142, sass/site/primary/_posts-and-pages.scss */
+    /* line 145, sass/site/primary/_posts-and-pages.scss */
     .entry-title {
-      font-size: 3em; } }
-  /* line 152, sass/site/primary/_posts-and-pages.scss */
+      /*		font-size: 3em; */
+      font-size: var(--khn-font-size-article-title-on-its-page-medscreen); } }
+  /* line 168, sass/site/primary/_posts-and-pages.scss */
   .entry-title a {
-    text-decoration: none;
-    color: black; }
-    /* line 156, sass/site/primary/_posts-and-pages.scss */
+    /*		color: black;	*/
+    /*		text-decoration: none; */
+    font-family: var(--khn-font-family-post-title-on-archive-page);
+    font-size: var(--khn-font-size-post-title-on-archive-page);
+    color: var(--khn-color-text-post-title-on-archive-page);
+    line-height: var(--khn-scalar-line-height-title-on-archive-page);
+    text-align: var(--khn-text-align-article-title-on-its-page);
+    text-transform: var(--khn-text-transform-post-title-on-archive-page);
+    text-decoration: var(khn-text-decoration-post-title-on-archive-page); }
+    /* line 180, sass/site/primary/_posts-and-pages.scss */
+    .entry-title a:visited {
+      color: var(--khn-color-text-post-title-on-archive-page); }
+    /* line 184, sass/site/primary/_posts-and-pages.scss */
     .entry-title a:focus, .entry-title a:hover {
       border-bottom: 5px solid; }
 
-/* line 163, sass/site/primary/_posts-and-pages.scss */
+/* line 192, sass/site/primary/_posts-and-pages.scss */
+.entry-meta {
+  margin: var(--khn-margins-entry-meta); }
+
+/* line 195, sass/site/primary/_posts-and-pages.scss */
 .entry-meta,
 .entry-footer {
-  font-family: var(--font-meta);
+  font-family: var(--khn-font-family-metadata);
   font-size: 80%;
   color: #404040; }
-  /* line 169, sass/site/primary/_posts-and-pages.scss */
+  /* line 201, sass/site/primary/_posts-and-pages.scss */
   .entry-meta a,
   .entry-footer a {
     font-weight: 700;
     text-decoration: none;
     color: black;
     border-bottom: 3px solid transparent; }
-    /* line 175, sass/site/primary/_posts-and-pages.scss */
+    /* line 207, sass/site/primary/_posts-and-pages.scss */
     .entry-meta a:focus, .entry-meta a:hover,
     .entry-footer a:focus,
     .entry-footer a:hover {
       color: black;
       border-bottom-color: black; }
 
-/* line 184, sass/site/primary/_posts-and-pages.scss */
+/* line 216, sass/site/primary/_posts-and-pages.scss */
 .byline::after {
-  content: "|";
+  /*		content: "|"; */
+  content: var(--khn-content-entry-meta-separator);
   margin: 0 .5em; }
 
-/* line 192, sass/site/primary/_posts-and-pages.scss */
+/* line 225, sass/site/primary/_posts-and-pages.scss */
 .comments-link::before,
 .edit-link::before {
-  content: "|";
+  /*		content: "|";	*/
+  content: var(--khn-content-entry-meta-separator);
   margin: 0 .5em; }
 
-/* line 198, sass/site/primary/_posts-and-pages.scss */
+/* line 234, sass/site/primary/_posts-and-pages.scss */
+.updated::before {
+  content: "| Revised:";
+  /*		content: var(--khn-content-entry-meta-separator);*/
+  margin: 0 .5em; }
+
+/* line 241, sass/site/primary/_posts-and-pages.scss */
+.comments-link {
+  display: var(--khn-display-comments-link); }
+
+/* line 245, sass/site/primary/_posts-and-pages.scss */
 .byline,
 .updated:not(.published) {
-  display: none; }
+  /*	display: none; */ }
 
-/* line 203, sass/site/primary/_posts-and-pages.scss */
+/* line 250, sass/site/primary/_posts-and-pages.scss */
 .single .byline,
 .group-blog .byline {
   display: inline; }
 
-/* line 208, sass/site/primary/_posts-and-pages.scss */
+/* line 255, sass/site/primary/_posts-and-pages.scss */
 .entry-content {
   margin: 1em 0; }
 
@@ -1835,7 +2060,7 @@ body:not(.archive-view) .site-main {
   margin-bottom: 2em;
   font-size: 2em;
   font-weight: 900;
-  font-family: var(--font-meta); }
+  font-family: var(--khn-font-family-metadata); }
 
 /* line 16, sass/site/primary/_comments.scss */
 .comment-list {
@@ -1925,7 +2150,7 @@ body:not(.archive-view) .site-main {
   margin-top: .2em;
   padding-bottom: .5em;
   font-size: .9em;
-  font-family: var(--font-meta);
+  font-family: var(--khn-font-family-metadata);
   line-height: 1em; }
 
 /* line 134, sass/site/primary/_comments.scss */
@@ -2082,7 +2307,7 @@ object {
 .wp-caption {
   margin-bottom: 2em;
   max-width: 100%;
-  font-family: var(--font-meta);
+  font-family: var(--khn-font-family-metadata);
   font-size: 90%;
   color: #666666;
   text-align: center; }
@@ -2179,7 +2404,7 @@ object {
 .gallery-caption {
   display: block;
   margin: 0;
-  font-family: var(--font-meta);
+  font-family: var(--khn-font-family-metadata);
   border: none; }
 
 /*--------------------------------------------------------------
