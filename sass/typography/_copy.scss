@@ -75,6 +75,7 @@ pre {
 
 code, kbd, tt, var {
 	font-family: $font__code;
+/*	I removed the following font-size modification because it assumes the <code> text lies inline with body text; however, it can lie in a heading */
 /*	@include font-size(0.9375); */
 }
 
