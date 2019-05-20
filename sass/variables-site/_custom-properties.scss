@@ -1,6 +1,12 @@
 /*	New partial, specific to the Kuhn-CSSvars fork, and to Kuhnian, to hold the new CSS variables  */
 @import "custom-properties-colors";
 @import "custom-properties-font-families";
+/*
+	Text domain as GUID for later global search-and-replace
+	39777124-e777-4818-91fd-2a96fff8ed73
+*/
+
+
 :root {
 /*	--font-line-height-body:	1.5	; */
 	--font-line-height-body:	var(--khn-scalar-line-height-base)	;
@@ -50,5 +56,21 @@
 	--khn-text-align-post-title-on-archive-page:			center						;
 	--khn-text-transform-post-title-on-archive-page:		none						;
 	--khn-text-decoration-post-title-on-archive-page:		none						;
+
+/*	Margins */
+/* Margins for entry-meta */
+	--khn-margins-entry-meta:								1em 0em 1em						;
+	--khn-margins-entry-meta-medium-screen:					var(--khn-margins-entry-meta)	;
+
+/*	Display */
+/*	"Leave a comment": In order to display, choose "inherit" */
+	--khn-display-comments-link:							none						;
+
+
+/*	Content */
+/*	Separator between elements in entry-meta (byline, etc.) */
+	--khn-content-entry-meta-separator:						" ★ "						;
+
+
 
 }
