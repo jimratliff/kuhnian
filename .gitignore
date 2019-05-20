@@ -1,1 +1,3 @@
 /sass/maps/**.*
+.DS_Store
+/style.css.map
