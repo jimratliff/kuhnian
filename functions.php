@@ -7,7 +7,7 @@
  * @package Kuhn
  */
 
-if ( ! function_exists( 'kuhn_setup' ) ) :
+if ( ! function_exists( 'kuhnian_setup' ) ) :
 /**
  * Sets up theme defaults and registers support for various WordPress features.
  *
@@ -15,7 +15,7 @@ if ( ! function_exists( 'kuhn_setup' ) ) :
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
  */
-function kuhn_setup() {
+function kuhnian_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
@@ -72,7 +72,7 @@ function kuhn_setup() {
 	add_theme_support( 'customize-selective-refresh-widgets' );
 }
 endif;
-add_action( 'after_setup_theme', 'kuhn_setup' );
+add_action( 'after_setup_theme', 'kuhnian_setup' );
 
 /***************	BEGIN JDR Additions ***************/
 /*	Create theme option re whether to display featured image on single posts */
