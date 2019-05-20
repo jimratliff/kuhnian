@@ -10,10 +10,11 @@
 ?>
 
 <!--$kuhnian_display_featured_image_on_posts is a flag: whether to display featured image
-	on posts.
-	This should be moved somewhere for easier customization.
+	on posts. It takes either 'display' or 'hide'.
 -->
-<?php $kuhnian_display_featured_image_on_posts = FALSE ; ?>
+<?php
+	$kuhnian_display_featured_image_on_posts = get_option('kuhnian_display_featured_image_on_single_posts','OOPS!') ;
+?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php 
 		if ( has_post_thumbnail() ) {
@@ -25,11 +26,16 @@
 					</a>
 				</figure>
 			<?php } else {			// IS a single post
-				if ($kuhnian_display_featured_image_on_posts) { ?>
+				if ($kuhnian_display_featured_image_on_posts == 'display') {?>
 					<figure class="featured-image">
 						<?php the_post_thumbnail('kuhn-index'); ?>
 					</figure>
-				<?php } else {} 
+				<?php } elseif ($kuhnian_display_featured_image_on_posts == 'hide') {
+				} else {
+					$error_message_kuhnian_display_featured_image_on_posts=
+						"Illegal value for option kuhnian_display_featured_image_on_posts: '$kuhnian_display_featured_image_on_posts'";
+/*					add_action('admin_notices','kuhnian_error_message_invalid_display_featured_image_preference'); */
+				}
 			}?>
 	<!-- </figure> --><!-- .featured-image full-bleed -->
 	<?php } ?>

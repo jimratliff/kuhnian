@@ -74,6 +74,107 @@ function kuhn_setup() {
 endif;
 add_action( 'after_setup_theme', 'kuhn_setup' );
 
+/***************	BEGIN JDR Additions ***************/
+/*	Create theme option re whether to display featured image on single posts */
+/*	Valid values: 'display' 'hide'  */
+/*	add_option ('display_featured_image_on_single_posts', 'display', '', 'yes');*/
+/*	update_option ('kuhnian_display_featured_image_on_single_posts', 'hide');  */
+/*	update_option ('kuhnian_display_featured_image_on_single_posts', 'display'); */
+	update_option ('kuhnian_display_featured_image_on_single_posts', 'elephantitis');
+
+add_action( 'admin_head' , 'kuhnian_check_settings_validity');
+
+function kuhnian_check_settings_validity() {
+/*	Upon entering wp-admin page, check whether 'kuhnian_display_featured_image_on_single_posts'
+	has legal value; viz., 'display' or 'hide'
+	
+	In all cases, put a message at the top of the admin page re validity of value:
+		Warning if value is invalid; State the default
+
+	This function assumes that it is hooked to the 'admin_head' action, which is executed 
+	in the HTML <head> section of the admin panel. see
+		https://adambrown.info/p/wp_hooks/hook/admin_head
+*/
+	$css_class_prefix = 'notice ' ;
+	$css_class_suffix = ' kuhnian-notice' ;
+
+/*	Get value of option 'kuhnian_display_featured_image_on_single_posts' */
+	$kuhnian_display_featured_image_on_posts =
+		get_option('kuhnian_display_featured_image_on_single_posts','OOPS!') ;
+/*	Check validity of value of option 'kuhnian_display_featured_image_on_single_posts' */
+	if ( $kuhnian_display_featured_image_on_posts == 'display' )
+	{
+		$alert_content = 	"Featured image <em>will</em> be displayed on post pages <br/> " .
+							"Supplied value: '$kuhnian_display_featured_image_on_posts'." ;
+		$cssclass = 'notice-info' ;
+/*		kuhnian_generic_admin_alert( $cssclass, $alert_content ) ; */
+	}
+	elseif ( $kuhnian_display_featured_image_on_posts == 'hide' )
+	{
+		$alert_content = 	"Featured image will <em>not</em> be displayed on post pages <br/> " .
+							"Supplied value: '$kuhnian_display_featured_image_on_posts'." ;
+		$cssclass = 'notice-info' ;
+/*		kuhnian_generic_admin_alert( $cssclass, $alert_content ) ; */
+	}
+	else
+	{
+		$alert_content = 	"Invalid preference for whether featured image should be displayed on post pages. <br/>" .
+							"Supplied value: '$kuhnian_display_featured_image_on_posts'. <br/>" .
+							"Value should be either (a) 'display' or (b) 'hide'. <br/>" .
+							'Defaults to: Featured image will <em>not</em> be displayed on post pages.' ;
+		$cssclass = 'notice-warning' ;
+/*		kuhnian_generic_admin_alert( $cssclass, $alert_content ) ;	*/
+	}
+	$css_class_composite = "$css_class_prefix" . "$cssclass" . "$css_class_suffix" ;
+	kuhnian_generic_alert( $css_class_composite, $alert_content ) ;
+}
+
+function kuhnian_generic_alert($cssclass,$content) {
+/*	Issues admin alert with CSS classes .notice and .kuhnian-notice as well as the additional
+	CSS class specified in argument $cssclass. (E.g., $cssclass='notice-warning')
+	The content of the alert is contained in $content.
+	This function will wrap $content (a) first, within _e()  and (b) second within <p> </p>
+*/
+	$prefix = 'kuhnian' ;
+	$css_class_for_theme_admin_notices = 'kuhnian-notice';
+/*	Construct string of CSS classes for alert */
+	$css_classes_for_notice = "notice $css_class_for_theme_admin_notices $cssclass";
+	?>
+		<div class="<?php echo $css_classes_for_notice ?>">
+			<p><?php _e("$content"); ?></p>
+		</div>
+	<?php
+}
+
+/*	Add CSS directly into admin-panel head */
+/*	See https://www.engagewp.com/edit-wordpress-admin-css/ */
+add_action( 'admin_head' , 'kuhnian_custom_css_for_admin_panel' ) ;
+function kuhnian_custom_css_for_admin_panel() {
+	?>
+	<style>
+		div.kuhnian-notice {
+/*			max-width: 500px ;	*/
+		}
+		div.kuhnian-notice p {
+			font-size: 1.25em ;
+		}
+		div.kuhnian-notice.notice-warning p {
+			color: red ;
+		}
+		div.kuhnian-notice p:before {
+			content: "Kuhnian Theme options notice" ;
+			display: block ;
+			font-size: 1.5em ;
+			font-style: bold ;
+			color: white ;
+			background-color: #00a0d2;
+			padding: 0.5em ;
+		}
+	</style>
+<?php }
+
+/***************	END JDR Additions ***************/
+
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
  *
@@ -210,6 +311,8 @@ function kuhn_widgets_init() {
 	) );
 }
 add_action( 'widgets_init', 'kuhn_widgets_init' );
+
+
 
 /**
  * Enqueue scripts and styles.
