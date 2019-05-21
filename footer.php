@@ -6,7 +6,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package Kuhn
+ * @package Kuhnian
  */
 
 ?>
@@ -22,17 +22,17 @@
 						'menu_class'     => 'social-links-menu',
 						'depth'          => 1,
 						'link_before'    => '<span class="screen-reader-text">',
-						'link_after'     => '</span>' . kuhn_get_svg( array( 'icon' => 'chain' ) ),
+						'link_after'     => '</span>' . kuhnian_get_svg( array( 'icon' => 'chain' ) ),
 					) );
 				?>
 			</nav><!-- .social-menu -->
 		<?php } ?>
 		<div class="site-info">
 			<span class="sitemeta">
-				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'kuhn' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s.', 'kuhn' ), 'WordPress' ); ?></a>
+				<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'kuhnian' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s.', 'kuhnian' ), 'WordPress' ); ?></a>
 			</span>
 			<span class="sitemeta">
-				<?php printf( esc_html__( 'Theme: %1$s.', 'kuhn' ), '<a href="https://github.com/mor10/kuhn" rel="nofollow">Kuhn-CSSvars</a>' ); ?>
+				<?php printf( esc_html__( 'Theme: %1$s.', 'kuhnian' ), '<a href="https://github.com/jimratliff/kuhnian" rel="nofollow">Kuhnian</a>' ); ?>
 			</span>
 		</div><!-- .site-info -->
 	</footer><!-- #colophon -->

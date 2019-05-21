@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Kuhn
+ * @package Kuhnian
  */
 
 get_header(); ?>
@@ -23,7 +23,7 @@ get_header(); ?>
 
 		<?php
 
-		echo kuhn_get_the_archive_navigation( 'next' );
+		echo kuhnian_get_the_archive_navigation( 'next' );
 		
 		/* Start the Loop */
 		while ( have_posts() ) : the_post();
@@ -37,7 +37,7 @@ get_header(); ?>
 
 		endwhile;
 
-		echo kuhn_get_the_archive_navigation( 'previous' );
+		echo kuhnian_get_the_archive_navigation( 'previous' );
 
 	else :
 

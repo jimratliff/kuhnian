@@ -9,7 +9,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Kuhn
+ * @package Kuhnian
  */
 
 get_header(); ?>

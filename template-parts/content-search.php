@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Kuhn
+ * @package Kuhnian
  */
 
 ?>
@@ -17,21 +17,21 @@
 		<a href="<?php echo esc_url( get_permalink() ) ?>" rel="bookmark">
 			<?php
 			$thumbnail_alt = 'Go to ' . get_the_title();
-			the_post_thumbnail('kuhn-index', 'alt=' . $thumbnail_alt);
+			the_post_thumbnail('kuhnian-index', 'alt=' . $thumbnail_alt);
 			?>
 		</a>
 	</figure><!-- .featured-image full-bleed -->
 	<?php } ?>
 
 	<header class="entry-header">
-		<?php kuhn_the_category_list(); ?>
+		<?php kuhnian_the_category_list(); ?>
 		<?php the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );	?>
 	</header><!-- .entry-header -->
 
 	<?php
 	if ( 'post' === get_post_type() ) : ?>
 	<div class="entry-meta">
-		<?php kuhn_posted_on(); ?>
+		<?php kuhnian_posted_on(); ?>
 	</div><!-- .entry-meta -->
 	<?php
 	endif; ?>

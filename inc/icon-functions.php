@@ -11,7 +11,7 @@
 /**
  * Add SVG definitions to the footer.
  */
-function kuhn_include_svg_icons() {
+function kuhnian_include_svg_icons() {
 	// Define SVG sprite file.
 	$svg_icons = get_parent_theme_file_path( '/images/svg-icons.svg' );
 
@@ -20,7 +20,7 @@ function kuhn_include_svg_icons() {
 		require_once( $svg_icons );
 	}
 }
-add_action( 'wp_footer', 'kuhn_include_svg_icons', 9999 );
+add_action( 'wp_footer', 'kuhnian_include_svg_icons', 9999 );
 
 /**
  * Return SVG markup.
@@ -34,15 +34,15 @@ add_action( 'wp_footer', 'kuhn_include_svg_icons', 9999 );
  * }
  * @return string SVG markup.
  */
-function kuhn_get_svg( $args = array() ) {
+function kuhnian_get_svg( $args = array() ) {
 	// Make sure $args are an array.
 	if ( empty( $args ) ) {
-		return __( 'Please define default parameters in the form of an array.', 'kuhn' );
+		return __( 'Please define default parameters in the form of an array.', 'kuhnian' );
 	}
 
 	// Define an icon.
 	if ( false === array_key_exists( 'icon', $args ) ) {
-		return __( 'Please define an SVG icon filename.', 'kuhn' );
+		return __( 'Please define an SVG icon filename.', 'kuhnian' );
 	}
 
 	// Set defaults.
@@ -67,9 +67,9 @@ function kuhn_get_svg( $args = array() ) {
 	 *
 	 * However, child themes can use the title and description to add information to non-decorative SVG icons to improve accessibility.
 	 *
-	 * Example 1 with title: <?php echo kuhn_get_svg( array( 'icon' => 'arrow-right', 'title' => __( 'This is the title', 'textdomain' ) ) ); ?>
+	 * Example 1 with title: <?php echo kuhnian_get_svg( array( 'icon' => 'arrow-right', 'title' => __( 'This is the title', 'textdomain' ) ) ); ?>
 	 *
-	 * Example 2 with title and description: <?php echo kuhn_get_svg( array( 'icon' => 'arrow-right', 'title' => __( 'This is the title', 'textdomain' ), 'desc' => __( 'This is the description', 'textdomain' ) ) ); ?>
+	 * Example 2 with title and description: <?php echo kuhnian_get_svg( array( 'icon' => 'arrow-right', 'title' => __( 'This is the title', 'textdomain' ), 'desc' => __( 'This is the description', 'textdomain' ) ) ); ?>
 	 *
 	 * See https://www.paciellogroup.com/blog/2013/12/using-aria-enhance-svg-accessibility/.
 	 */
@@ -124,22 +124,22 @@ function kuhn_get_svg( $args = array() ) {
  * @param  array   $args        wp_nav_menu() arguments.
  * @return string  $item_output The menu item output with social icon.
  */
-function kuhn_nav_menu_social_icons( $item_output, $item, $depth, $args ) {
+function kuhnian_nav_menu_social_icons( $item_output, $item, $depth, $args ) {
 	// Get supported social icons.
-	$social_icons = kuhn_social_links_icons();
+	$social_icons = kuhnian_social_links_icons();
 
 	// Change SVG icon inside social links menu if there is supported URL.
 	if ( 'social' === $args->theme_location ) {
 		foreach ( $social_icons as $attr => $value ) {
 			if ( false !== strpos( $item_output, $attr ) ) {
-				$item_output = str_replace( $args->link_after, '</span>' . kuhn_get_svg( array( 'icon' => esc_attr( $value ) ) ), $item_output );
+				$item_output = str_replace( $args->link_after, '</span>' . kuhnian_get_svg( array( 'icon' => esc_attr( $value ) ) ), $item_output );
 			}
 		}
 	}
 
 	return $item_output;
 }
-add_filter( 'walker_nav_menu_start_el', 'kuhn_nav_menu_social_icons', 10, 4 );
+add_filter( 'walker_nav_menu_start_el', 'kuhnian_nav_menu_social_icons', 10, 4 );
 
 
 /**
@@ -147,7 +147,7 @@ add_filter( 'walker_nav_menu_start_el', 'kuhn_nav_menu_social_icons', 10, 4 );
  *
  * @return array $social_links_icons
  */
-function kuhn_social_links_icons() {
+function kuhnian_social_links_icons() {
 	// Supported social links icons.
 	$social_links_icons = array(
 		'behance.net'     => 'behance',
@@ -194,5 +194,5 @@ function kuhn_social_links_icons() {
 	 *
 	 * @param array $social_links_icons
 	 */
-	return apply_filters( 'kuhn_social_links_icons', $social_links_icons );
+	return apply_filters( 'kuhnian_social_links_icons', $social_links_icons );
 }

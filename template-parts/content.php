@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Kuhn
+ * @package Kuhnian
  */
 
 ?>
@@ -22,13 +22,13 @@
 	?>								<!--Create a figure with image linked to the post-->
 				<figure class="featured-image">
 					<a href="<?php echo esc_url( get_permalink() ) ?>" rel="bookmark">
-						<?php $thumbnail_alt = 'Go to ' . get_the_title(); the_post_thumbnail('kuhn-index', 'alt=' . $thumbnail_alt);?>
+						<?php $thumbnail_alt = 'Go to ' . get_the_title(); the_post_thumbnail('kuhnian-index', 'alt=' . $thumbnail_alt);?>
 					</a>
 				</figure>
 			<?php } else {			// IS a single post
 				if ($kuhnian_display_featured_image_on_posts == 'display') {?>
 					<figure class="featured-image">
-						<?php the_post_thumbnail('kuhn-index'); ?>
+						<?php the_post_thumbnail('kuhnian-index'); ?>
 					</figure>
 				<?php } elseif ($kuhnian_display_featured_image_on_posts == 'hide') {
 				} else {
@@ -41,7 +41,7 @@
 	<?php } ?>
 
 	<header class="entry-header">
-		<?php kuhn_the_category_list(); ?>
+		<?php kuhnian_the_category_list(); ?>
 		<?php
 		if ( is_single() ) :
 			the_title( '<h1 class="entry-title">', '</h1>' );
@@ -54,7 +54,7 @@
 	<?php
 	if ( 'post' === get_post_type() ) : ?>
 	<div class="entry-meta">
-		<?php kuhn_posted_on(); ?>
+		<?php kuhnian_posted_on(); ?>
 	</div><!-- .entry-meta -->
 	<?php
 	endif; ?>
@@ -64,12 +64,12 @@
 		if ( is_singular() ) {
 			the_content( sprintf(
 				/* translators: %s: Name of current post. */
-				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'kuhn' ), array( 'span' => array( 'class' => array() ) ) ),
+				wp_kses( __( 'Continue reading %s <span class="meta-nav">&rarr;</span>', 'kuhnian' ), array( 'span' => array( 'class' => array() ) ) ),
 				the_title( '<span class="screen-reader-text">"', '"</span>', false )
 			) );
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'kuhn' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'kuhnian' ),
 				'after'  => '</div>',
 			) );
 		} else {
@@ -80,7 +80,7 @@
 	<?php
 	if ( is_singular() ) { ?>
 		<footer class="entry-footer">
-			<?php kuhn_entry_footer(); ?>
+			<?php kuhnian_entry_footer(); ?>
 		</footer><!-- .entry-footer -->
 	<?php } ?>
 

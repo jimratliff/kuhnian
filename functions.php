@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Kuhn
+ * @package Kuhnian
  */
 
 if ( ! function_exists( 'kuhnian_setup' ) ) :
@@ -20,9 +20,9 @@ function kuhnian_setup() {
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
 	 * If you're building a theme based on Kuhn, use a find and replace
-	 * to change 'kuhn' to the name of your theme in all the template files.
+	 * to change 'kuhnian' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'kuhn', get_template_directory() . '/languages' );
+	load_theme_textdomain( 'kuhnian', get_template_directory() . '/languages' );
 
 	// Add default posts and comments RSS feed links to head.
 	add_theme_support( 'automatic-feed-links' );
@@ -41,11 +41,11 @@ function kuhnian_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
-	add_image_size( 'kuhn-index', 966, 555, true);
+	add_image_size( 'kuhnian-index', 966, 555, true);
 
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
-		'primary' => esc_html__( 'Primary', 'kuhn' ),
+		'primary' => esc_html__( 'Primary', 'kuhnian' ),
 		'social' => esc_html__( 'Social Media Menu', 'hume' ),
 	) );
 
@@ -183,16 +183,16 @@ function kuhnian_custom_css_for_admin_panel() {
  *
  * @global int $content_width
  */
-function kuhn_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'kuhn_content_width', 640 );
+function kuhnian_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'kuhnian_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'kuhn_content_width', 0 );
+add_action( 'after_setup_theme', 'kuhnian_content_width', 0 );
 
 
 /**
  * Register custom fonts.
  */
-function kuhn_fonts_url() {
+function kuhnian_fonts_url() {
 	$fonts_url = '';
 
 	/**
@@ -200,9 +200,9 @@ function kuhn_fonts_url() {
 	 * supported by Rubik and Roboto Mono translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
-	$rubik = _x( 'on', 'Rubik font: on or off', 'kuhn' );
-	$roboto_mono = _x( 'on', 'Roboto Mono font: on or off', 'kuhn' );
-	$slabo = _x( 'on', 'Slabo 27px font: on or off', 'kuhn' );
+	$rubik = _x( 'on', 'Rubik font: on or off', 'kuhnian' );
+	$roboto_mono = _x( 'on', 'Roboto Mono font: on or off', 'kuhnian' );
+	$slabo = _x( 'on', 'Slabo 27px font: on or off', 'kuhnian' );
 
 	$font_families = array();
 
@@ -236,8 +236,8 @@ function kuhn_fonts_url() {
  * @param string $relation_type  The relation type the URLs are printed.
  * @return array $urls           URLs to print for resource hints.
  */
-function kuhn_resource_hints( $urls, $relation_type ) {
-	if ( wp_style_is( 'kuhn-fonts', 'queue' ) && 'preconnect' === $relation_type ) {
+function kuhnian_resource_hints( $urls, $relation_type ) {
+	if ( wp_style_is( 'kuhnian-fonts', 'queue' ) && 'preconnect' === $relation_type ) {
 		$urls[] = array(
 			'href' => 'https://fonts.gstatic.com',
 			'crossorigin',
@@ -246,7 +246,7 @@ function kuhn_resource_hints( $urls, $relation_type ) {
 
 	return $urls;
 }
-add_filter( 'wp_resource_hints', 'kuhn_resource_hints', 10, 2 );
+add_filter( 'wp_resource_hints', 'kuhnian_resource_hints', 10, 2 );
 
 
 
@@ -261,7 +261,7 @@ add_filter( 'wp_resource_hints', 'kuhn_resource_hints', 10, 2 );
  *                      values in pixels (in that order).
  * @return string A source size value for use in a content image 'sizes' attribute.
  */
-function kuhn_content_image_sizes_attr( $sizes, $size ) {
+function kuhnian_content_image_sizes_attr( $sizes, $size ) {
 	if ( is_singular() ) {
 		$width = $size[0];
 		if ( 610 <= $width ) {
@@ -270,7 +270,7 @@ function kuhn_content_image_sizes_attr( $sizes, $size ) {
 		return $sizes;
 	}
 }
-add_filter( 'wp_calculate_image_sizes', 'kuhn_content_image_sizes_attr', 10, 2 );
+add_filter( 'wp_calculate_image_sizes', 'kuhnian_content_image_sizes_attr', 10, 2 );
 
 
 /**
@@ -284,7 +284,7 @@ add_filter( 'wp_calculate_image_sizes', 'kuhn_content_image_sizes_attr', 10, 2 )
  * @param array $size       Registered image size or flat array of height and width dimensions.
  * @return string A source size value for use in a post thumbnail 'sizes' attribute.
  */
-function kuhn_post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
+function kuhnian_post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
 	if ( is_singular() ) {
 		$attr['sizes'] = '(min-width: 990px) 720px, (min-width: 1300px) 820px, 95vw';
 	} else {
@@ -292,7 +292,7 @@ function kuhn_post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
 	}
 	return $attr;
 }
-add_filter( 'wp_get_attachment_image_attributes', 'kuhn_post_thumbnail_sizes_attr', 10, 3 );
+add_filter( 'wp_get_attachment_image_attributes', 'kuhnian_post_thumbnail_sizes_attr', 10, 3 );
 
 
 /**
@@ -300,45 +300,45 @@ add_filter( 'wp_get_attachment_image_attributes', 'kuhn_post_thumbnail_sizes_att
  *
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
-function kuhn_widgets_init() {
+function kuhnian_widgets_init() {
 	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'kuhn' ),
+		'name'          => esc_html__( 'Sidebar', 'kuhnian' ),
 		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'kuhn' ),
+		'description'   => esc_html__( 'Add widgets here.', 'kuhnian' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
 }
-add_action( 'widgets_init', 'kuhn_widgets_init' );
+add_action( 'widgets_init', 'kuhnian_widgets_init' );
 
 
 
 /**
  * Enqueue scripts and styles.
  */
-function kuhn_scripts() {
+function kuhnian_scripts() {
 	// Enqueue Google Fonts:
-	wp_enqueue_style( 'kuhn-fonts', kuhn_fonts_url() );
+	wp_enqueue_style( 'kuhnian-fonts', kuhnian_fonts_url() );
 
-	wp_enqueue_style( 'kuhn-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'kuhnian-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'kuhn-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151215', true );
-	wp_localize_script( 'kuhn-navigation', 'kuhnScreenReaderText', array(
-		'expand' => __( 'Expand child menu', 'kuhn'),
-		'collapse' => __( 'Collapse child menu', 'kuhn'),
+	wp_enqueue_script( 'kuhnian-navigation', get_template_directory_uri() . '/js/navigation.js', array('jquery'), '20151215', true );
+	wp_localize_script( 'kuhnian-navigation', 'kuhnScreenReaderText', array(
+		'expand' => __( 'Expand child menu', 'kuhnian'),
+		'collapse' => __( 'Collapse child menu', 'kuhnian'),
 	));
 
-	wp_enqueue_script( 'kuhn-functions', get_template_directory_uri() . '/js/functions.js', array('jquery'), '20161201', true );
+	wp_enqueue_script( 'kuhnian-functions', get_template_directory_uri() . '/js/functions.js', array('jquery'), '20161201', true );
 
-	wp_enqueue_script( 'kuhn-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'kuhnian-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'kuhn_scripts' );
+add_action( 'wp_enqueue_scripts', 'kuhnian_scripts' );
 
 /**
  * Implement the Custom Header feature.

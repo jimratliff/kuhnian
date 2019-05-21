@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package kuhn
+ * @package Kuhnian
  */
 
 ?>
@@ -16,12 +16,12 @@
 			<header class="page-header">
 				<h1 class="page-title">
 					<?php
-					if ( is_404() ) { esc_html_e( 'Page not available', 'kuhn' );
+					if ( is_404() ) { esc_html_e( 'Page not available', 'kuhnian' );
 					} else if ( is_search() ) {
 						/* translators: %s = search query */
-						printf( esc_html__( 'Nothing found for &ldquo;%s&rdquo;', 'kuhn'), get_search_query() );
+						printf( esc_html__( 'Nothing found for &ldquo;%s&rdquo;', 'kuhnian'), get_search_query() );
 					} else {
-						esc_html_e( 'Nothing Found', 'kuhn' );
+						esc_html_e( 'Nothing Found', 'kuhnian' );
 					}
 					?>
 				</h1>
@@ -30,21 +30,21 @@
 				<div class="page-content">
 					<?php if ( is_home() && current_user_can( 'publish_posts' ) ) : ?>
 
-						<p><?php printf( wp_kses( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'kuhn' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
+						<p><?php printf( wp_kses( __( 'Ready to publish your first post? <a href="%1$s">Get started here</a>.', 'kuhnian' ), array( 'a' => array( 'href' => array() ) ) ), esc_url( admin_url( 'post-new.php' ) ) ); ?></p>
 
 					<?php elseif ( is_search() ) : ?>
 
-						<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'kuhn' ); ?></p>
+						<p><?php esc_html_e( 'Sorry, but nothing matched your search terms. Please try again with some different keywords.', 'kuhnian' ); ?></p>
 						<?php get_search_form(); ?>
 
 					<?php elseif ( is_404() ) : ?>
 
-						<p><?php esc_html_e( 'You seem to be lost. To find what you are looking for check out the most recent articles below or try a search:', 'kuhn' ); ?></p>
+						<p><?php esc_html_e( 'You seem to be lost. To find what you are looking for check out the most recent articles below or try a search:', 'kuhnian' ); ?></p>
 						<?php get_search_form(); ?>
 
 					<?php else : ?>
 
-						<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'kuhn' ); ?></p>
+						<p><?php esc_html_e( 'It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps searching can help.', 'kuhnian' ); ?></p>
 						<?php get_search_form(); ?>
 
 					<?php endif; ?>

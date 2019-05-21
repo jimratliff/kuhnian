@@ -256,23 +256,23 @@
 
 /* Custom Recent Comments and Recent Posts widgets */
 
-.content-area .widget_kuhn_recent_comments li,
-.content-area .widget_kuhn_recent_posts li {
+.content-area .widget_kuhnian_recent_comments li,
+.content-area .widget_kuhnian_recent_posts li {
 	a {
 		color: black;
 	}
 }
 
-.widget_kuhn_recent_comments li,
-.widget_kuhn_recent_posts li {
+.widget_kuhnian_recent_comments li,
+.widget_kuhnian_recent_posts li {
 	position: relative;
 	padding: 0 0 1em 70px;
 	margin-bottom: 2em;
 	border-bottom: 1px solid #c3c3c3;
 }
 
-.widget_kuhn_recent_comments,
-.widget_kuhn_recent_posts {
+.widget_kuhnian_recent_comments,
+.widget_kuhnian_recent_posts {
 
 	ul {
 		margin-top: 2em;
@@ -307,7 +307,7 @@
 }
 
 
-.widget_kuhn_recent_comments {
+.widget_kuhnian_recent_comments {
 
 	.post-icon img {
 		border-radius: 50px;
@@ -360,7 +360,7 @@
 
 
 /* Custom Recent Posts widget */
-.widget_kuhn_recent_posts {
+.widget_kuhnian_recent_posts {
 
 	.post-icon {
 		width: 50px;
