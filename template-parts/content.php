@@ -12,9 +12,7 @@
 <!--$kuhnian_display_featured_image_on_posts is a flag: whether to display featured image
 	on posts. It takes either 'display' or 'hide'.
 -->
-<?php
-	$kuhnian_display_featured_image_on_posts = get_option('kuhnian_display_featured_image_on_single_posts','OOPS!') ;
-?>
+
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php 
 		if ( has_post_thumbnail() ) {
@@ -26,15 +24,11 @@
 					</a>
 				</figure>
 			<?php } else {			// IS a single post
-				if ($kuhnian_display_featured_image_on_posts == 'display') {?>
+				if ( kuhnian_boolean_display_featured_image_on_posts() ) {?>
 					<figure class="featured-image">
 						<?php the_post_thumbnail('kuhnian-index'); ?>
 					</figure>
-				<?php } elseif ($kuhnian_display_featured_image_on_posts == 'hide') {
-				} else {
-					$error_message_kuhnian_display_featured_image_on_posts=
-						"Illegal value for option kuhnian_display_featured_image_on_posts: '$kuhnian_display_featured_image_on_posts'";
-/*					add_action('admin_notices','kuhnian_error_message_invalid_display_featured_image_preference'); */
+				<?php } else {
 				}
 			}?>
 	<!-- </figure> --><!-- .featured-image full-bleed -->
