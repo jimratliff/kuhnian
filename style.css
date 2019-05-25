@@ -1336,94 +1336,94 @@ a {
 
 /* Custom Recent Comments and Recent Posts widgets */
 /* line 261, sass/site/secondary/_widgets.scss */
-.content-area .widget_kuhn_recent_comments li a,
-.content-area .widget_kuhn_recent_posts li a {
+.content-area .widget_kuhnian_recent_comments li a,
+.content-area .widget_kuhnian_recent_posts li a {
   color: black; }
 
 /* line 266, sass/site/secondary/_widgets.scss */
-.widget_kuhn_recent_comments li,
-.widget_kuhn_recent_posts li {
+.widget_kuhnian_recent_comments li,
+.widget_kuhnian_recent_posts li {
   position: relative;
   padding: 0 0 1em 70px;
   margin-bottom: 2em;
   border-bottom: 1px solid #c3c3c3; }
 
 /* line 277, sass/site/secondary/_widgets.scss */
-.widget_kuhn_recent_comments ul,
-.widget_kuhn_recent_posts ul {
+.widget_kuhnian_recent_comments ul,
+.widget_kuhnian_recent_posts ul {
   margin-top: 2em;
   margin-bottom: 0;
   padding-bottom: 0; }
 /* line 283, sass/site/secondary/_widgets.scss */
-.widget_kuhn_recent_comments li:last-child,
-.widget_kuhn_recent_posts li:last-child {
+.widget_kuhnian_recent_comments li:last-child,
+.widget_kuhnian_recent_posts li:last-child {
   margin-bottom: 0;
   border-bottom: none;
   padding-bottom: 0; }
 /* line 289, sass/site/secondary/_widgets.scss */
-.widget_kuhn_recent_comments a,
-.widget_kuhn_recent_posts a {
+.widget_kuhnian_recent_comments a,
+.widget_kuhnian_recent_posts a {
   display: block;
   font-size: 1em; }
   /* line 293, sass/site/secondary/_widgets.scss */
-  .widget_kuhn_recent_comments a:focus, .widget_kuhn_recent_comments a:hover,
-  .widget_kuhn_recent_posts a:focus,
-  .widget_kuhn_recent_posts a:hover {
+  .widget_kuhnian_recent_comments a:focus, .widget_kuhnian_recent_comments a:hover,
+  .widget_kuhnian_recent_posts a:focus,
+  .widget_kuhnian_recent_posts a:hover {
     text-decoration: none;
     border-bottom: none; }
 /* line 300, sass/site/secondary/_widgets.scss */
-.widget_kuhn_recent_comments .post-icon,
-.widget_kuhn_recent_posts .post-icon {
+.widget_kuhnian_recent_comments .post-icon,
+.widget_kuhnian_recent_posts .post-icon {
   position: absolute;
   left: 0;
   width: 50px;
   height: 50px; }
 
 /* line 312, sass/site/secondary/_widgets.scss */
-.widget_kuhn_recent_comments .post-icon img {
+.widget_kuhnian_recent_comments .post-icon img {
   border-radius: 50px; }
 /* line 316, sass/site/secondary/_widgets.scss */
-.widget_kuhn_recent_comments .title,
-.widget_kuhn_recent_comments .original-title {
+.widget_kuhnian_recent_comments .title,
+.widget_kuhnian_recent_comments .original-title {
   margin-top: 0;
   margin-bottom: .8em;
   font-size: .7em;
   line-height: 1.4em; }
 /* line 324, sass/site/secondary/_widgets.scss */
-.widget_kuhn_recent_comments .excerpt {
+.widget_kuhnian_recent_comments .excerpt {
   margin-top: 0;
   margin-bottom: .8em;
   font-size: .8em;
   font-weight: 400;
   line-height: 1.4em; }
   /* line 331, sass/site/secondary/_widgets.scss */
-  .widget_kuhn_recent_comments .excerpt:before {
+  .widget_kuhnian_recent_comments .excerpt:before {
     content: "“"; }
   /* line 334, sass/site/secondary/_widgets.scss */
-  .widget_kuhn_recent_comments .excerpt:after {
+  .widget_kuhnian_recent_comments .excerpt:after {
     content: "”"; }
 /* line 339, sass/site/secondary/_widgets.scss */
-.widget_kuhn_recent_comments .original-title {
+.widget_kuhnian_recent_comments .original-title {
   color: #7D7D7D;
   font-weight: 500; }
   /* line 343, sass/site/secondary/_widgets.scss */
-  .widget_kuhn_recent_comments .original-title span {
+  .widget_kuhnian_recent_comments .original-title span {
     font-weight: normal;
     font-style: italic; }
 /* line 351, sass/site/secondary/_widgets.scss */
-.widget_kuhn_recent_comments a:focus .original-title,
-.widget_kuhn_recent_comments a:hover .original-title {
+.widget_kuhnian_recent_comments a:focus .original-title,
+.widget_kuhnian_recent_comments a:hover .original-title {
   text-decoration: underline; }
 /* line 354, sass/site/secondary/_widgets.scss */
-.widget_kuhn_recent_comments a:focus .title,
-.widget_kuhn_recent_comments a:focus .excerpt,
-.widget_kuhn_recent_comments a:hover .title,
-.widget_kuhn_recent_comments a:hover .excerpt {
+.widget_kuhnian_recent_comments a:focus .title,
+.widget_kuhnian_recent_comments a:focus .excerpt,
+.widget_kuhnian_recent_comments a:hover .title,
+.widget_kuhnian_recent_comments a:hover .excerpt {
   color: inherit; }
 
 /* Custom Recent Posts widget */
 /* line 365, sass/site/secondary/_widgets.scss */
-.widget_kuhn_recent_posts .post-icon {
+.widget_kuhnian_recent_posts .post-icon {
   width: 50px;
   height: 50px;
   font-size: 1.3em;
@@ -1432,19 +1432,19 @@ a {
   color: #fff;
   background: #333333; }
 /* line 375, sass/site/secondary/_widgets.scss */
-.widget_kuhn_recent_posts .title {
+.widget_kuhnian_recent_posts .title {
   margin: 0;
   font-size: .9em;
   line-height: 1.4em; }
 /* line 381, sass/site/secondary/_widgets.scss */
-.widget_kuhn_recent_posts .meta {
+.widget_kuhnian_recent_posts .meta {
   margin: 0 0 .8em;
   font-size: .7em;
   text-transform: uppercase;
   color: #7D7D7D; }
 /* line 388, sass/site/secondary/_widgets.scss */
-.widget_kuhn_recent_posts a:hover .title,
-.widget_kuhn_recent_posts a:focus .title {
+.widget_kuhnian_recent_posts a:hover .title,
+.widget_kuhnian_recent_posts a:focus .title {
   text-decoration: underline; }
 
 /*--------------------------------------------------------------
