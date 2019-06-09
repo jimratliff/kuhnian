@@ -152,11 +152,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   --font-pre: var(--khn-font-family-pre) ;
   /***	New CSS variables beyond any Sass variables defined in Kuhn ****/
   /*	Font families	*/
-  --khn-font-family-serif: "PT Serif", "Times New Roman", serif ;
+  --khn-font-family-serif: "Lora", "Times New Roman", serif ;
   --khn-font-family-sans-serif: "PT Sans", Arial, Helvetica, sans-serif ;
-  --khn-font-family-sans-serif-alt: "Open Sans", Arial, Helvetica, sans-serif ;
+  /*	--khn-font-family-sans-serif-alt:	"Open Sans", Arial, Helvetica, sans-serif	; */
   --khn-font-family-code: "PT Mono", monospace ;
   --khn-font-family-pre: "PT Mono", monospace ;
+  /*	The below cursive font should probably be relegated to a child theme	*/
   --khn-font-family-cursive: "Petit Formal Script", cursive ;
   --khn-font-family-body: var(--khn-font-family-serif) ;
   --khn-font-family-headings: var(--khn-font-family-sans-serif) ;
