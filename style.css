@@ -166,11 +166,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   --khn-font-family-menus: var(--khn-font-family-sans-serif-alt) ;
   --khn-font-family-site-logo: var(--khn-font-family-cursive) ; }
 
-/*
-	Text domain as GUID for later global search-and-replace
-	39777124-e777-4818-91fd-2a96fff8ed73
-*/
-/* line 10, sass/variables-site/_custom-properties.scss */
+/* line 6, sass/variables-site/_custom-properties.scss */
 :root {
   /*	--font-line-height-body:	1.5	; */
   --font-line-height-body: var(--khn-scalar-line-height-base) ;
