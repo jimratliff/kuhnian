@@ -1,10 +1,6 @@
 /*	New partial, specific to the Kuhn-CSSvars fork, and to Kuhnian, to hold the new CSS variables  */
 @import "custom-properties-colors";
 @import "custom-properties-font-families";
-/*
-	Text domain as GUID for later global search-and-replace
-	39777124-e777-4818-91fd-2a96fff8ed73
-*/
 
 
 :root {
@@ -22,8 +18,11 @@
 	--khn-length-margin-top-paragraph:		0		;
 	--khn-length-margin-bottom-paragraph:	0.6em	;
 
+/*	For html root level */
+	--khn-font-size-base:				1rem	; 
+	
 /*	Lengths for paragraphs */
-	--khn-font-size-base:				16px	;
+	--khn-font-size-body:				1.0rem	;
 	--khn-scalar-line-height-base:		1.5		;
 /*	Lengths for paragraphs */
 	
