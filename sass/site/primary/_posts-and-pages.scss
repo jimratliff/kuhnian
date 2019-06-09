@@ -195,7 +195,7 @@ body:not(.archive-view) {
 .entry-meta,
 .entry-footer {
 	font-family: $font__meta;
-	font-size: 80%;
+	font-size: var(--khn-font-size-entry-meta);
 	color: hsl(0, 0%, 25%);
 
 	a {
