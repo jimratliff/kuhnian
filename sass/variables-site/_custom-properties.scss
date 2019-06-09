@@ -41,7 +41,7 @@
 	--khn-scalar-line-height-article-title:					1.2							;
 /*	For post-article or page-article title on its own page */
 	--khn-font-family-article-title-on-its-page:			var(--khn-font-family-serif);
-	--khn-font-size-article-title-on-its-page:				2.25em						;
+	--khn-font-size-article-title-on-its-page:				1.5em						;
 	--khn-scalar-line-height-article-title-on-its-page:		var(--khn-scalar-line-height-article-title);
 	--khn-font-size-article-title-on-its-page-medscreen:	2.5em						;
 	--khn-color-text-article-title-on-its-page:				var(--khn-color-theme-tertiary)	;
@@ -50,7 +50,7 @@
 	--khn-text-decoration-article-title-on-its-page:		none						;
 /*	For post-article's title on an archive page */
 	--khn-font-family-post-title-on-archive-page:			var(--khn-font-family-serif);
-	--khn-font-size-post-title-on-archive-page:				1.3em						;
+	--khn-font-size-post-title-on-archive-page:				1.5rem						;
 	--khn-scalar-line-height-title-on-archive-page:			var(--khn-scalar-line-height-article-title);
 	--khn-color-text-post-title-on-archive-page:			var(--khn-color-theme-tertiary)	;
 	--khn-text-align-post-title-on-archive-page:			center						;
@@ -59,6 +59,7 @@
 
 /*	Margins */
 /* Margins for entry-meta */
+	--khn-font-size-entry-meta:								90%							;
 	--khn-margins-entry-meta:								1em 0em 1em						;
 	--khn-margins-entry-meta-medium-screen:					var(--khn-margins-entry-meta)	;
 
