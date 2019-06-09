@@ -35,7 +35,9 @@ require get_template_directory() . '/inc/extras.php';
 /**
  * Customizer additions.
  */
-require get_template_directory() . '/inc/customizer.php';
+// Temporarily disable the customizer.php from Kuhn and replace it
+//require get_template_directory() . '/inc/customizer.php';
+require get_template_directory() . '/inc/customizer_kuhnian.php';
 
 /**
  * Load Jetpack compatibility file.
