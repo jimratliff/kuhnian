@@ -54,17 +54,3 @@ require get_template_directory() . '/inc/icon-functions.php';
  */
 require get_template_directory() . "/widgets/recent-comments.php";
 require get_template_directory() . "/widgets/recent-posts.php";
-
-/*	Add custom CSS to admin area 
-	See https://css-tricks.com/snippets/wordpress/apply-custom-css-to-admin-area/
-	See https://davidwalsh.name/add-custom-css-wordpress-admin
-*/
-// add_action('admin_head', 'kuhnian_custom_CSS_for_admin_area');
-// 
-// function kuhnian_custom_CSS_for_admin_area() {
-//   echo '<style>
-// 	p.zzyzx-settings-section-pre-input-text {
-// 		color: red ;
-//     } 
-//   </style>';
-// }
