@@ -9,9 +9,11 @@
 
 ?>
 
-<!--$kuhnian_display_featured_image_on_posts is a flag: whether to display featured image
-	on posts. It takes either 'display' or 'hide'.
+<!--kuhnian_boolean_display_featured_image_on_posts() is a flag: whether to display featured image
+	on posts. 
 -->
+<!--$kuhnian_boolean_display_featured_image_on_posts should be incorporated into theme preferences-->
+<?php $kuhnian_boolean_display_featured_image_on_posts = false ; ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php 
@@ -24,7 +26,7 @@
 					</a>
 				</figure>
 			<?php } else {			// IS a single post
-				if ( kuhnian_boolean_display_featured_image_on_posts() ) {?>
+				if ( $kuhnian_boolean_display_featured_image_on_posts ) {?>
 					<figure class="featured-image">
 						<?php the_post_thumbnail('kuhnian-index'); ?>
 					</figure>
