@@ -8,14 +8,7 @@
  */
  
  locate_template( array( 'inc/kuhnian_setup.php' ), true, true ) ;
-// locate_template( array( 'inc/kuhnian_error_processing.php' ), true, true ) ;
  locate_template( array( 'inc/kuhnian_register_fonts.php' ), true, true ) ;
-// locate_template( array( 'inc/kuhnian_create_theme_options_page.php' ), true, true ) ;
-// locate_template( array( 'inc/kuhnian_create_theme_options_page_Arshad.php' ), true, true ) ;
-// locate_template( array( 'inc/arshad_verbatim_code.php' ), true, true ) ;
-// locate_template( array( 'inc/theme_page_aj_clarke.php' ), true, true ) ;
-// locate_template( array( 'inc/Anna_Johansson_verbatim_code.php' ), true, true ) ;
-// locate_template( array( 'inc/Matthew_Ray_options_page.php' ), true, true ) ;
 
 /**
  * Implement the Custom Header feature.
