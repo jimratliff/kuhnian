@@ -95,8 +95,33 @@ class Kuhnian_Theme_Customizer {
 		return ( $input === true ) ? true : false ;
 	}
 
+	public function boolean_display_featured_image_on_posts(): bool {
+//		Returns true if theme_mod $id_setting_always_show_featured_image_in_post is true;
+//			otherwise, returns false (or, $default_value, if for some reason get_theme_mod
+//			can't fetch a value)
+//		This is defined within the class to give access to $id_setting_always_show_featured_image_in_post.
+//			Can be paired to an outside-of-class helper to make calling this less wordy and less
+//			dependent on implementation by this class
+//		E.g., see function kuhnian_boolean_display_featured_image_on_posts()
+		$default_value = false ;
+		$return_value = get_theme_mod(
+			$this->id_setting_always_show_featured_image_in_post ,
+			$default_value
+		)
+		return $return_value ;
+	}
+
 } // End class Kuhnian_Theme_Customizer
 new Kuhnian_Theme_Customizer() ;
+
+function kuhnian_boolean_display_featured_image_on_posts(): bool {
+//		Returns true if theme_mod $id_setting_always_show_featured_image_in_post is true;
+//			otherwise, returns false
+	$return_value = Kuhnian_Theme_Customizer->boolean_display_featured_image_on_posts() ;
+	return $return_value ;
+}
+
+
 
 
 
