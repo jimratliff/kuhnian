@@ -1,6 +1,8 @@
 .main-navigation {
 	display: block;
-	font-family: $font__meta;
+/*	font-family: $font__meta;  */
+	font-family: var(--khn-font-family-menus);
+	font-weight: var(--khn-font-weight-menus);
 	font-size: 90%;
 	clear: left;
 
@@ -21,7 +23,8 @@
 			}
 
 		a {
-			color: white;
+			color: var(--khn-color-theme-primary-contrast);
+/*			color: white; */
 		}
 
 		ul {
