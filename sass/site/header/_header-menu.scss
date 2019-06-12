@@ -171,7 +171,8 @@ button.dropdown-toggle {
 
 			a {
 				padding: .4em 1em;
-				background: hsla(0,0%,100%,.05);
+				background: var(--khn-color-background-main-navigation);
+/*				background: hsla(0,0%,100%,.05); */
 
 			}
 
