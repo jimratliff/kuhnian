@@ -179,6 +179,10 @@ add_action( 'widgets_init', 'kuhnian_widgets_init' );
 function kuhnian_scripts() {
 	// Enqueue Google Fonts:
 	wp_enqueue_style( 'kuhnian-fonts', kuhnian_fonts_url() );
+//	Makes separate query to load additional fonts because I inexplicably failed to add
+//		using function kuhnian_fonts_url() 
+	wp_enqueue_style( 'kuhnian-additional-fonts', kuhnian_additional_fonts_url() );
+	
 
 	wp_enqueue_style( 'kuhnian-style', get_stylesheet_uri() );
 
