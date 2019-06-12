@@ -45,8 +45,13 @@ if ( ! function_exists ( 'kuhnian_fonts_url' ) ) :
 		$use_font_lora		= _x( 'on', 'Lora font: on or off' );
 		$use_font_PT_mono	= _x( 'on', 'PT Mono font: on or off' );
 		$use_font_PT_sans	= _x( 'on', 'PT Sans font: on or off' );
+		
+//		Unsuccessful attempt to add "Open Sans" via what looks like the identifical
+//			machinery as the other fonts are loaded.
+// 		$use_font_open_sans	= _x( 'on', 'Open Sans font: on or off' );
 
-		$font_families = array();
+		$font_families = array(); 
+
 //		Correcting nonfatal logic error in original Kuhn font:
 //			The below tests check whether flag is NOT "off", but later check follows 
 //			to load the fonts only if one of the switches is actually "on"
