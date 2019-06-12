@@ -96,4 +96,9 @@
 	--khn-outline-link-hover:			none	;
 	--khn-outline-link-focus:			none	;
 	--khn-outline-link-active:			none	;
+/*	Site header colors */
+	--khn-color-background-site-header:		var(--khn-color-theme-primary)	;
+	--khn-color-text-site-header:			var(--khn-color-theme-primary-contrast)	;
+/*	--khn-color-background-main-navigation:		hsla(0,0%,100%,.05) ; */
+	--khn-color-background-main-navigation:		hsla(0,0%,100%,0) ;
 }
