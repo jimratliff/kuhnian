@@ -80,7 +80,9 @@
 
  function kuhnian_the_category_list() {
  	/* translators: used between list items, there is a space after the comma */
- 	$categories_list = get_the_category_list( esc_html__( ', ', 'kuhnian' ) );
+ 	$inter_category_separation_character = kuhnian_character_separate_categories() ;
+// 	$categories_list = get_the_category_list( esc_html__( ', ', 'kuhnian' ) );  // Original Kuhn-theme code
+ 	$categories_list = get_the_category_list( $inter_category_separation_character );
  	if ( $categories_list && kuhnian_categorized_blog() ) {
  		printf( '<div class="cat-links">' . esc_html__( '%1$s', 'kuhnian' ) . '</div>', $categories_list ); // WPCS: XSS OK.
  	}
