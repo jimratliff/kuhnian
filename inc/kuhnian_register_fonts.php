@@ -47,6 +47,9 @@ if ( ! function_exists ( 'kuhnian_fonts_url' ) ) :
 		$use_font_PT_sans	= _x( 'on', 'PT Sans font: on or off' );
 
 		$font_families = array();
+//		Correcting nonfatal logic error in original Kuhn font:
+//			The below tests check whether flag is NOT "off", but later check follows 
+//			to load the fonts only if one of the switches is actually "on"
 		$at_least_one_font_to_load = false ;
 
 		if ( 'off' !== $use_font_lora ) {
@@ -65,6 +68,7 @@ if ( ! function_exists ( 'kuhnian_fonts_url' ) ) :
 			$at_least_one_font_to_load = true ;
 		
 
+//		Corrects nonfatal logic error
 		if ( $at_least_one_font_to_load ) {
 //		if ( in_array( 'on', array( $use_font_lora, $use_font_PT_mono, $use_font_PT_sans ) ) ) {
 
