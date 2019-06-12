@@ -1,8 +1,10 @@
 .site-header {
 	position: relative;
 	padding: 1em;
-	color: white;
-	background-color: $color__grey_black;
+/*	color: white; */
+	color: var(--khn-color-text-site-header);
+/*	background-color: $color__grey_black;	*/
+	background-color: var(--khn-color-background-site-header);
 	border-bottom: 1px solid $color__background-hr;
 
 	@media screen and (min-width: $query__small) {
