@@ -63,7 +63,7 @@ function kuhnian_get_svg( $args = array() ) {
 	$aria_labelledby = '';
 
 	/*
-	 * Kuhn doesn't use the SVG title or description attributes; non-decorative icons are described with .screen-reader-text.
+	 * Kuhnian doesn't use the SVG title or description attributes; non-decorative icons are described with .screen-reader-text.
 	 *
 	 * However, child themes can use the title and description to add information to non-decorative SVG icons to improve accessibility.
 	 *
