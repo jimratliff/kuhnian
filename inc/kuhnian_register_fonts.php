@@ -31,21 +31,26 @@ if ( ! function_exists ( 'kuhnian_fonts_url' ) ) :
 		$use_font_PT_sans = _x( 'on', 'PT Sans font: on or off', 'kuhnian' );
 
 		$font_families = array();
+		$at_least_one_font_to_load = false ;
 
 		if ( 'off' !== $use_font_lora ) {
 			$font_families[] = 'Lora:400,400i,700,700i';
+			$at_least_one_font_to_load = true ;
 		}
 
 		if ( 'off' !== $use_font_PT_mono ) {
 			$font_families[] = 'PT+Mono';
+			$at_least_one_font_to_load = true ;
 		}
 
 		if ( 'off' !== $use_font_PT_sans ) {
 			$font_families[] = 'PT+Sans';
 		}		
+			$at_least_one_font_to_load = true ;
 		
 
-		if ( in_array( 'on', array($use_font_lora, $use_font_PT_mono, $use_font_PT_sans ) ) ) {
+		if ( $at_least_one_font_to_load ) {
+//		if ( in_array( 'on', array( $use_font_lora, $use_font_PT_mono, $use_font_PT_sans ) ) ) {
 
 			$query_args = array(
 				'family' => urlencode( implode( '|', $font_families ) ),
