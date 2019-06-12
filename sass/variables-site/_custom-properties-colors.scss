@@ -36,6 +36,7 @@
 	--khn-color-theme-whitish:					white		;
 	--khn-color-theme-grayish:					#777		;
 	--khn-color-theme-dark-grayish:				#222		;
+	--khn-color-theme-very-dark-grayish:		#111		;
 	--khn-color-theme-primary-contrast:			white		;
 	--khn-color-theme-secondary-contrast:		white		;
 	--khn-color-theme-tertiary-contrast:		white		;
@@ -50,7 +51,7 @@
 	--khn-color-theme-dark-violetish:			#7800cd		;
 	--khn-color-theme-dark-magentaish:			#9a009a		;
 /*	Text colors */
-	--khn-color-text-default:					var(--khn-color-theme-dark-grayish)			;
+	--khn-color-text-default:					var(--khn-color-theme-very-dark-grayish)	;
 	--khn-color-text-subdued:					var(--khn-color-theme-grayish)				;
 	--khn-color-code-meta:						var(--khn-color-theme-dark-blueish)			;
 	--khn-color-code:							var(--khn-color-theme-new-midnight-blueish)	;
