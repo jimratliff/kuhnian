@@ -20,6 +20,8 @@
 					</a>
 				</figure>
 			<?php } else {			// IS a single post
+//				The function kuhnian_boolean_display_featured_image_on_posts() queries theme_mod
+//					whether to display automatically the featured image on a post's page
 				if ( kuhnian_boolean_display_featured_image_on_posts() ) {?>
 					<figure class="featured-image">
 						<?php the_post_thumbnail('kuhnian-index'); ?>
