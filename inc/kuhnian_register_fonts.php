@@ -42,9 +42,9 @@ if ( ! function_exists ( 'kuhnian_fonts_url' ) ) :
 		$slabo = _x( 'on', 'Slabo 27px font: on or off', 'kuhnian' );
 */
 
-		$use_font_lora = _x( 'on', 'Lora font: on or off', 'kuhnian' );
-		$use_font_PT_mono = _x( 'on', 'PT Mono font: on or off', 'kuhnian' );
-		$use_font_PT_sans = _x( 'on', 'PT Sans font: on or off', 'kuhnian' );
+		$use_font_lora		= _x( 'on', 'Lora font: on or off' );
+		$use_font_PT_mono	= _x( 'on', 'PT Mono font: on or off' );
+		$use_font_PT_sans	= _x( 'on', 'PT Sans font: on or off' );
 
 		$font_families = array();
 		$at_least_one_font_to_load = false ;
