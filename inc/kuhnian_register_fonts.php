@@ -69,10 +69,16 @@ if ( ! function_exists ( 'kuhnian_fonts_url' ) ) :
 
 		if ( 'off' !== $use_font_PT_sans ) {
 			$font_families[] = 'PT+Sans';
-		}		
 			$at_least_one_font_to_load = true ;
-		
+		}
 
+//		Unsuccessful attempt to add "Open Sans" via what looks like the identifical
+//			machinery as the other fonts are loaded.
+// 		if ( 'off' !== $use_font_open_sans ) {
+// 			$font_families[] = 'Open+Sans';
+// 			$at_least_one_font_to_load = true ;
+// 		}
+		
 //		Corrects nonfatal logic error
 		if ( $at_least_one_font_to_load ) {
 //		if ( in_array( 'on', array( $use_font_lora, $use_font_PT_mono, $use_font_PT_sans ) ) ) {
@@ -84,7 +90,6 @@ if ( ! function_exists ( 'kuhnian_fonts_url' ) ) :
 
 			$fonts_url = add_query_arg( $query_args, 'https://fonts.googleapis.com/css' );
 		}
-
 		return esc_url_raw( $fonts_url );
 	}
 endif;
