@@ -8,6 +8,22 @@
  * Register custom fonts.
  */
 
+/*	For reasons that remain inexplicable, I could not successfully add "Open Sans" or any
+	additional Google fonts to the below function kuhnian_fonts_url(). (When I added the
+	additional machinery, the new font failed to be loaded by the document.)
+	
+	Thus, at least for now, I add Noto Sans (my updated choice for menu font) as a
+	standalone fetch.
+*/
+if ( ! function_exists ( 'kuhnian_additional_fonts_url' ) ) :
+	function kuhnian_additional_fonts_url() {
+		$fonts_url = 'https://fonts.googleapis.com/css?family=Noto+Sans:700' ;
+		$escaped_fonts_url = esc_url_raw( $fonts_url );
+		return $escaped_fonts_url ;
+	}
+endif;
+
+
 if ( ! function_exists ( 'kuhnian_fonts_url' ) ) :
 	function kuhnian_fonts_url() {
 		$fonts_url = '';
