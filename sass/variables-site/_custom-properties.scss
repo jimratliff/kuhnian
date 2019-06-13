@@ -4,12 +4,11 @@
 
 
 :root {
-/*	--font-line-height-body:	1.5	; */
+/*	For html root level */
+	--khn-font-size-base:				1rem	;
+	
 	--font-line-height-body:	var(--khn-scalar-line-height-base)	;
 	--font-line-height-pre:		1.6	;	
-
-
-/***	New CSS variables beyond any Sass variables defined in Kuhn ****/
 
 /***	PARAGRAPH SETTINGS	***/
 	--khn-font-size-paragraph:				1em		;
@@ -18,31 +17,23 @@
 	--khn-length-margin-top-paragraph:		0		;
 	--khn-length-margin-bottom-paragraph:	0.6em	;
 
-/*	For html root level */
-	--khn-font-size-base:				1rem	; 
-	
 /*	Lengths for paragraphs */
 	--khn-font-size-body:				1.0rem	;
 	--khn-scalar-line-height-base:		1.5		;
-/*	Lengths for paragraphs */
-	
-	
-
-	
-/*	Lengths for entry-title */
-	--khn-font-size-entry-title:			1.3em	;
 	
 /*	Styling of post/page article titles */
 /*	Post-article titles appear both on single-post pages and archive pages; Page-article titles appear, I think, only on the page itself (not including menus, etc.)
 *	I want (a) a post-article title on a single-post page to be styled identically to (b) a page-article title on that page.
 */
+	--khn-font-size-entry-title:							1.3em	;
 	--khn-margin-entry-title:								0.125em 0 0.25em			;
 	--khn-scalar-line-height-article-title:					1.2							;
 /*	For post-article or page-article title on its own page */
 	--khn-font-family-article-title-on-its-page:			var(--khn-font-family-serif);
 	--khn-font-size-article-title-on-its-page:				1.5em						;
-	--khn-scalar-line-height-article-title-on-its-page:		var(--khn-scalar-line-height-article-title);
 	--khn-font-size-article-title-on-its-page-medscreen:	2.5em						;
+	--khn-scalar-line-height-article-title-on-its-page:		var(--khn-scalar-line-height-article-title);
+					;
 	--khn-color-text-article-title-on-its-page:				var(--khn-color-theme-tertiary)	;
 	--khn-text-align-article-title-on-its-page:				center						;
 	--khn-text-transform-article-title-on-its-page:			none						;
