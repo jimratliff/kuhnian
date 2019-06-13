@@ -124,7 +124,8 @@ button.dropdown-toggle {
 .menu-toggle {
 	display: block;
 	width: 100%;
-	margin: 1.2em 1.2em 0 0;
+/*	margin: 1.2em 1.2em 0 0; */
+	margin: auto;
 	padding: .6em .8em;
 	font-size: 80%;
 	text-transform: uppercase;
@@ -136,12 +137,30 @@ button.dropdown-toggle {
 	border-radius: 0;
 }
 
+button.menu-toggle {
+	width: var(--khn-width-hamburger-button);
+	margin: auto;
+}
+
+button.menu-toggle:hover,
+button.menu-toggle:active,
+button.menu-toggle:focus,
+ 	{
+		background: var(--khn-color-theme-secondary); 
+		color: var (--khn-color-background-site-header);
+	}
+
+
+
 .kuhnian-hamburger div {
 	width: var(--khn-width-hamburger-div);
 	height: var(--khn-height-hamburger-div);
 	background-color: var(--khn-color-text-site-header);
 	margin: var(--khn-margins-top-bottom-hamburger-div) 0;
 }
+
+nav#site-navigation {margin: auto;}
+
 /* Toggle small menu and children on */
 .toggled-on ul,
 .children.toggled-on,
