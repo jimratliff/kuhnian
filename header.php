@@ -43,7 +43,15 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation" role="navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'kuhnian' ); ?></button>
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+				<!--<?php esc_html_e( 'Primary Menu', 'kuhnian' );?> -->
+				<!--<svg class="icon icon-bars" role="img"><title><?phpesc_html_e( 'Primary Menu', 'kuhnian' );?></title> <use href="#icon-bars" xlink:href="#icon-bars"></use></svg>-->
+				<div class="kuhnian-hamburger" title="<?php esc_html_e( 'Primary Menu' );?>">
+					<div></div>
+					<div></div>
+					<div></div>
+				</div>
+			</button>
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
