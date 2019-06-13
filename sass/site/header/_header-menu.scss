@@ -136,6 +136,12 @@ button.dropdown-toggle {
 	border-radius: 0;
 }
 
+.kuhnian-hamburger div {
+	width: var(--khn-width-hamburger-div);
+	height: var(--khn-height-hamburger-div);
+	background-color: var(--khn-color-text-site-header);
+	margin: var(--khn-margins-top-bottom-hamburger-div) 0;
+}
 /* Toggle small menu and children on */
 .toggled-on ul,
 .children.toggled-on,
