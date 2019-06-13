@@ -5,7 +5,8 @@
 /*	--font-meta:				'Roboto Mono', sans-serif	;	*/
 /*	--font-code:				Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace	; */
 /*	--font-pre:					"Courier 10 Pitch", Courier, monospace	; */
-	--font-main:				var(--khn-font-family-sans-serif)	;
+/*	--font-main:				var(--khn-font-family-sans-serif)	; */
+	--font-main:				var(--khn-font-family-sans-serif-alt)	;
 	--font-meta:				var(--khn-font-family-metadata)		;
 	--font-code:				var(--khn-font-family-code)			;
 	--font-pre:					var(--khn-font-family-pre)			;
@@ -14,17 +15,19 @@
 /*	Font families	*/
 	--khn-font-family-serif:			"Lora", "Times New Roman", serif		;
 	--khn-font-family-sans-serif:		"PT Sans", Arial, Helvetica, sans-serif		;
-/*	--khn-font-family-sans-serif-alt:	"Open Sans", Arial, Helvetica, sans-serif	; */
+	--khn-font-family-sans-serif-alt:	"Noto Sans", Arial, Helvetica, sans-serif	;  
+/*	--khn-font-family-sans-serif-alt:	"Open Sans", Arial, Helvetica, sans-serif	;   */
 	--khn-font-family-code:				"PT Mono", monospace						;
 	--khn-font-family-pre:				"PT Mono", monospace						;
 /*	The below cursive font should probably be relegated to a child theme	*/
 	--khn-font-family-cursive:			"Petit Formal Script", cursive				;
 
-	--khn-font-family-body:								var(--khn-font-family-serif)		;
-	--khn-font-family-headings:							var(--khn-font-family-sans-serif)	;
+	--khn-font-family-body:					var(--khn-font-family-serif)		;
+	--khn-font-family-headings:				var(--khn-font-family-sans-serif)	;
 
 	--khn-font-family-generic-elements:		var(--khn-font-family-sans-serif)		;
 	--khn-font-family-metadata:				var(--khn-font-family-sans-serif)		;
 	--khn-font-family-menus:				var(--khn-font-family-sans-serif-alt)	;
+	--khn-font-weight-menus:				700; /* For Noto Sans 700 */
 	--khn-font-family-site-logo:			var(--khn-font-family-cursive)			;
 }
