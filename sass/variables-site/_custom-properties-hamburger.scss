@@ -1,0 +1,84 @@
+/*	New partial, specific to the Kuhn-CSSvars fork, and to Kuhnian, to hold the new CSS
+	variables 
+*/
+
+:root {
+//  Background color for entire hamburger button. Typically this would be transparent, but you can change it for diagnostic purposes because this area corresponds to the clickable area.
+    --kuhnian-hamburger-color-background:	transparent ;
+
+//	Outline styling of button 
+//	Can be useful for diagnostic purposes. The outlined area appears to be the same as the background-color area, which is the same as the clickable region. In any case, these definitions are important in order to override the user-agent defaults.
+    --kuhnian-hamburger-outline-style: none ;
+    --kuhnian-hamburger-outline-width: 1px ;
+    --kuhnian-hamburger-outline-color: black ;
+
+//	At a minimum, specifying border styles serves the purpose of overriding the default border specifications from the user-agent
+    --kuhnian-hamburger-border-style:	none ;
+    --kuhnian-hamburger-border-width:	1px ;
+    --kuhnian-hamburger-border-color:	purple ;
+
+//  Positions/pads the hamburger
+    --kuhnian-hamburger-position-type:	absolute ;
+//  If --kuhnian-hamburger-position-type is "absolute", these specify location of hamburger relative to its containing block (i.e., the ancestor relative to which the element is positioned.)
+
+    --kuhnian-hamburger-left:  10em ;
+    --kuhnian-hamburger-top:   20em ;
+
+//  Sets padding around the button. Importantly, padding is included in the clickable area of the button.
+    --kuhnian-hamburger-padding-top:	15px ;
+    --kuhnian-hamburger-padding-bottom: 15px ;
+    --kuhnian-hamburger-padding-left:	15px ;
+    --kuhnian-hamburger-padding-right:	15px ;
+    --kuhnian-hamburger-padding:		var( --kuhnian-hamburger-padding-top )
+                                        var( --kuhnian-hamburger-padding-right )
+                                        var( --kuhnian-hamburger-padding-bottom )
+                                        var( --kuhnian-hamburger-padding-left ) ;
+
+    --kuhnian-hamburger-margin-top:		10px ;
+    --kuhnian-hamburger-margin-bottom:	10px ;
+    --kuhnian-hamburger-margin-left:	10px ;
+    --kuhnian-hamburger-margin-right:	10px ;
+    --kuhnian-hamburger-margin:         var( --kuhnian-hamburger-margin-top )
+                                        var( --kuhnian-hamburger-margin-right )
+                                        var( --kuhnian-hamburger-margin-bottom )
+                                        var( --kuhnian-hamburger-margin-left ) ;
+
+//  The common width/height of the slices are determined by --kuhnian-hamburger-width and --kuhnian-hamburger-slice-thickness
+    --kuhnian-hamburger-width:				44px ;
+    --kuhnian-hamburger-slice-thickness:	5px ;
+    --kuhnian-hamburger-gap-between-slices:	10px ;
+
+//  The below larger sizes exist for diagnosing the clickable area
+    --kuhnian-hamburger-width:				88px ;
+    --kuhnian-hamburger-slice-thickness: 	10px ;
+    --kuhnian-hamburger-gap-between-slices: 20px ;
+
+//  Calculates total width and height, respectively, of hamburger, including any padding. Used to provide the horizontal dimension for the enclosing button in its hamburger configuration.
+    --kuhnian-hamburger-total-width-not-X:
+        calc( var( --kuhnian-hamburger-width ) +
+              var( --kuhnian-hamburger-padding-left ) + 
+              var( --kuhnian-hamburger-padding-right )
+            ) ;
+
+    --kuhnian-hamburger-total-height-not-X:
+        calc( var( --kuhnian-hamburger-slice-thickness ) + 
+              2 * var( --kuhnian-hamburger-gap-between-slices ) +
+              var( --kuhnian-hamburger-padding-bottom ) + 
+              var( --kuhnian-hamburger-padding-top )
+        ) ;
+//  Calculates total height, including padding, of the hamburger in its "X" configuration
+//	Note: 0.70707 = 1/SQRT(2). Ensures sufficient clickable area vertically.
+    --kuhnian-hamburger-total-height-as-X:
+        calc(	0.70707 * var( --kuhnian-hamburger-width ) +
+              var( --kuhnian-hamburger-padding-bottom ) + 
+              var( --kuhnian-hamburger-padding-top )
+            ) ;
+
+//	Determines color of the hamburger slices
+    --kuhnian-hamburger-color-hamburger:		red ;
+//	Controls how rounded the corners of the hamburger bars are 
+    --kuhnian-hamburger-border-radius:			7px ;
+
+//	Controls speed of animation 
+    --kuhnian-hamburger-transition-time:		600ms ;
+}

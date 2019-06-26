@@ -1,0 +1,76 @@
+button#nav-toggle {
+    background-color:	var( --kuhnian-hamburger-color-background ) ;
+    position:	        var( --kuhnian-hamburger-position-type ) ;
+    cursor:           	pointer ;
+    left:	            var( --kuhnian-hamburger-left ) ;
+    top:				var( --kuhnian-hamburger-top ) ;
+    padding:			var( --kuhnian-hamburger-padding ) ; 
+    margin:		        var( --kuhnian-hamburger-margin ) ;
+    width: 				var( --kuhnian-hamburger-total-width-not-X ) ;
+    height: 			var( --kuhnian-hamburger-total-height-not-X ) ;
+    outline-style: 		var( --kuhnian-hamburger-outline-style ) ;
+    outline-width: 		var( --kuhnian-hamburger-outline-width ) ;
+    outline-color: 		var( --kuhnian-hamburger-outline-color ) ; 
+    border-style: 		var( --kuhnian-hamburger-border-style ) ;
+    border-width: 		var( --kuhnian-hamburger-border-width ) ;
+    border-color: 		var( --kuhnian-hamburger-border-color ) ; 
+}
+
+.kuhnian-hamburger span,
+.kuhnian-hamburger span:before,
+.kuhnian-hamburger span:after {
+    display:		    block ;
+    cursor: 		    pointer ; 
+    height:			    var( --kuhnian-hamburger-slice-thickness ) ;
+    width:			    var( --kuhnian-hamburger-width ) ;
+    border-radius:  	var( --kuhnian-hamburger-border-radius ) ;
+    background:	    	var( --kuhnian-hamburger-color-hamburger ) ;
+    content:		    '' ;
+    transition: 	  	all var( --kuhnian-hamburger-transition-time ) ease-in-out;
+}
+
+.kuhnian-hamburger span {
+//	Getting the right combination of values for the `position` property for both this middle slice and the top and bottom slices was tricky and somewhat trial-and-error. The challenge was getting the three vertically stacked bars to sit vertically centered within the button's clickable area.
+//	I benefited from both:
+//		jamesplease's answer https://stackoverflow.com/a/14196691/8401379 to ":before, :after and padding," Stack Overflow, January 7, 2013, and
+//		Jacob Gray's answer https://stackoverflow.com/a/31969031/8401379 to "Pseudo-elements and padding," Stack Overflow, August 12, 2015,
+//		both of whom suggested, effectively, in different contexts, making the middle slice position:relative and making the ::before and ::after pseudo elements position:absolute. These choices solved the problem.
+
+    position: relative ;
+}
+
+//	The :before pseudo element is the top slice
+.kuhnian-hamburger span:before {
+//	Raises the top slice above the top of its containing block (viz., the middle slice)
+    position: absolute ;
+    top:	    calc( -1 * var( --kuhnian-hamburger-gap-between-slices ) ) ; 
+}
+
+//	The :after pseudo element is the bottom slice
+.kuhnian-hamburger span:after {
+    position:	absolute ;
+//	Lowers the bottom slice through the bottom of the containing block (viz., the middle slice)
+    bottom:	  calc( -1 * var(--kuhnian-hamburger-gap-between-slices) ) ; 
+}
+
+//	Implements animation by defining the hamburger-active class, which is added to the button's list of classes by JavaScript when the button (icon) is clicked. The CSS will smoothly transition to the new values for the redefined properties
+button#nav-toggle.hamburger-active {
+//	I am electing NOT to switch the height of the "X" button to its higher value when it's an "X" (compared to when it's a hamburger). This caused the following problem: "Note a remaining animation glitch. After the hamburger changes to an "X," it remains in that state until clicked. When clicked, the "X" takes a small sudden jump up a few pixels and then smoothly untransforms into a hamburger. I haven't figured out what causes the jump."
+//	Thus I comment out the next redefinition of `height`: 
+//	height:     var( --kuhnian-hamburger-total-height-as-X ) ; 
+}
+
+.kuhnian-hamburger.hamburger-active span {
+//	Fades out the middle slice
+    background-color: transparent;
+}
+.kuhnian-hamburger.hamburger-active span:before {
+//  (a) Translates downwards the top slice to coincide with the original middle slice, and simultaneously (b) rotates the top slice clockwise
+    transform:	translateY( var( --kuhnian-hamburger-gap-between-slices ) ) 
+                rotate(45deg);
+}
+.kuhnian-hamburger.hamburger-active span:after {
+//	(a) Translates upwards the bottom slice to coincide with the original middle slice, and simultaneously (b) rotates the bottom slice counterclockwise
+    transform:	translateY( calc( -1 * var(--kuhnian-hamburger-gap-between-slices) ) )
+                rotate(-45deg);
+}
