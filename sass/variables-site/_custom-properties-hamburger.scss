@@ -49,9 +49,9 @@
     --khn-hamburger-gap-between-slices:	10px ;
 
 //  The below larger sizes exist for diagnosing the clickable area
-    --khn-hamburger-width:				88px ;
-    --khn-hamburger-slice-thickness: 	10px ;
-    --khn-hamburger-gap-between-slices: 20px ;
+//    --khn-hamburger-width:				88px ;
+//    --khn-hamburger-slice-thickness: 	10px ;
+//    --khn-hamburger-gap-between-slices: 20px ;
 
 //  Calculates total width and height, respectively, of hamburger, including any padding. Used to provide the horizontal dimension for the enclosing button in its hamburger configuration.
     --khn-hamburger-total-width-not-X:
@@ -75,7 +75,7 @@
             ) ;
 
 //	Determines color of the hamburger slices
-    --khn-hamburger-color-hamburger:		red ;
+    --khn-hamburger-color-hamburger:		var( --khn-color-text-site-header ) ;
 //	Controls how rounded the corners of the hamburger bars are 
     --khn-hamburger-border-radius:			7px ;
 
