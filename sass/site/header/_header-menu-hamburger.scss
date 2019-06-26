@@ -54,22 +54,22 @@ button#site-navigation {
 }
 
 //	Implements animation by defining the hamburger-active class, which is added to the button's list of classes by JavaScript when the button (icon) is clicked. The CSS will smoothly transition to the new values for the redefined properties
-button#site-navigation.hamburger-active {
+button#site-navigation.toggled-on {
 //	I am electing NOT to switch the height of the "X" button to its higher value when it's an "X" (compared to when it's a hamburger). This caused the following problem: "Note a remaining animation glitch. After the hamburger changes to an "X," it remains in that state until clicked. When clicked, the "X" takes a small sudden jump up a few pixels and then smoothly untransforms into a hamburger. I haven't figured out what causes the jump."
 //	Thus I comment out the next redefinition of `height`: 
 //	height:     var( --khn-hamburger-total-height-as-X ) ; 
 }
 
-.kuhnian-hamburger.hamburger-active span {
+.kuhnian-hamburger.toggled-on span {
 //	Fades out the middle slice
     background-color: transparent;
 }
-.kuhnian-hamburger.hamburger-active span:before {
+.kuhnian-hamburger.toggled-on span:before {
 //  (a) Translates downwards the top slice to coincide with the original middle slice, and simultaneously (b) rotates the top slice clockwise
     transform:	translateY( var( --khn-hamburger-gap-between-slices ) ) 
                 rotate(45deg);
 }
-.kuhnian-hamburger.hamburger-active span:after {
+.kuhnian-hamburger.toggled-on span:after {
 //	(a) Translates upwards the bottom slice to coincide with the original middle slice, and simultaneously (b) rotates the bottom slice counterclockwise
     transform:	translateY( calc( -1 * var(--khn-hamburger-gap-between-slices) ) )
                 rotate(-45deg);
