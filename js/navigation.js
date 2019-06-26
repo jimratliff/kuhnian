@@ -12,6 +12,7 @@
 
 		// Add dropdown toggle that displays child menu items.
 		var dropdownToggle = $( '<button />', { 'class': 'dropdown-toggle', 'aria-expanded': false })
+//			.append( $( '<span />', { 'class': 'dropdown-symbol', text: '+' }) )
 			.append( $( '<span />', { 'class': 'dropdown-symbol', text: '+' }) )
 			.append( $( '<span />', { 'class': 'screen-reader-text', text: kuhnScreenReaderText.expand }) );
 
