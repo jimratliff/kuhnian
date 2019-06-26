@@ -46,7 +46,7 @@
 <!--	Comment out original <button> code and add kuhnian-hamburger class
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
 -->
-			<button class="menu-toggle kuhnian-hamburger" aria-controls="primary-menu" aria-expanded="false">
+			<button class="menu-toggle kuhnian-hamburger" aria-controls="primary-menu" aria-expanded="false"><span></span></button>
 				<!--<?php esc_html_e( 'Primary Menu', 'kuhnian' );?> -->
 				<!--<svg class="icon icon-bars" role="img"><title><?phpesc_html_e( 'Primary Menu', 'kuhnian' );?></title> <use href="#icon-bars" xlink:href="#icon-bars"></use></svg>-->
 <!-- Comment out static-hamburger code
@@ -55,8 +55,8 @@
 					<div></div>
 					<div></div>
 				</div>
--->
 			</button>
+-->
 			<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
