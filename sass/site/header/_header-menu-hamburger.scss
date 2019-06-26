@@ -1,4 +1,4 @@
-button#nav-toggle {
+button#site-navigation {
     background-color:	var( --kuhnian-hamburger-color-background ) ;
     position:	        var( --kuhnian-hamburger-position-type ) ;
     cursor:           	pointer ;
@@ -42,8 +42,8 @@ button#nav-toggle {
 //	The :before pseudo element is the top slice
 .kuhnian-hamburger span:before {
 //	Raises the top slice above the top of its containing block (viz., the middle slice)
-    position: absolute ;
-    top:	    calc( -1 * var( --kuhnian-hamburger-gap-between-slices ) ) ; 
+    position:	absolute ;
+    top:		calc( -1 * var( --kuhnian-hamburger-gap-between-slices ) ) ; 
 }
 
 //	The :after pseudo element is the bottom slice
@@ -54,7 +54,7 @@ button#nav-toggle {
 }
 
 //	Implements animation by defining the hamburger-active class, which is added to the button's list of classes by JavaScript when the button (icon) is clicked. The CSS will smoothly transition to the new values for the redefined properties
-button#nav-toggle.hamburger-active {
+button#site-navigation.hamburger-active {
 //	I am electing NOT to switch the height of the "X" button to its higher value when it's an "X" (compared to when it's a hamburger). This caused the following problem: "Note a remaining animation glitch. After the hamburger changes to an "X," it remains in that state until clicked. When clicked, the "X" takes a small sudden jump up a few pixels and then smoothly untransforms into a hamburger. I haven't figured out what causes the jump."
 //	Thus I comment out the next redefinition of `height`: 
 //	height:     var( --kuhnian-hamburger-total-height-as-X ) ; 
