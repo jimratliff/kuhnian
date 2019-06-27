@@ -1,4 +1,4 @@
-button#site-navigation {
+nav#site-navigation button.kuhnian-hamburger {
     background-color:	var( --khn-hamburger-color-background ) ;
     position:	        var( --khn-hamburger-position-type ) ;
     cursor:           	pointer ;
@@ -16,9 +16,9 @@ button#site-navigation {
     border-color: 		var( --khn-hamburger-border-color ) ; 
 }
 
-.kuhnian-hamburger span,
-.kuhnian-hamburger span:before,
-.kuhnian-hamburger span:after {
+button.kuhnian-hamburger > span,
+button.kuhnian-hamburger > span:before,
+button.kuhnian-hamburger > span:after {
     display:		    block ;
     cursor: 		    pointer ; 
     height:			    var( --khn-hamburger-slice-thickness ) ;
@@ -60,16 +60,16 @@ button#site-navigation.toggled-on {
 //	height:     var( --khn-hamburger-total-height-as-X ) ; 
 }
 
-.kuhnian-hamburger.toggled-on span {
+nav#site-navigation.toggled-on button.kuhnian-hamburger span {
 //	Fades out the middle slice
     background-color: transparent;
 }
-.kuhnian-hamburger.toggled-on span:before {
+nav#site-navigation.toggled-on button.kuhnian-hamburger span:before {
 //  (a) Translates downwards the top slice to coincide with the original middle slice, and simultaneously (b) rotates the top slice clockwise
     transform:	translateY( var( --khn-hamburger-gap-between-slices ) ) 
                 rotate(45deg);
 }
-.kuhnian-hamburger.toggled-on span:after {
+nav#site-navigation.toggled-on button.kuhnian-hamburger span:after {
 //	(a) Translates upwards the bottom slice to coincide with the original middle slice, and simultaneously (b) rotates the bottom slice counterclockwise
     transform:	translateY( calc( -1 * var(--khn-hamburger-gap-between-slices) ) )
                 rotate(-45deg);

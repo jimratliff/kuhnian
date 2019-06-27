@@ -10,25 +10,25 @@
 //	Can be useful for diagnostic purposes. The outlined area appears to be the same as the background-color area, which is the same as the clickable region. In any case, these definitions are important in order to override the user-agent defaults.
     --khn-hamburger-outline-style: none ;
     --khn-hamburger-outline-width: 1px ;
-    --khn-hamburger-outline-color: black ;
+    --khn-hamburger-outline-color: powderblue ;
 
 //	At a minimum, specifying border styles serves the purpose of overriding the default border specifications from the user-agent
     --khn-hamburger-border-style:	none ;
     --khn-hamburger-border-width:	1px ;
-    --khn-hamburger-border-color:	purple ;
+    --khn-hamburger-border-color:	rebeccapurple ;
 
 //  Positions/pads the hamburger
-    --khn-hamburger-position-type:	absolute ;
+    --khn-hamburger-position-type:	relative ;
 //  If --khn-hamburger-position-type is "absolute", these specify location of hamburger relative to its containing block (i.e., the ancestor relative to which the element is positioned.)
 
-    --khn-hamburger-left:  10em ;
-    --khn-hamburger-top:   20em ;
+    --khn-hamburger-left:  0em ;
+    --khn-hamburger-top:   0em ;
 
 //  Sets padding around the button. Importantly, padding is included in the clickable area of the button.
-    --khn-hamburger-padding-top:	15px ;
-    --khn-hamburger-padding-bottom: 15px ;
-    --khn-hamburger-padding-left:	15px ;
-    --khn-hamburger-padding-right:	15px ;
+    --khn-hamburger-padding-top:	0px ;
+    --khn-hamburger-padding-bottom: 0px ;
+    --khn-hamburger-padding-left:	0px ;
+    --khn-hamburger-padding-right:	0px ;
     --khn-hamburger-padding:		var( --khn-hamburger-padding-top )
                                         var( --khn-hamburger-padding-right )
                                         var( --khn-hamburger-padding-bottom )
@@ -36,8 +36,8 @@
 
     --khn-hamburger-margin-top:		10px ;
     --khn-hamburger-margin-bottom:	10px ;
-    --khn-hamburger-margin-left:	10px ;
-    --khn-hamburger-margin-right:	10px ;
+    --khn-hamburger-margin-left:	auto ;
+    --khn-hamburger-margin-right:	auto ;
     --khn-hamburger-margin:         var( --khn-hamburger-margin-top )
                                         var( --khn-hamburger-margin-right )
                                         var( --khn-hamburger-margin-bottom )
@@ -45,8 +45,8 @@
 
 //  The common width/height of the slices are determined by --khn-hamburger-width and --khn-hamburger-slice-thickness
     --khn-hamburger-width:				44px ;
-    --khn-hamburger-slice-thickness:	5px ;
-    --khn-hamburger-gap-between-slices:	10px ;
+    --khn-hamburger-slice-thickness:	3px ;
+    --khn-hamburger-gap-between-slices:	8px ;
 
 //  The below larger sizes exist for diagnosing the clickable area
 //    --khn-hamburger-width:				88px ;
