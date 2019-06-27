@@ -1,9 +1,7 @@
 .main-navigation {
 	display: block;
-/*	font-family: $font__meta;  */
 	font-family: var(--khn-font-family-menus);
 	font-weight: var(--khn-font-weight-menus);
-/*	font-size: 90%; */
 	font-size: var(--khn-font-size-main-navigation);
 	clear: left;
 
@@ -25,7 +23,6 @@
 
 		a {
 			color: var(--khn-color-theme-primary-contrast);
-/*			color: white; */
 		}
 
 		ul {
@@ -130,9 +127,7 @@ button.dropdown-toggle {
 	font-size: 80%;
 	text-transform: uppercase;
 	color: var(--khn-color-text-site-header); 
-/*	color: white;  */
 	background-color: var(--khn-color-background-main-navigation); 
-/*	background-color: $color__text-main; */
 	border: none;
 	border-radius: 0;
 }
