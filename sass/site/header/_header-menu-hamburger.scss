@@ -26,7 +26,14 @@ button.kuhnian-hamburger > span:after {
     border-radius:  	var( --khn-hamburger-border-radius ) ;
     background:	    	var( --khn-hamburger-color-hamburger ) ;
     content:		    '' ;
-    transition: 	  	all var( --khn-hamburger-transition-time ) ease-in-out;
+/*    transition: 	  	all var( --khn-hamburger-transition-time ) ease-in-out; */
+}
+
+button.kuhnian-hamburger > span ,
+button.kuhnian-hamburger > span:before ,
+button.kuhnian-hamburger > span:after ,
+ul#primary-menu {
+	transition: 	  	all var( --khn-hamburger-transition-time ) ease-in-out;
 }
 
 .kuhnian-hamburger span {
