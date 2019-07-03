@@ -48,8 +48,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Galleries
 --------------------------------------------------------------*/
 /*	New partial, specific to the Kuhn-CSSvars fork, and to Kuhnian, to hold the new CSS variables  */
-/*	New partial, specific to the Kuhn-CSSvars fork, and to Kuhnian, to hold the new CSS variables  */
-/* line 2, sass/variables-site/_custom-properties-colors.scss */
+/*	New partial, specific to the Kuhn-CSSvars fork, and to Kuhnian, to hold the new CSS
+	variables 
+*/
+/*	Not all color-related CSS variables are defined here. Some are defined along with their
+	related properties
+*/
+/* line 7, sass/variables-site/_custom-properties-colors.scss */
 :root {
   /***	Refactors partial _colors.scss ****/
   /*	Specific colors */
@@ -87,6 +92,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   --khn-color-theme-whitish: white ;
   --khn-color-theme-grayish: #777 ;
   --khn-color-theme-dark-grayish: #222 ;
+  --khn-color-theme-very-dark-grayish: #111 ;
   --khn-color-theme-primary-contrast: white ;
   --khn-color-theme-secondary-contrast: white ;
   --khn-color-theme-tertiary-contrast: white ;
@@ -101,7 +107,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   --khn-color-theme-dark-violetish: #7800cd ;
   --khn-color-theme-dark-magentaish: #9a009a ;
   /*	Text colors */
-  --khn-color-text-default: var(--khn-color-theme-dark-grayish) ;
+  --khn-color-text-default: var(--khn-color-theme-very-dark-grayish) ;
   --khn-color-text-subdued: var(--khn-color-theme-grayish) ;
   --khn-color-code-meta: var(--khn-color-theme-dark-blueish) ;
   --khn-color-code: var(--khn-color-theme-new-midnight-blueish) ;
@@ -136,7 +142,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   --khn-outline-link-visited: none ;
   --khn-outline-link-hover: none ;
   --khn-outline-link-focus: none ;
-  --khn-outline-link-active: none ; }
+  --khn-outline-link-active: none ;
+  /*	Site header colors */
+  --khn-color-background-site-header: var(--khn-color-theme-primary) ;
+  --khn-color-text-site-header: var(--khn-color-theme-primary-contrast) ;
+  /*	--khn-color-background-main-navigation:		hsla(0,0%,100%,.05) ; */
+  --khn-color-background-main-navigation: hsla(0,0%,100%,0) ; }
 
 /*	New partial, specific to the Kuhn-CSSvars fork, and to Kuhnian, to hold the new CSS variables  */
 /* line 2, sass/variables-site/_custom-properties-font-families.scss */
@@ -146,7 +157,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   /*	--font-meta:				'Roboto Mono', sans-serif	;	*/
   /*	--font-code:				Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace	; */
   /*	--font-pre:					"Courier 10 Pitch", Courier, monospace	; */
-  --font-main: var(--khn-font-family-sans-serif) ;
+  /*	--font-main:				var(--khn-font-family-sans-serif)	; */
+  --font-main: var(--khn-font-family-sans-serif-alt) ;
   --font-meta: var(--khn-font-family-metadata) ;
   --font-code: var(--khn-font-family-code) ;
   --font-pre: var(--khn-font-family-pre) ;
@@ -154,7 +166,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   /*	Font families	*/
   --khn-font-family-serif: "Lora", "Times New Roman", serif ;
   --khn-font-family-sans-serif: "PT Sans", Arial, Helvetica, sans-serif ;
-  /*	--khn-font-family-sans-serif-alt:	"Open Sans", Arial, Helvetica, sans-serif	; */
+  --khn-font-family-sans-serif-alt: "Noto Sans", Arial, Helvetica, sans-serif ;
+  /*	--khn-font-family-sans-serif-alt:	"Open Sans", Arial, Helvetica, sans-serif	;   */
   --khn-font-family-code: "PT Mono", monospace ;
   --khn-font-family-pre: "PT Mono", monospace ;
   /*	The below cursive font should probably be relegated to a child theme	*/
@@ -164,39 +177,91 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   --khn-font-family-generic-elements: var(--khn-font-family-sans-serif) ;
   --khn-font-family-metadata: var(--khn-font-family-sans-serif) ;
   --khn-font-family-menus: var(--khn-font-family-sans-serif-alt) ;
+  --khn-font-weight-menus: 700;
+  /* For Noto Sans 700 */
   --khn-font-family-site-logo: var(--khn-font-family-cursive) ; }
 
-/* line 6, sass/variables-site/_custom-properties.scss */
+/*	New partial, specific to the Kuhn-CSSvars fork, and to Kuhnian, to hold the new CSS
+	variables 
+*/
+/* line 5, sass/variables-site/_custom-properties-hamburger.scss */
 :root {
-  /*	--font-line-height-body:	1.5	; */
+  --khn-hamburger-color-background: transparent ;
+  --khn-hamburger-outline-style: none ;
+  --khn-hamburger-outline-width: 1px ;
+  --khn-hamburger-outline-color: powderblue ;
+  --khn-hamburger-border-style: none ;
+  --khn-hamburger-border-width: 1px ;
+  --khn-hamburger-border-color: rebeccapurple ;
+  --khn-hamburger-position-type: relative ;
+  --khn-hamburger-left: 0em ;
+  --khn-hamburger-top: 0em ;
+  --khn-hamburger-padding-top: 0px ;
+  --khn-hamburger-padding-bottom: 0px ;
+  --khn-hamburger-padding-left: 0px ;
+  --khn-hamburger-padding-right: 0px ;
+  --khn-hamburger-padding: var( --khn-hamburger-padding-top )
+                                      var( --khn-hamburger-padding-right )
+                                      var( --khn-hamburger-padding-bottom )
+                                      var( --khn-hamburger-padding-left ) ;
+  --khn-hamburger-margin-top: 10px ;
+  --khn-hamburger-margin-bottom: 10px ;
+  --khn-hamburger-margin-left: auto ;
+  --khn-hamburger-margin-right: auto ;
+  --khn-hamburger-margin: var( --khn-hamburger-margin-top )
+                                      var( --khn-hamburger-margin-right )
+                                      var( --khn-hamburger-margin-bottom )
+                                      var( --khn-hamburger-margin-left ) ;
+  --khn-hamburger-width: 44px ;
+  --khn-hamburger-slice-thickness: 3px ;
+  --khn-hamburger-gap-between-slices: 8px ;
+  --khn-hamburger-total-width-not-X:
+      calc( var( --khn-hamburger-width ) +
+            var( --khn-hamburger-padding-left ) +
+            var( --khn-hamburger-padding-right )
+          ) ;
+  --khn-hamburger-total-height-not-X:
+      calc( var( --khn-hamburger-slice-thickness ) +
+            2 * var( --khn-hamburger-gap-between-slices ) +
+            var( --khn-hamburger-padding-bottom ) +
+            var( --khn-hamburger-padding-top )
+      ) ;
+  --khn-hamburger-total-height-as-X:
+      calc( 0.70707 * var( --khn-hamburger-width ) +
+            var( --khn-hamburger-padding-bottom ) +
+            var( --khn-hamburger-padding-top )
+          ) ;
+  --khn-hamburger-color-hamburger: var( --khn-color-text-site-header ) ;
+  --khn-hamburger-border-radius: 7px ;
+  --khn-hamburger-transition-time: 600ms ; }
+
+/* line 7, sass/variables-site/_custom-properties.scss */
+:root {
+  /*	For html root level */
+  --khn-font-size-base: 1rem ;
   --font-line-height-body: var(--khn-scalar-line-height-base) ;
   --font-line-height-pre: 1.6 ;
-  /***	New CSS variables beyond any Sass variables defined in Kuhn ****/
   /***	PARAGRAPH SETTINGS	***/
   --khn-font-size-paragraph: 1em ;
   --khn-line-height-paragraph: 1.5 ;
   --khn-length-indent-paragraph: 1.0em ;
   --khn-length-margin-top-paragraph: 0 ;
   --khn-length-margin-bottom-paragraph: 0.6em ;
-  /*	For html root level */
-  --khn-font-size-base: 1rem ;
   /*	Lengths for paragraphs */
   --khn-font-size-body: 1.0rem ;
   --khn-scalar-line-height-base: 1.5 ;
-  /*	Lengths for paragraphs */
-  /*	Lengths for entry-title */
-  --khn-font-size-entry-title: 1.3em ;
   /*	Styling of post/page article titles */
   /*	Post-article titles appear both on single-post pages and archive pages; Page-article titles appear, I think, only on the page itself (not including menus, etc.)
   *	I want (a) a post-article title on a single-post page to be styled identically to (b) a page-article title on that page.
   */
+  --khn-font-size-entry-title: 1.3em ;
   --khn-margin-entry-title: 0.125em 0 0.25em ;
   --khn-scalar-line-height-article-title: 1.2 ;
   /*	For post-article or page-article title on its own page */
   --khn-font-family-article-title-on-its-page: var(--khn-font-family-serif);
   --khn-font-size-article-title-on-its-page: 1.5em ;
-  --khn-scalar-line-height-article-title-on-its-page: var(--khn-scalar-line-height-article-title);
   --khn-font-size-article-title-on-its-page-medscreen: 2.5em ;
+  --khn-scalar-line-height-article-title-on-its-page: var(--khn-scalar-line-height-article-title);
   --khn-color-text-article-title-on-its-page: var(--khn-color-theme-tertiary) ;
   --khn-text-align-article-title-on-its-page: center ;
   --khn-text-transform-article-title-on-its-page: none ;
@@ -219,7 +284,15 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   --khn-display-comments-link: none ;
   /*	Content */
   /*	Separator between elements in entry-meta (byline, etc.) */
-  --khn-content-entry-meta-separator: " ★ " ; }
+  --khn-content-entry-meta-separator: " ★ " ;
+  /*	Navigation Hamburger icon */
+  --khn-margins-top-bottom-hamburger-div: 4px ;
+  --khn-width-hamburger-button: 4em;
+  --khn-width-hamburger-div: 2.5em;
+  --khn-height-hamburger-div: 2px;
+  /*	Navigation menu */
+  --khn-font-size-main-navigation: 0.9rem;
+  --khn-content-before-main-navigation-children: '• ' ; }
 
 /*
 $color__grey_black: hsl(210, 10%, 15%);
@@ -259,6 +332,7 @@ $color__border-button-focus: #aaa #bbb #bbb;
 $color__border-input: #ccc;
 $color__border-abbr: #666;
 */
+/* From original Kuhn font, which I've refactored with CSS variables */
 /*
 $font__main: 'Rubik', sans-serif;
 $font__meta: 'Roboto Mono', sans-serif;
@@ -502,9 +576,6 @@ button,
 input,
 select,
 textarea {
-  /*	color: $color__text-main; */
-  /*	font-family: $font__main;	*/
-  /*	line-height: $font__line-height-body; */
   color: var(--khn-color-text-default);
   font-family: var(--khn-font-family-body);
   font-size: var(--khn-font-size-body);
@@ -525,31 +596,43 @@ textarea {
 h1, h2, h3, h4, h5, h6 {
   clear: both;
   font-weight: 700;
-  line-height: 1.3em; }
+  line-height: 1.3em;
+  margin-bottom: 0em;
+  margin-top: 0em; }
 
-/* line 7, sass/typography/_headings.scss */
+/* line 9, sass/typography/_headings.scss */
 h1 {
   font-size: 3em; }
 
-/* line 11, sass/typography/_headings.scss */
+/* line 13, sass/typography/_headings.scss */
 h2 {
-  font-size: 2.6em; }
-
-/* line 15, sass/typography/_headings.scss */
-h3 {
-  font-size: 2.2em; }
+  font-size: 2.6em;
+  color: var(--khn-color-text-h2);
+  font-size: 1.7rem; }
 
 /* line 19, sass/typography/_headings.scss */
+h3 {
+  font-size: 2.2em;
+  color: var(--khn-color-text-h3);
+  font-size: 1.375rem; }
+
+/* line 25, sass/typography/_headings.scss */
 h4 {
-  font-size: 2em; }
+  font-size: 2em;
+  color: var(--khn-color-text-h4);
+  font-size: 1.1875rem; }
 
-/* line 23, sass/typography/_headings.scss */
+/* line 31, sass/typography/_headings.scss */
 h5 {
-  font-size: 1.8em; }
+  font-size: 1.8em;
+  color: var(--khn-color-text-h5);
+  font-size: 1.1rem; }
 
-/* line 27, sass/typography/_headings.scss */
+/* line 37, sass/typography/_headings.scss */
 h6 {
-  font-size: 1.6em; }
+  font-size: 1.6em;
+  color: var(--khn-color-text-h6);
+  font-size: 1.0rem; }
 
 /* line 1, sass/typography/_copy.scss */
 p {
@@ -1588,8 +1671,8 @@ a {
 .site-header {
   position: relative;
   padding: 1em;
-  color: white;
-  background-color: var(--color-grey-black);
+  color: var(--khn-color-text-site-header);
+  background-color: var(--khn-color-background-site-header);
   border-bottom: 1px solid var(--color-background-hr); }
   @media screen and (min-width: 600px) {
     /* line 1, sass/site/header/_header.scss */
@@ -1621,7 +1704,7 @@ a {
 
 /* line 38, sass/site/header/_header.scss */
 .site-title {
-  margin: 0 0 .25em;
+  margin: 0 0 0.25em;
   padding: 0;
   font-size: 1.6em;
   font-weight: 900;
@@ -1671,26 +1754,27 @@ Header Menu
 /* line 1, sass/site/header/_header-menu.scss */
 .main-navigation {
   display: block;
-  font-family: var(--khn-font-family-metadata);
-  font-size: 90%;
+  font-family: var(--khn-font-family-menus);
+  font-weight: var(--khn-font-weight-menus);
+  font-size: var(--khn-font-size-main-navigation);
   clear: left; }
-  /* line 7, sass/site/header/_header-menu.scss */
+  /* line 8, sass/site/header/_header-menu.scss */
   .main-navigation ul {
     display: none;
     list-style: none;
     margin: 0;
     padding-top: 1em;
     padding-left: 0; }
-    /* line 14, sass/site/header/_header-menu.scss */
+    /* line 15, sass/site/header/_header-menu.scss */
     .main-navigation ul li {
       margin: 0 1px 1px 0; }
-    /* line 18, sass/site/header/_header-menu.scss */
+    /* line 19, sass/site/header/_header-menu.scss */
     .main-navigation ul:hover > ul, .main-navigation ul:focus > ul {
       left: auto; }
-    /* line 23, sass/site/header/_header-menu.scss */
+    /* line 24, sass/site/header/_header-menu.scss */
     .main-navigation ul a {
-      color: white; }
-    /* line 27, sass/site/header/_header-menu.scss */
+      color: var(--khn-color-theme-primary-contrast); }
+    /* line 28, sass/site/header/_header-menu.scss */
     .main-navigation ul ul {
       display: none;
       top: 1.5em;
@@ -1698,137 +1782,228 @@ Header Menu
       margin-top: 1px;
       margin-right: -1px;
       padding-top: 0; }
-      /* line 35, sass/site/header/_header-menu.scss */
+      /* line 36, sass/site/header/_header-menu.scss */
       .main-navigation ul ul ul {
         top: 0; }
-      /* line 41, sass/site/header/_header-menu.scss */
+      /* line 42, sass/site/header/_header-menu.scss */
       .main-navigation ul ul li:hover > ul, .main-navigation ul ul li.focus > ul {
         left: 100%; }
-      /* line 46, sass/site/header/_header-menu.scss */
+      /* line 47, sass/site/header/_header-menu.scss */
       .main-navigation ul ul li a {
         padding-left: .8em; }
-        /* line 49, sass/site/header/_header-menu.scss */
+        /* line 50, sass/site/header/_header-menu.scss */
         .main-navigation ul ul li a:before {
-          content: "- "; }
-      /* line 56, sass/site/header/_header-menu.scss */
+          /*						content: "- "; */
+          content: var(--khn-content-before-main-navigation-children); }
+      /* line 58, sass/site/header/_header-menu.scss */
       .main-navigation ul ul li li a {
         padding-left: 1.4em; }
-  /* line 74, sass/site/header/_header-menu.scss */
+  /* line 76, sass/site/header/_header-menu.scss */
   .main-navigation li {
     position: relative; }
-  /* line 78, sass/site/header/_header-menu.scss */
+  /* line 80, sass/site/header/_header-menu.scss */
   .main-navigation a {
     display: inline-block;
     width: 100%;
     padding: .5em 0;
     text-decoration: none;
     color: var(--khn-color-link-active); }
-  /* line 86, sass/site/header/_header-menu.scss */
+  /* line 88, sass/site/header/_header-menu.scss */
   .main-navigation a:hover,
   .main-navigation a:focus {
     text-decoration: underline; }
-  /* line 97, sass/site/header/_header-menu.scss */
+  /* line 99, sass/site/header/_header-menu.scss */
   .main-navigation .menu-item-has-children,
   .main-navigation .page_item_has_children {
     min-width: 218px; }
-  /* line 101, sass/site/header/_header-menu.scss */
+  /* line 103, sass/site/header/_header-menu.scss */
   .main-navigation .menu-item-has-children > a,
   .main-navigation .page_item_has_children > a {
     padding-right: 2em; }
 
-/* line 107, sass/site/header/_header-menu.scss */
+/* line 109, sass/site/header/_header-menu.scss */
 button.dropdown-toggle {
   position: absolute;
   right: 0;
   font-size: 1em;
   border: none;
   background: inherit;
-  color: white;
+  /*	color: white; */
+  color: var(--khn-color-text-site-header);
   line-height: 1.5em;
   padding: .4em 1em .4em .5em; }
 
-/* line 118, sass/site/header/_header-menu.scss */
+/* line 121, sass/site/header/_header-menu.scss */
 .menu-toggle {
   display: block;
   width: 100%;
-  margin: 1.2em 1.2em 0 0;
+  /*	margin: 1.2em 1.2em 0 0; */
+  margin: auto;
   padding: .6em .8em;
   font-size: 80%;
   text-transform: uppercase;
-  color: white;
-  background-color: var(--khn-color-link-active);
+  color: var(--khn-color-text-site-header);
+  background-color: var(--khn-color-background-main-navigation);
   border: none;
   border-radius: 0; }
 
+/* line 135, sass/site/header/_header-menu.scss */
+button.menu-toggle {
+  width: var(--khn-width-hamburger-button);
+  margin: auto; }
+
+/* line 140, sass/site/header/_header-menu.scss */
+button.menu-toggle:hover,
+button.menu-toggle:active,
+button.menu-toggle:focus {
+  background: var(--khn-color-theme-secondary);
+  color: var --khn-color-background-site-header; }
+
+/* line 150, sass/site/header/_header-menu.scss */
+.kuhnian-hamburger div {
+  width: var(--khn-width-hamburger-div);
+  height: var(--khn-height-hamburger-div);
+  background-color: var(--khn-color-text-site-header);
+  margin: var(--khn-margins-top-bottom-hamburger-div) 0; }
+
+/* line 157, sass/site/header/_header-menu.scss */
+nav#site-navigation {
+  margin: auto; }
+
 /* Toggle small menu and children on */
-/* line 132, sass/site/header/_header-menu.scss */
+/* line 160, sass/site/header/_header-menu.scss */
 .toggled-on ul,
 .children.toggled-on,
 .sub-menu.toggled-on {
   display: block; }
 
 @media screen and (min-width: 600px) {
-  /* line 140, sass/site/header/_header-menu.scss */
+  /* line 168, sass/site/header/_header-menu.scss */
   .menu-toggle {
     display: none; }
 
-  /* line 146, sass/site/header/_header-menu.scss */
+  /* line 174, sass/site/header/_header-menu.scss */
   .main-navigation .menu-item-has-children > a,
   .main-navigation .page_item_has_children > a {
     padding-right: 2em; }
-  /* line 151, sass/site/header/_header-menu.scss */
+  /* line 179, sass/site/header/_header-menu.scss */
   .main-navigation ul {
     display: block;
     display: flex;
     margin-top: 1em;
     flex-wrap: wrap;
     justify-content: center; }
-    /* line 158, sass/site/header/_header-menu.scss */
+    /* line 186, sass/site/header/_header-menu.scss */
     .main-navigation ul ul {
       flex-direction: column;
       margin-left: 0; }
-      /* line 162, sass/site/header/_header-menu.scss */
+      /* line 190, sass/site/header/_header-menu.scss */
       .main-navigation ul ul li {
         padding-left: 0; }
-        /* line 165, sass/site/header/_header-menu.scss */
+        /* line 193, sass/site/header/_header-menu.scss */
         .main-navigation ul ul li a {
           width: 218px; }
-    /* line 172, sass/site/header/_header-menu.scss */
+    /* line 200, sass/site/header/_header-menu.scss */
     .main-navigation ul a {
       padding: .4em 1em;
-      background: rgba(255, 255, 255, 0.05); } }
+      background: var(--khn-color-background-main-navigation);
+      /*				background: hsla(0,0%,100%,.05); */ } }
 @supports (grid-area: auto) {
   @media screen and (min-width: 61.875em) {
-    /* line 187, sass/site/header/_header-menu.scss */
+    /* line 216, sass/site/header/_header-menu.scss */
     .menu-toggle {
       display: none; }
 
-    /* line 191, sass/site/header/_header-menu.scss */
+    /* line 220, sass/site/header/_header-menu.scss */
     .main-navigation {
       flex: 1 0 auto;
       padding-bottom: 2em; }
-      /* line 195, sass/site/header/_header-menu.scss */
+      /* line 224, sass/site/header/_header-menu.scss */
       .main-navigation .menu-item-has-children > a,
       .main-navigation .page_item_has_children > a {
         padding-right: 2em; }
-      /* line 200, sass/site/header/_header-menu.scss */
+      /* line 229, sass/site/header/_header-menu.scss */
       .main-navigation ul {
         display: block;
         margin-top: 0;
         padding-top: 1em; }
-        /* line 205, sass/site/header/_header-menu.scss */
+        /* line 234, sass/site/header/_header-menu.scss */
         .main-navigation ul ul {
           margin-left: 0; }
-          /* line 208, sass/site/header/_header-menu.scss */
+          /* line 237, sass/site/header/_header-menu.scss */
           .main-navigation ul ul li {
             padding-left: 0; }
-            /* line 211, sass/site/header/_header-menu.scss */
+            /* line 240, sass/site/header/_header-menu.scss */
             .main-navigation ul ul li a {
               width: auto; }
-        /* line 218, sass/site/header/_header-menu.scss */
+        /* line 247, sass/site/header/_header-menu.scss */
         .main-navigation ul a {
           padding: .4em 0;
           background: none; } } }
+/* line 1, sass/site/header/_header-menu-hamburger.scss */
+nav#site-navigation button.kuhnian-hamburger {
+  background-color: var(--khn-hamburger-color-background);
+  position: var(--khn-hamburger-position-type);
+  cursor: pointer;
+  left: var(--khn-hamburger-left);
+  top: var(--khn-hamburger-top);
+  padding: var(--khn-hamburger-padding);
+  margin: var(--khn-hamburger-margin);
+  width: var(--khn-hamburger-total-width-not-X);
+  height: var(--khn-hamburger-total-height-not-X);
+  outline-style: var(--khn-hamburger-outline-style);
+  outline-width: var(--khn-hamburger-outline-width);
+  outline-color: var(--khn-hamburger-outline-color);
+  border-style: var(--khn-hamburger-border-style);
+  border-width: var(--khn-hamburger-border-width);
+  border-color: var(--khn-hamburger-border-color); }
+
+/* line 19, sass/site/header/_header-menu-hamburger.scss */
+button.kuhnian-hamburger > span,
+button.kuhnian-hamburger > span:before,
+button.kuhnian-hamburger > span:after {
+  display: block;
+  cursor: pointer;
+  height: var(--khn-hamburger-slice-thickness);
+  width: var(--khn-hamburger-width);
+  border-radius: var(--khn-hamburger-border-radius);
+  background: var(--khn-hamburger-color-hamburger);
+  content: "";
+  /*    transition: 	  	all var( --khn-hamburger-transition-time ) ease-in-out; */ }
+
+/* line 32, sass/site/header/_header-menu-hamburger.scss */
+button.kuhnian-hamburger > span,
+button.kuhnian-hamburger > span:before,
+button.kuhnian-hamburger > span:after,
+ul#primary-menu {
+  transition: all var(--khn-hamburger-transition-time) ease-in-out; }
+
+/* line 39, sass/site/header/_header-menu-hamburger.scss */
+.kuhnian-hamburger span {
+  position: relative; }
+
+/* line 50, sass/site/header/_header-menu-hamburger.scss */
+.kuhnian-hamburger span:before {
+  position: absolute;
+  top: calc( -1 * var( --khn-hamburger-gap-between-slices ) ); }
+
+/* line 57, sass/site/header/_header-menu-hamburger.scss */
+.kuhnian-hamburger span:after {
+  position: absolute;
+  bottom: calc( -1 * var(--khn-hamburger-gap-between-slices) ); }
+
+/* line 70, sass/site/header/_header-menu-hamburger.scss */
+nav#site-navigation.toggled-on button.kuhnian-hamburger span {
+  background-color: transparent; }
+
+/* line 74, sass/site/header/_header-menu-hamburger.scss */
+nav#site-navigation.toggled-on button.kuhnian-hamburger span:before {
+  transform: translateY(var(--khn-hamburger-gap-between-slices)) rotate(45deg); }
+
+/* line 79, sass/site/header/_header-menu-hamburger.scss */
+nav#site-navigation.toggled-on button.kuhnian-hamburger span:after {
+  transform: translateY(calc( -1 * var(--khn-hamburger-gap-between-slices) )) rotate(-45deg); }
+
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/

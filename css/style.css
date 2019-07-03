@@ -48,8 +48,13 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## Galleries
 --------------------------------------------------------------*/
 /*	New partial, specific to the Kuhn-CSSvars fork, and to Kuhnian, to hold the new CSS variables  */
-/*	New partial, specific to the Kuhn-CSSvars fork, and to Kuhnian, to hold the new CSS variables  */
-/* line 2, ../sass/variables-site/_custom-properties-colors.scss */
+/*	New partial, specific to the Kuhn-CSSvars fork, and to Kuhnian, to hold the new CSS
+	variables 
+*/
+/*	Not all color-related CSS variables are defined here. Some are defined along with their
+	related properties
+*/
+/* line 7, ../sass/variables-site/_custom-properties-colors.scss */
 :root {
   /***	Refactors partial _colors.scss ****/
   /*	Specific colors */
@@ -152,11 +157,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   --font-pre: var(--khn-font-family-pre) ;
   /***	New CSS variables beyond any Sass variables defined in Kuhn ****/
   /*	Font families	*/
-  --khn-font-family-serif: "PT Serif", "Times New Roman", serif ;
+  --khn-font-family-serif: "Lora", "Times New Roman", serif ;
   --khn-font-family-sans-serif: "PT Sans", Arial, Helvetica, sans-serif ;
-  --khn-font-family-sans-serif-alt: "Open Sans", Arial, Helvetica, sans-serif ;
+  /*	--khn-font-family-sans-serif-alt:	"Open Sans", Arial, Helvetica, sans-serif	; */
   --khn-font-family-code: "PT Mono", monospace ;
   --khn-font-family-pre: "PT Mono", monospace ;
+  /*	The below cursive font should probably be relegated to a child theme	*/
   --khn-font-family-cursive: "Petit Formal Script", cursive ;
   --khn-font-family-body: var(--khn-font-family-serif) ;
   --khn-font-family-headings: var(--khn-font-family-sans-serif) ;
@@ -165,11 +171,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   --khn-font-family-menus: var(--khn-font-family-sans-serif-alt) ;
   --khn-font-family-site-logo: var(--khn-font-family-cursive) ; }
 
-/*
-	Text domain as GUID for later global search-and-replace
-	39777124-e777-4818-91fd-2a96fff8ed73
-*/
-/* line 10, ../sass/variables-site/_custom-properties.scss */
+/* line 6, ../sass/variables-site/_custom-properties.scss */
 :root {
   /*	--font-line-height-body:	1.5	; */
   --font-line-height-body: var(--khn-scalar-line-height-base) ;
@@ -181,8 +183,10 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   --khn-length-indent-paragraph: 1.0em ;
   --khn-length-margin-top-paragraph: 0 ;
   --khn-length-margin-bottom-paragraph: 0.6em ;
+  /*	For html root level */
+  --khn-font-size-base: 1rem ;
   /*	Lengths for paragraphs */
-  --khn-font-size-base: 16px ;
+  --khn-font-size-body: 1.0rem ;
   --khn-scalar-line-height-base: 1.5 ;
   /*	Lengths for paragraphs */
   /*	Lengths for entry-title */
@@ -195,7 +199,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   --khn-scalar-line-height-article-title: 1.2 ;
   /*	For post-article or page-article title on its own page */
   --khn-font-family-article-title-on-its-page: var(--khn-font-family-serif);
-  --khn-font-size-article-title-on-its-page: 2.25em ;
+  --khn-font-size-article-title-on-its-page: 1.5em ;
   --khn-scalar-line-height-article-title-on-its-page: var(--khn-scalar-line-height-article-title);
   --khn-font-size-article-title-on-its-page-medscreen: 2.5em ;
   --khn-color-text-article-title-on-its-page: var(--khn-color-theme-tertiary) ;
@@ -204,7 +208,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   --khn-text-decoration-article-title-on-its-page: none ;
   /*	For post-article's title on an archive page */
   --khn-font-family-post-title-on-archive-page: var(--khn-font-family-serif);
-  --khn-font-size-post-title-on-archive-page: 1.3em ;
+  --khn-font-size-post-title-on-archive-page: 1.5rem ;
   --khn-scalar-line-height-title-on-archive-page: var(--khn-scalar-line-height-article-title);
   --khn-color-text-post-title-on-archive-page: var(--khn-color-theme-tertiary) ;
   --khn-text-align-post-title-on-archive-page: center ;
@@ -212,6 +216,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
   --khn-text-decoration-post-title-on-archive-page: none ;
   /*	Margins */
   /* Margins for entry-meta */
+  --khn-font-size-entry-meta: 90% ;
   --khn-margins-entry-meta: 1em 0em 1em ;
   --khn-margins-entry-meta-medium-screen: var(--khn-margins-entry-meta) ;
   /*	Display */
@@ -507,8 +512,8 @@ textarea {
   /*	line-height: $font__line-height-body; */
   color: var(--khn-color-text-default);
   font-family: var(--khn-font-family-body);
-  font-size: 17.6px;
-  font-size: 1.1rem;
+  font-size: var(--khn-font-size-body);
+  /*	@include font-size(1.1); */
   font-weight: 300;
   line-height: var(--khn-scalar-line-height-base); }
   @media screen and (min-width: 600px) {
@@ -518,8 +523,8 @@ textarea {
     input,
     select,
     textarea {
-      font-size: 20px;
-      font-size: 1.25rem; } }
+      /*		@include font-size(1.25); */
+      font-size: var(--khn-font-size-body); } }
 
 /* line 1, ../sass/typography/_headings.scss */
 h1, h2, h3, h4, h5, h6 {
@@ -533,21 +538,22 @@ h1 {
 
 /* line 11, ../sass/typography/_headings.scss */
 h2 {
-  font-size: 2.6em; }
+  font-size: 2.6em;
+  color: --khn-color-text-h2; }
 
-/* line 15, ../sass/typography/_headings.scss */
+/* line 16, ../sass/typography/_headings.scss */
 h3 {
   font-size: 2.2em; }
 
-/* line 19, ../sass/typography/_headings.scss */
+/* line 20, ../sass/typography/_headings.scss */
 h4 {
   font-size: 2em; }
 
-/* line 23, ../sass/typography/_headings.scss */
+/* line 24, ../sass/typography/_headings.scss */
 h5 {
   font-size: 1.8em; }
 
-/* line 27, ../sass/typography/_headings.scss */
+/* line 28, ../sass/typography/_headings.scss */
 h6 {
   font-size: 1.6em; }
 
@@ -1991,7 +1997,7 @@ body:not(.archive-view) .site-main {
 .entry-meta,
 .entry-footer {
   font-family: var(--khn-font-family-metadata);
-  font-size: 80%;
+  font-size: var(--khn-font-size-entry-meta);
   color: #404040; }
   /* line 201, ../sass/site/primary/_posts-and-pages.scss */
   .entry-meta a,
