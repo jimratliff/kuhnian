@@ -168,22 +168,24 @@ body:not(.archive-view) {
 	a {
 /*		color: black;	*/
 /*		text-decoration: none; */
-		font-family:		var(--khn-font-family-post-title-on-archive-page)		;
-		font-size:			var(--khn-font-size-post-title-on-archive-page) 		;
-		color:				var(--khn-color-text-post-title-on-archive-page) 		;
+		font-family:		var( --khn-font-family-post-title-on-archive-page)		;
+		font-size:			var( --khn-font-size-post-title-on-archive-page) 		;
+		color:				var( --khn-color-text-post-title-on-archive-page) 		;
 
-		line-height:		var(--khn-scalar-line-height-title-on-archive-page)		;
-		text-align:			var(--khn-text-align-article-title-on-its-page)			;
-		text-transform:		var(--khn-text-transform-post-title-on-archive-page)	;
-		text-decoration:	var(khn-text-decoration-post-title-on-archive-page)	;
+		line-height:		var( --khn-scalar-line-height-title-on-archive-page)		;
+		text-align:			var( --khn-text-align-article-title-on-its-page)			;
+		text-transform:		var( --khn-text-transform-post-title-on-archive-page)	;
+		text-decoration:	var( --khn-text-decoration-post-title-on-archive-page)	;
+		transition:			all var( --khn-transition-time-links ) ;
 
 		&:visited {
-			color:			var(--khn-color-text-post-title-on-archive-page) 		;
+//			color:			var(--khn-color-text-post-title-on-archive-page) 		;
+			color:			inherit		;
 		}
 		
 		&:focus,
 		&:hover {
-			border-bottom: 5px solid;
+//			border-bottom: 5px solid;
 		}
 	}
 }

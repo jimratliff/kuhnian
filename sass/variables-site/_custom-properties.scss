@@ -11,7 +11,7 @@
 /*	For html root level */
 	--khn-font-size-base:				1rem	;
 	
-	--font-line-height-body:	var(--khn-scalar-line-height-base)	;
+	--font-line-height-body:	var( --khn-scalar-line-height-base )	;
 	--font-line-height-pre:		1.6	;	
 
 /***	PARAGRAPH SETTINGS	***/
@@ -53,32 +53,36 @@
 
 /*	Margins */
 /* Margins for entry-meta */
-	--khn-font-size-entry-meta:								90%							;
+	--khn-font-size-entry-meta:								90%								;
 	--khn-margins-entry-meta:								1em 0em 1em						;
 	--khn-margins-entry-meta-medium-screen:					var(--khn-margins-entry-meta)	;
 
 /*	Display */
 /*	"Leave a comment": In order to display, choose "inherit" */
-	--khn-display-comments-link:							none						;
+	--khn-display-comments-link:							none	;
 
 
 /*	Content */
 /*	Separator between elements in entry-meta (byline, etc.) */
-	--khn-content-entry-meta-separator:						" ★ "						;
+	--khn-content-entry-meta-separator:						" ★ "	;
 
 /*	Navigation Hamburger icon */
-	--khn-margins-top-bottom-hamburger-div: 4px ;
-	--khn-width-hamburger-button: 4em;
-	--khn-width-hamburger-div: 2.5em;
-	--khn-height-hamburger-div: 2px;
+	--khn-margins-top-bottom-hamburger-div: 4px 	;
+	--khn-width-hamburger-button:			4em		;
+	--khn-width-hamburger-div:				2.5em	;
+	--khn-height-hamburger-div:				2px		;
 
 /*	Navigation menu */
-	--khn-font-size-main-navigation: 0.9rem;
-	--khn-content-before-main-navigation-children: '• ' ;
+	--khn-font-size-main-navigation:				0.9rem	;
+	--khn-content-before-main-navigation-children:	'• ' 	;
 /*	Structural */
 	--khn-width-max-site-main-default:	40em ;
 	--khn-width-max-paragraph:			50em ; 
 /*	Links (except for color/decoration, for which see _custom-properties-colors.scss.) */
 	--khn-border-radius-link: 0.25em ;
+
+
+
+
 
 }
