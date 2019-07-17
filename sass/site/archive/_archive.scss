@@ -37,7 +37,7 @@
 
 @supports (grid-area: auto) {
     .archive-view .site-main {
-        max-width: 40em;
+        max-width: var( --khn-width-max-site-main-default ) ;
         padding: 1em;
     }
 

@@ -75,6 +75,9 @@
 /*	Navigation menu */
 	--khn-font-size-main-navigation: 0.9rem;
 	--khn-content-before-main-navigation-children: '• ' ;
+/*	Structural */
+	--khn-width-max-site-main-default:	40em ;
+	--khn-width-max-paragraph:			50em ; 
 /*	Links (except for color/decoration, for which see _custom-properties-colors.scss.) */
 	--khn-border-radius-link: 0.25em ;
 
