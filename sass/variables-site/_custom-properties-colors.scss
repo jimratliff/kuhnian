@@ -36,9 +36,14 @@
 /***	New CSS variables beyond any Sass variables defined in Kuhn ****/
 /*	Theme colors */
 	--khn-color-theme-primary:					#88187F		;
+	--khn-color-theme-primary-faded:			#c38bbf		;
 	--khn-color-theme-secondary:				#18882b		;
+	--khn-color-theme-secondary-faded:			#8bc395		;
+	--khn-color-theme-secondary-very-faded:		#d0e7d4		;
 	--khn-color-theme-tertiary:					#885418		;
+	--khn-color-theme-tertiary-faded:			#B79874		;
 	--khn-color-theme-whitish:					white		;
+	--khn-color-theme-light-grayish:			#444		;
 	--khn-color-theme-grayish:					#777		;
 	--khn-color-theme-dark-grayish:				#222		;
 	--khn-color-theme-very-dark-grayish:		#111		;
@@ -63,12 +68,20 @@
 	--khn-color-code-token-keyword:				var(--khn-color-theme-pelorousish)			;
 	--khn-color-code-token-function-selector:	var(--khn-color-theme-forest-greenish)		;
 	--khn-color-output:							black		;
-	--khn-color-text-h1:						black		;
-	--khn-color-text-h2:						mediumblue	;
-	--khn-color-text-h3:						var(--khn-color-theme-pigment-greenish)		;
-	--khn-color-text-h4:						var(--khn-color-theme-tawnyish)				;
-	--khn-color-text-h5:						var(--khn-color-theme-dark-violetish)		;
-	--khn-color-text-h6:						var(--khn-color-theme-dark-magentaish)		;
+	--khn-color-text-h1:						var( --khn-color-text-default )		;
+	--khn-color-text-h2:						var( --khn-color-theme-tertiary )	;
+	--khn-color-text-h3:						var( --khn-color-theme-secondary )	;
+	--khn-color-text-h4:						var( --khn-color-text-default )		;
+	--khn-color-text-h5:						var( --khn-color-theme-primary )	;
+	--khn-color-text-h6:						var( --khn-color-theme-dark-blueish );
+
+	--khn-color-text-h1-contrast:	var( --khn-color-theme-whitish-contrast )	;
+	--khn-color-text-h2-contrast:	var( --khn-color-theme-tertiary-contrast )	;
+	--khn-color-text-h3-contrast:	var( --khn-color-theme-secondary-contrast )	;
+	--khn-color-text-h4-contrast:	var( --khn-color-theme-whitish )	;
+	--khn-color-text-h5-contrast:	var( --khn-color-theme-primary-contrast )	;
+	--khn-color-text-h6-contrast:	var( --khn-color-theme-whitish-contrast )	;
+	
 /*	Link colors (and text-decoration)*/
 /*	See https://html.spec.whatwg.org/multipage/rendering.html#phrasing-content-3 */
 	--color-link-default-unvisited:			#0000EE ;
@@ -81,15 +94,15 @@
 	--khn-color-link-hover:					var(--khn-color-theme-primary-contrast)	;
 	--khn-color-link-active:				var(--color-link-default-active)		;
 
-	--khn-color-background-link-unvisited:		transparent						;
-	--khn-color-background-link-visited:		transparent						;
-	--khn-color-background-link-hover:			var(--khn-color-theme-primary)	;
-	--khn-color-background-link-active:			transparent						;
+	--khn-color-background-link-unvisited:	transparent						;
+	--khn-color-background-link-visited:	transparent						;
+	--khn-color-background-link-hover:		var(--khn-color-theme-secondary)	;
+	--khn-color-background-link-active:		transparent						;
 
-	--khn-text-decoration-link-unvisited:		none	;
-	--khn-text-decoration-link-visited:			none	;
-	--khn-text-decoration-link-hover:			none	;
-	--khn-text-decoration-link-active:			none	;
+	--khn-text-decoration-link-unvisited:	none	;
+	--khn-text-decoration-link-visited:		none	;
+	--khn-text-decoration-link-hover:		none	;
+	--khn-text-decoration-link-active:		none	;
 	
 	--khn-outline-link-unvisited:		none	;
 	--khn-outline-link-visited:			none	;
@@ -101,6 +114,8 @@
 	--khn-color-text-site-header:			var(--khn-color-theme-primary-contrast)	;
 /*	--khn-color-background-main-navigation:		hsla(0,0%,100%,.05) ; */
 	--khn-color-background-main-navigation:		hsla(0,0%,100%,0) ;
-
+	
+/*	Grid background */
+	--khn-color-background-archive:		var( --khn-color-theme-primary ) ;
 
 }
