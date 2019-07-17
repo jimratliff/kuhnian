@@ -92,6 +92,12 @@
 /*	Structural */
 	--khn-width-max-site-main-default:	40em ;
 	--khn-width-max-paragraph:			50em ; 
+
+/*	Archive pages */
+	--khn-archive-page-inter-post-divider-thickness:		3px ;
+	--khn-archive-page-inter-post-divider-margin-top:		2em ;
+	--khn-archive-page-inter-post-divider-margin-bottom:	1em ;
+
 /*	Links (except for color/decoration, for which see _custom-properties-colors.scss.) */
 	--khn-border-radius-link: 0.25em ;
 
