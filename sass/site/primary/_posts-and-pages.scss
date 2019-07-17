@@ -123,22 +123,26 @@ body:not(.archive-view) {
 
 }
 
-
-
 .cat-links {
-	margin-bottom: .5em;
-	font-family: $font__meta;
-	font-size: 80%;
+	margin-bottom:	var( --khn-category-links-margin-bottom ) ;
+	font-family:	$font__meta;
+	font-size:		var( --khn-category-links-font-size );
 
-	a {
-		text-decoration: none;
-		text-transform: uppercase;
-		border-bottom: 3px solid transparent;
+	a, a:visited, a:focus, a:hover, a:active {
+		border-radius:		var( --khn-category-links-border-radius ) ;
+		background-color:	var( --khn-category-links-background-color ) ;
+		color:				var( --khn-category-links-text-color ) ;
+		padding:			var( --khn-category-links-padding) ;
+		text-transform:		var( --khn-category-links-text-transform );
+		text-decoration:	none;
+		transition:			all var( --khn-transition-time-links ) ;
+	}
 
-		&:focus,
-		&:hover {
-			border-bottom-color: black;
-		}
+/*	On focus or hover, inverts text and background colors, adding border */
+	a:focus, a:hover {
+		background-color:	var( --khn-category-links-text-color ) ;
+		color:				var( --khn-category-links-background-color ) ;
+		border:				1px solid var( --khn-category-links-background-color ) ;
 	}
 }
 
@@ -150,6 +154,7 @@ body:not(.archive-view) {
 
 	
 	margin: var(--khn-margin-entry-title);
+	
 	
 	font-family:		var(--khn-font-family-article-title-on-its-page)	;
 	font-size:			var(--khn-font-size-article-title-on-its-page);
@@ -186,6 +191,8 @@ body:not(.archive-view) {
 		&:focus,
 		&:hover {
 //			border-bottom: 5px solid;
+			background-color: var(--khn-color-text-post-title-on-archive-page) 		;
+			color:	var( --color-background-body ) ;
 		}
 	}
 }
