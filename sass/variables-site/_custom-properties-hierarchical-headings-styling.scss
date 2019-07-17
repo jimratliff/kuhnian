@@ -1,0 +1,252 @@
+/*	New partial, specific to the Kuhn-CSSvars fork, and to Kuhnian, to hold the new CSS
+	variables.
+	
+	See  … sass/typography/_headings-hierarchical.scss for relevant styling rules.
+	
+	The styling for these headings were inspired by Demo 2 of "Heading Set Styling with CSS,"
+	<https://tympanus.net/Tutorials/HeadingSets/index2.html>, 
+	
+*/
+:root {
+/*	Heirarchical heading numbers */
+	
+	--khn-hnumber-default-margin-top:		0.5rem ;
+	--khn-hnumber-default-margin-bottom:	0.5rem ;
+	
+	--khn-hnumber-default-padding-top:		0.0rem ;
+	--khn-hnumber-default-padding-right:	1rem ;
+	--khn-hnumber-default-padding-bottom:	0rem ;
+	--khn-hnumber-default-padding-left:		1rem ;
+
+	--khn-hnumber-default-before-padding:	0.25rem ; 
+	
+	--khn-hnumber-h2-padding-left:	var( --khn-hnumber-default-padding-left ) ;
+	--khn-hnumber-h3-padding-left:	var( --khn-hnumber-default-padding-left ) ;
+	--khn-hnumber-h4-padding-left:	var( --khn-hnumber-default-padding-left ) ;
+	--khn-hnumber-h5-padding-left:	var( --khn-hnumber-default-padding-left ) ;
+	--khn-hnumber-h6-padding-left:	var( --khn-hnumber-default-padding-left ) ;
+
+/*	Common min-width of heading-numbering area */
+	--khn-hnumber-default-min-width:		5.25rem ;
+	--khn-hnumber-h2-min-width:				var( --khn-hnumber-default-min-width ) ;
+	--khn-hnumber-h3-min-width:				var( --khn-hnumber-default-min-width ) ;
+	--khn-hnumber-h4-min-width:				var( --khn-hnumber-default-min-width ) ;
+	--khn-hnumber-h5-min-width:				var( --khn-hnumber-default-min-width ) ;
+	--khn-hnumber-h6-min-width:				var( --khn-hnumber-default-min-width ) ;
+
+/*	The auxiliary color is for the border and the background for the header number */
+	--khn-hnumber-h2-auxiliary-color:		var( --khn-color-theme-tertiary-faded ) ;
+	--khn-hnumber-h3-auxiliary-color:		var( --khn-color-theme-secondary-faded ) ;
+	--khn-hnumber-h4-auxiliary-color:		var( --khn-color-theme-light-grayish ) ;
+	--khn-hnumber-h5-auxiliary-color:		var( --khn-color-theme-primary-faded ) ;
+	--khn-hnumber-h6-auxiliary-color:		#bbbbd5 ;
+
+	--khn-hnumber-h2-auxiliary-color-contrast:	var( --khn-color-theme-tertiary-contrast ) ;
+	--khn-hnumber-h3-auxiliary-color-contrast:	var( --khn-color-text-h3-contrast ) ;
+	--khn-hnumber-h4-auxiliary-color-contrast:	var( --khn-color-text-h4-contrast ) ;
+	--khn-hnumber-h5-auxiliary-color-contrast:	var( --khn-color-text-h5-contrast ) ;
+	--khn-hnumber-h6-auxiliary-color-contrast:	var( --khn-color-text-h6-contrast ) ;
+
+/*	Constructs (a) border-style, (b) border-width, (c) border-radius for main h# element, and
+	(d) border-radius for h#::before
+	
+	I'm assuming that any particular border will be turned off by setting its width to zero.
+*/ 
+
+	--khn-hnumber-default-border-style:		solid ;
+	--khn-hnumber-h2-border-style:			ridge ;
+	--khn-hnumber-h3-border-style:			double ;
+	--khn-hnumber-h4-border-style:			var( --khn-hnumber-default-border-style ) ;
+	--khn-hnumber-h5-border-style:			var( --khn-hnumber-default-border-style ) ;
+	--khn-hnumber-h6-border-style:			var( --khn-hnumber-default-border-style ) ;
+	
+	--khn-hnumber-h2-border-width:			var( --khn-hnumber-h2-border-top-width ) 
+											var( --khn-hnumber-h2-border-right-width )
+											var( --khn-hnumber-h2-border-bottom-width )
+											var( --khn-hnumber-h2-border-left-width )	;
+									
+	--khn-hnumber-h2-border-radius:			var( --khn-hnumber-h2-border-top-left-radius )
+											var( --khn-hnumber-h2-border-top-right-radius )
+											var( --khn-hnumber-h2-border-bottom-right-radius )
+											var( --khn-hnumber-h2-border-bottom-left-radius )	;
+	
+	--khn-hnumber-h2-before-border-radius:	var( --khn-hnumber-h2-before-border-top-left-radius )
+											var( --khn-hnumber-h2-before-border-top-right-radius )
+											var( --khn-hnumber-h2-before-border-bottom-right-radius )
+											var( --khn-hnumber-h2-before-border-bottom-left-radius )  ;
+
+	--khn-hnumber-h3-border-width:			var( --khn-hnumber-h3-border-top-width ) 
+											var( --khn-hnumber-h3-border-right-width )
+											var( --khn-hnumber-h3-border-bottom-width )
+											var( --khn-hnumber-h3-border-left-width )	;
+									
+	--khn-hnumber-h3-border-radius:			var( --khn-hnumber-h3-border-top-left-radius )
+											var( --khn-hnumber-h3-border-top-right-radius )
+											var( --khn-hnumber-h3-border-bottom-right-radius )
+											var( --khn-hnumber-h3-border-bottom-left-radius )	;
+
+	--khn-hnumber-h3-before-border-radius:	var( --khn-hnumber-h3-before-border-top-left-radius )
+											var( --khn-hnumber-h3-before-border-top-right-radius )
+											var( --khn-hnumber-h3-before-border-bottom-right-radius )
+											var( --khn-hnumber-h3-before-border-bottom-left-radius )  ;
+	
+	--khn-hnumber-h4-border-width:			var( --khn-hnumber-h4-border-top-width ) 
+											var( --khn-hnumber-h4-border-right-width )
+											var( --khn-hnumber-h4-border-bottom-width )
+											var( --khn-hnumber-h4-border-left-width )	;
+									
+	--khn-hnumber-h4-border-radius:			var( --khn-hnumber-h4-border-top-left-radius )
+											var( --khn-hnumber-h4-border-top-right-radius )
+											var( --khn-hnumber-h4-border-bottom-right-radius )
+											var( --khn-hnumber-h4-border-bottom-left-radius )	;
+
+	--khn-hnumber-h4-before-border-radius:	var( --khn-hnumber-h4-before-border-top-left-radius )
+											var( --khn-hnumber-h4-before-border-top-right-radius )
+											var( --khn-hnumber-h4-before-border-bottom-right-radius )
+											var( --khn-hnumber-h4-before-border-bottom-left-radius )  ;
+
+	--khn-hnumber-h5-border-width:			var( --khn-hnumber-h5-border-top-width ) 
+											var( --khn-hnumber-h5-border-right-width )
+											var( --khn-hnumber-h5-border-bottom-width )
+											var( --khn-hnumber-h5-border-left-width )	;
+									
+	--khn-hnumber-h5-border-radius:			var( --khn-hnumber-h5-border-top-left-radius )
+											var( --khn-hnumber-h5-border-top-right-radius )
+											var( --khn-hnumber-h5-border-bottom-right-radius )
+											var( --khn-hnumber-h5-border-bottom-left-radius )	;
+
+	--khn-hnumber-h5-before-border-radius:	var( --khn-hnumber-h5-before-border-top-left-radius )
+											var( --khn-hnumber-h5-before-border-top-right-radius )
+											var( --khn-hnumber-h5-before-border-bottom-right-radius )
+											var( --khn-hnumber-h5-before-border-bottom-left-radius )  ;
+
+	--khn-hnumber-h6-border-width:			var( --khn-hnumber-h6-border-top-width ) 
+											var( --khn-hnumber-h6-border-right-width )
+											var( --khn-hnumber-h6-border-bottom-width )
+											var( --khn-hnumber-h6-border-left-width )	;
+									
+	--khn-hnumber-h6-border-radius:			var( --khn-hnumber-h6-border-top-left-radius )
+											var( --khn-hnumber-h6-border-top-right-radius )
+											var( --khn-hnumber-h6-border-bottom-right-radius )
+											var( --khn-hnumber-h6-border-bottom-left-radius )	;
+
+	--khn-hnumber-h6-before-border-radius:	var( --khn-hnumber-h6-before-border-top-left-radius )
+											var( --khn-hnumber-h6-before-border-top-right-radius )
+											var( --khn-hnumber-h6-before-border-bottom-right-radius )
+											var( --khn-hnumber-h6-before-border-bottom-left-radius )  ;
+
+/*	Defines width of each side of each element's border.
+	Typically takes form: Use the element's default boundary width for each side; then set
+	to zero each side that should not take a border.
+*/
+
+	--khn-hnumber-h2-boundary-width: 	5px ;
+	--khn-hnumber-h3-boundary-width: 	3px ;
+	--khn-hnumber-h4-boundary-width: 	1px ;
+	--khn-hnumber-h5-boundary-width: 	0px ;
+	--khn-hnumber-h6-boundary-width: 	0px ;
+	
+	--khn-hnumber-h2-border-top-width:		var( --khn-hnumber-h2-boundary-width ) ;
+	--khn-hnumber-h2-border-right-width:	var( --khn-hnumber-h2-boundary-width ) ;
+	--khn-hnumber-h2-border-bottom-width:	var( --khn-hnumber-h2-boundary-width ) ;
+	--khn-hnumber-h2-border-left-width:		var( --khn-hnumber-h2-boundary-width ) ;
+	
+	--khn-hnumber-h3-border-top-width:		var( --khn-hnumber-h3-boundary-width ) ;
+	--khn-hnumber-h3-border-right-width:	var( --khn-hnumber-h3-boundary-width ) ;
+	--khn-hnumber-h3-border-bottom-width:	var( --khn-hnumber-h3-boundary-width ) ;
+	--khn-hnumber-h3-border-left-width:		var( --khn-hnumber-h3-boundary-width ) ;
+
+	--khn-hnumber-h4-border-top-width:		var( --khn-hnumber-h4-boundary-width ) ;
+	--khn-hnumber-h4-border-right-width:	0 ;
+	--khn-hnumber-h4-border-bottom-width:	0 ;
+	--khn-hnumber-h4-border-left-width:		0 ;
+
+	--khn-hnumber-h5-border-top-width:		var( --khn-hnumber-h5-boundary-width ) ;
+	--khn-hnumber-h5-border-right-width:	var( --khn-hnumber-h5-boundary-width ) ;
+	--khn-hnumber-h5-border-bottom-width:	var( --khn-hnumber-h5-boundary-width ) ;
+	--khn-hnumber-h5-border-left-width:		var( --khn-hnumber-h5-boundary-width ) ;
+
+	--khn-hnumber-h6-border-top-width:		var( --khn-hnumber-h6-boundary-width ) ;
+	--khn-hnumber-h6-border-right-width:	var( --khn-hnumber-h6-boundary-width ) ;
+	--khn-hnumber-h6-border-bottom-width:	var( --khn-hnumber-h6-boundary-width ) ;
+	--khn-hnumber-h6-border-left-width:		var( --khn-hnumber-h6-boundary-width ) ;
+
+/*	Defines border-radius for each corner of (a) each h# element's border and
+	(b) each h#::before pseudo element's background.
+
+	Note: --khn-hnumber-h#-before-border-top-left-radius should be chosen to match 
+	--khn-hnumber-h#-border-top-left-radius. (Same for bottom-left.) However, setting
+	the values equal doesn't work. --khn-hnumber-h#-before-border-top-left-radius must
+	be a little smaller (e.g., 15px) than --khn-hnumber-h#-border-top-left-radius (20px).
+	
+*/
+	
+	--khn-hnumber-default-border-radius:			20px	;
+	--khn-hnumber-default-before-border-radius:		15px		;
+	
+	--khn-hnumber-default-before-border-top-right-radius:		0 ;
+	--khn-hnumber-default-before-border-bottom-right-radius:	0 ;
+	
+	--khn-hnumber-h2-border-radius-common:				var( --khn-hnumber-default-border-radius )   ;
+	--khn-hnumber-h2-border-top-left-radius:			0 ;
+//	--khn-hnumber-h2-border-top-right-radius:			var( --khn-hnumber-h2-border-radius-common ) ;
+	--khn-hnumber-h2-border-top-right-radius:			0 ;
+	--khn-hnumber-h2-border-bottom-right-radius:		var( --khn-hnumber-h2-border-radius-common ) ;
+//	--khn-hnumber-h2-border-bottom-left-radius:			var( --khn-hnumber-h2-border-radius-common ) ;
+	--khn-hnumber-h2-border-bottom-left-radius:			0 ;
+
+	--khn-hnumber-h2-before-border-left-radius-common:	var( --khn-hnumber-default-before-border-radius ) ;
+	--khn-hnumber-h2-before-border-top-left-radius:		0 ;
+	--khn-hnumber-h2-before-border-top-right-radius:	var( --khn-hnumber-default-before-border-top-right-radius )	;
+	--khn-hnumber-h2-before-border-bottom-right-radius:	var( --khn-hnumber-default-before-border-radius ) ;
+	--khn-hnumber-h2-before-border-bottom-left-radius:	0 ;
+	
+	--khn-hnumber-h3-border-radius-common:				var( --khn-hnumber-default-border-radius ) ;
+	--khn-hnumber-h3-border-top-left-radius:			var( --khn-hnumber-h3-border-radius-common ) ;
+	--khn-hnumber-h3-border-top-right-radius:			0 ;
+	--khn-hnumber-h3-border-bottom-right-radius:		var( --khn-hnumber-h3-border-top-left-radius ) ;
+	--khn-hnumber-h3-border-bottom-left-radius:			0 ;
+
+	--khn-hnumber-h3-before-border-left-radius-common:	var( --khn-hnumber-default-before-border-radius ) ;
+	--khn-hnumber-h3-before-border-top-left-radius:		var( --khn-hnumber-h3-before-border-left-radius-common ) ;
+	--khn-hnumber-h3-before-border-top-right-radius:	var( --khn-hnumber-default-before-border-top-right-radius )	;
+	--khn-hnumber-h3-before-border-bottom-right-radius:	var( --khn-hnumber-h3-before-border-top-left-radius ) ;
+	--khn-hnumber-h3-before-border-bottom-left-radius:	0 ;
+	
+	--khn-hnumber-h4-border-radius-common:				var( --khn-hnumber-default-border-radius ) ;
+	--khn-hnumber-h4-border-top-left-radius:			var( --khn-hnumber-h4-border-radius-common ) ;
+	--khn-hnumber-h4-border-top-right-radius:			var( --khn-hnumber-h4-border-radius-common ) ;
+	--khn-hnumber-h4-border-bottom-right-radius:		var( --khn-hnumber-h4-border-radius-common ) ;
+	--khn-hnumber-h4-border-bottom-left-radius:			var( --khn-hnumber-h4-border-radius-common ) ;
+
+	--khn-hnumber-h4-before-border-left-radius-common:	var( --khn-hnumber-default-before-border-radius ) ;
+	--khn-hnumber-h4-before-border-top-left-radius:		var( --khn-hnumber-h4-before-border-left-radius-common ) ;
+	--khn-hnumber-h4-before-border-top-right-radius:	var( --khn-hnumber-default-before-border-top-right-radius )	;
+	--khn-hnumber-h4-before-border-bottom-right-radius:	var( --khn-hnumber-h4-before-border-top-left-radius ) ;
+	--khn-hnumber-h4-before-border-bottom-left-radius:	0 ;
+	
+	--khn-hnumber-h5-border-radius-common:				var( --khn-hnumber-default-border-radius ) ;
+	--khn-hnumber-h5-border-top-left-radius:			var( --khn-hnumber-h5-border-radius-common ) ;
+	--khn-hnumber-h5-border-top-right-radius:			var( --khn-hnumber-h5-border-radius-common ) ;
+	--khn-hnumber-h5-border-bottom-right-radius:		var( --khn-hnumber-h5-border-radius-common ) ;
+	--khn-hnumber-h5-border-bottom-left-radius:			var( --khn-hnumber-h5-border-radius-common ) ;
+
+	--khn-hnumber-h5-before-border-left-radius-common:	var( --khn-hnumber-default-before-border-radius ) ;
+	--khn-hnumber-h5-before-border-top-left-radius:		var( --khn-hnumber-h5-before-border-left-radius-common ) ;
+	--khn-hnumber-h5-before-border-top-right-radius:	var( --khn-hnumber-default-before-border-top-right-radius )	;
+	--khn-hnumber-h5-before-border-bottom-right-radius:	var( --khn-hnumber-h5-before-border-top-left-radius ) ;
+	--khn-hnumber-h5-before-border-bottom-left-radius:	0 ;
+	
+	--khn-hnumber-h6-border-radius-common:				var( --khn-hnumber-default-border-radius ) ;
+	--khn-hnumber-h6-border-top-left-radius:			var( --khn-hnumber-h6-border-radius-common ) ;
+	--khn-hnumber-h6-border-top-right-radius:			var( --khn-hnumber-h6-border-radius-common ) ;
+	--khn-hnumber-h6-border-bottom-right-radius:		var( --khn-hnumber-h6-border-radius-common ) ;
+	--khn-hnumber-h6-border-bottom-left-radius:			var( --khn-hnumber-h6-border-radius-common ) ;
+
+	--khn-hnumber-h6-before-border-left-radius-common:	var( --khn-hnumber-default-before-border-radius ) ;
+	--khn-hnumber-h6-before-border-top-left-radius:		var( --khn-hnumber-h6-before-border-left-radius-common ) ;
+	--khn-hnumber-h6-before-border-top-right-radius:	var( --khn-hnumber-default-before-border-top-right-radius )	;
+	--khn-hnumber-h6-before-border-bottom-right-radius:	var( --khn-hnumber-h6-before-border-top-left-radius ) ;
+	--khn-hnumber-h6-before-border-bottom-left-radius:	0 ;
+
+}

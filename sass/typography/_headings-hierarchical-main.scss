@@ -1,0 +1,99 @@
+/*	Creates hierarchical numbering of heading elements h2–h6 in posts/pages, i.e., within 
+	class "entry-content", using CSS counters.
+	
+	See … sass/variables-site/_custom-properties-hierarchical-headings.scss for definitions
+	of the relevant CSS variables.
+
+	FYI, If an element increments/resets a counter and also uses it (in the 'content'
+	property of its :before or :after pseudo-element), the counter is used after being
+	incremented/reset. Source: <https://www.w3.org/TR/CSS2/generate.html#counters>
+
+	If you do NOT want a particular post/page heading numbered, assign it class "dont-number-heading".
+		In this case:
+			* the counter for that level of heading will not be incremented.
+			* the counter for the next level deeper will not be reset.
+			
+	If you globally want no heading numbers, set --khn-hnumber-null-content: none;
+		Otherwise, --khn-hnumber-null-content MUST NOT BE DEFINED AT ALL. (The appearance of heading
+		numbers relies on --khn-hnumber-null-content being undefined.)
+*/
+.entry-content {
+/*	Resets h2counter just in case <h1> didn't already */
+	counter-reset:	h2counter ;
+
+/*	<h1> does not receive a heading number, but does reset the counter for <h2> */
+	h1 {
+		counter-reset:	h2counter ;
+	}
+
+	& h2:not(.dont-number-heading) {
+		counter-reset:	h3counter  ;
+	}
+
+	& h2:not(.dont-number-heading)::before {
+		counter-increment:			h2counter ;
+		--khn-hnumber-h2-content:	var( --khn-hnumber-prefix )
+									counter(h2counter, var( --khn-hnumber-h2-format ) )
+									var( --khn-hnumber-suffix ) ;									
+		content:					var( --khn-hnumber-null-content, var( --khn-hnumber-h2-content ) ) ;
+	}
+
+	h3:not(.dont-number-heading) {
+		counter-reset:	h4counter  ;
+	}
+
+	& h3:not(.dont-number-heading)::before {
+		counter-increment:			h3counter ;
+		--khn-hnumber-h3-content:	var( --khn-hnumber-prefix )
+									counter(h2counter, var( --khn-hnumber-h2-format ) ) var( --khn-hnumber-separator )
+									counter(h3counter, var( --khn-hnumber-h3-format ) )
+									var( --khn-hnumber-suffix ) ;
+		content:					var( --khn-hnumber-null-content, var( --khn-hnumber-h3-content ) ) ;
+		
+	}
+
+	h4:not(.dont-number-heading) {
+		counter-reset:	h5counter  ;
+	}
+
+	& h4:not(.dont-number-heading)::before {
+		counter-increment:			h4counter ;
+		--khn-hnumber-h4-content:	var( --khn-hnumber-prefix )
+									counter(h2counter, var( --khn-hnumber-h2-format ) ) var( --khn-hnumber-separator )
+									counter(h3counter, var( --khn-hnumber-h3-format ) ) var( --khn-hnumber-separator )
+									counter(h4counter, var( --khn-hnumber-h4-format ) )
+									var( --khn-hnumber-suffix ) ;
+		content:					var( --khn-hnumber-null-content, var( --khn-hnumber-h4-content ) ) ;
+	}
+
+	h5:not(.dont-number-heading) {
+		counter-reset:	h6counter  ;
+	}
+
+	& h5:not(.dont-number-heading)::before {
+		counter-increment:			h5counter ;
+		--khn-hnumber-h5-content:	var( --khn-hnumber-prefix )
+									counter(h2counter, var( --khn-hnumber-h2-format ) ) var( --khn-hnumber-separator )
+									counter(h3counter, var( --khn-hnumber-h3-format ) ) var( --khn-hnumber-separator )
+									counter(h4counter, var( --khn-hnumber-h4-format ) ) var( --khn-hnumber-separator )
+									counter(h5counter, var( --khn-hnumber-h5-format ) )
+									var( --khn-hnumber-suffix ) ;
+		content:					var( --khn-hnumber-null-content, var( --khn-hnumber-h5-content ) ) ;
+	}
+
+	h6:not(.dont-number-heading) {
+//		counter-reset:				h7counter  ;
+	}
+
+	& h6:not(.dont-number-heading)::before {
+		counter-increment:			h6counter ;
+		--khn-hnumber-h6-content:	var( --khn-hnumber-prefix )
+									counter(h2counter, var( --khn-hnumber-h2-format ) ) var( --khn-hnumber-separator )
+									counter(h3counter, var( --khn-hnumber-h3-format ) ) var( --khn-hnumber-separator )
+									counter(h4counter, var( --khn-hnumber-h4-format ) ) var( --khn-hnumber-separator )
+									counter(h5counter, var( --khn-hnumber-h5-format ) ) var( --khn-hnumber-separator )
+									counter(h6counter, var( --khn-hnumber-h6-format ) )
+									var( --khn-hnumber-suffix ) ;
+		content:					var( --khn-hnumber-null-content, var( --khn-hnumber-h6-content ) ) ;
+	}
+}

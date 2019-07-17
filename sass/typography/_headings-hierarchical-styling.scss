@@ -1,0 +1,135 @@
+/*	Creates hierarchical numbering of heading elements h2–h6 in posts/pages, i.e., within 
+	class "entry-content", using CSS counters.
+	
+	See … sass/variables-site/_custom-properties-hierarchical-headings.scss for definitions
+	of the relevant CSS variables.
+
+	box-shadow provides a border/outline around each h# element, where the spreadSize of the box-shadow
+		is the thickness of the border/outline. I reject outline, because it doesn't respect border-radius.
+		An alternative is border; I moved away from this, but now can't replicate the case where it caused
+		the problem (of not enough padding between the left side of the text and the left wall of the 
+		border. And when I added padding, it also undesirably pushed the heading number inward away from the
+		border).
+
+*/
+.entry-content {
+
+	--khn-hnumber-suffix: "" ;
+
+	& h2:not(.dont-number-heading), h3:not(.dont-number-heading), h4:not(.dont-number-heading),
+	  h5:not(.dont-number-heading), h6:not(.dont-number-heading) {
+		margin-top:		var( --khn-hnumber-default-margin-top ) ;
+		margin-bottom:	var( --khn-hnumber-default-margin-bottom ) ;
+		padding-left:	var( --khn-hnumber-default-padding-left ) ;
+		padding:		var( --khn-hnumber-default-padding-top )
+						var( --khn-hnumber-default-padding-right )
+						var( --khn-hnumber-default-padding-bottom )
+						var( --khn-hnumber-default-padding-left ) ;
+		display: flex ;
+		flex-direction: row ;
+	}
+	
+	& h2:not(.dont-number-heading)::before, h3:not(.dont-number-heading)::before, h4:not(.dont-number-heading)::before,
+	  h5:not(.dont-number-heading)::before, h6:not(.dont-number-heading)::before {
+	  	position: relative ;
+	  	display: flex ;
+		justify-content:	center ;
+//		align-items:		center ;
+		height: 100% ;
+		font-size: 0.8em ;
+
+		left:	calc( -1 * var( --khn-hnumber-default-padding-left ) ) ;
+		top:	calc( -1 * var( --khn-hnumber-default-padding-top ) ) ;
+	  	min-width: var( --khn-hnumber-default-min-width ) ;
+//	  	padding: var( --khn-hnumber-default-before-padding ) ;
+//	  	padding-top: var( --khn-hnumber-default-padding-top ) ;
+//	  	padding-bottom: var( --khn-hnumber-default-padding-top ) ;
+		padding: 0 ;
+
+/*		See https://css-tricks.com/almanac/properties/b/border-radius/ */
+	  	-webkit-background-clip: content-box ;
+	  	background-clip: content-box ;
+	}
+
+	& h2:not(.dont-number-heading) {
+		min-width:		var( --khn-hnumber-h2-min-width ) ;		
+		border-style:	var( --khn-hnumber-h2-border-style )	;
+		border-color:	var( --khn-hnumber-h2-auxiliary-color )	;
+		border-width:	var( --khn-hnumber-h2-border-width )	;
+		border-radius:	var( --khn-hnumber-h2-border-radius )	;
+	}
+
+	& h2:not(.dont-number-heading)::before {
+		left: 				calc( -1 * var( --khn-hnumber-h2-padding-left ) ) ;			
+		color:				var( --khn-hnumber-h2-auxiliary-color-contrast ) ;
+		background-color:	var( --khn-hnumber-h2-auxiliary-color ) ;		
+		border-radius:		var( --khn-hnumber-h2-before-border-radius ) ;
+	}
+
+/* ************************************** */
+
+	& h3:not(.dont-number-heading) {
+		min-width:		var( --khn-hnumber-h3-min-width ) ;		
+		border-style:	var( --khn-hnumber-h3-border-style )	;
+		border-color:	var( --khn-hnumber-h3-auxiliary-color )	;
+		border-width:	var( --khn-hnumber-h3-border-width )	;
+		border-radius:	var( --khn-hnumber-h3-border-radius )	;
+	}
+
+	& h3:not(.dont-number-heading)::before {
+		left: 				calc( -1 * var( --khn-hnumber-h3-padding-left ) ) ;				
+		color:				var( --khn-hnumber-h3-auxiliary-color-contrast ) ;
+		background-color:	var( --khn-hnumber-h3-auxiliary-color ) ;
+		border-radius:		var( --khn-hnumber-h3-before-border-radius ) ;
+	}
+	
+/* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
+
+	& h4:not(.dont-number-heading) {
+		min-width:		var( --khn-hnumber-h4-min-width ) ;		
+		border-style:	var( --khn-hnumber-h4-border-style )	;
+		border-color:	var( --khn-hnumber-h4-auxiliary-color )	;
+		border-width:	var( --khn-hnumber-h4-border-width )	;
+		border-radius:	var( --khn-hnumber-h4-border-radius )	;
+	}
+
+	& h4:not(.dont-number-heading)::before {
+		left: 				calc( -1 * var( --khn-hnumber-h4-padding-left ) ) ;				
+		color:				var( --khn-hnumber-h4-auxiliary-color-contrast ) ;
+		background-color:	var( --khn-hnumber-h4-auxiliary-color ) ;
+		border-radius:		var( --khn-hnumber-h4-before-border-radius ) ;
+	}
+
+	& h5:not(.dont-number-heading) {
+		min-width:		var( --khn-hnumber-h5-min-width ) ;		
+		border-style:	var( --khn-hnumber-h5-border-style )	;
+		border-color:	var( --khn-hnumber-h5-auxiliary-color )	;
+		border-width:	var( --khn-hnumber-h5-border-width )	;
+		border-radius:	var( --khn-hnumber-h5-border-radius )	;
+	}
+
+	& h5:not(.dont-number-heading)::before {
+		left: 				calc( -1 * var( --khn-hnumber-h5-padding-left ) ) ;				
+		color:				var( --khn-hnumber-h5-auxiliary-color-contrast ) ;
+		background-color:	var( --khn-hnumber-h5-auxiliary-color ) ;
+		border-radius:		var( --khn-hnumber-h5-before-border-radius ) ;
+	}
+
+	& h6:not(.dont-number-heading) {
+		min-width:		var( --khn-hnumber-h6-min-width ) ;		
+		border-style:	var( --khn-hnumber-h6-border-style )	;
+		border-color:	var( --khn-hnumber-h6-auxiliary-color )	;
+		border-width:	var( --khn-hnumber-h6-border-width )	;
+		border-radius:	var( --khn-hnumber-h6-border-radius )	;
+	}
+
+	& h6:not(.dont-number-heading)::before {
+		left: 				calc( -1 * var( --khn-hnumber-h6-padding-left ) ) ;				
+		color:				var( --khn-hnumber-h6-auxiliary-color-contrast ) ;
+		background-color:	var( --khn-hnumber-h6-auxiliary-color ) ;
+		border-radius:		var( --khn-hnumber-h6-before-border-radius ) ;
+	}
+
+
+
+}

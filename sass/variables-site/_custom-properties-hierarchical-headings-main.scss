@@ -1,0 +1,39 @@
+/*	New partial, specific to the Kuhn-CSSvars fork, and to Kuhnian, to hold the new CSS
+	variables.
+	
+	See  … sass/typography/_headings-hierarchical.scss for relevant styling rules.
+
+	If you do NOT want a particular post/page heading numbered, assign it class "dont-number-heading".
+		In this case:
+			* the counter for that level of heading will not be incremented.
+			* the counter for the next level deeper will not be reset.
+			
+*/
+:root {
+/*	Heirarchical heading numbers */
+
+/*	If you globally want no heading numbers, set --khn-hnumber-null-content: none;
+		Otherwise, --khn-hnumber-null-content MUST NOT BE DEFINED AT ALL. (The appearance of heading
+		numbers relies on --khn-hnumber-null-content being undefined.)
+*/
+//	--khn-hnumber-null-content: none;
+
+//	--khn-hnumber-separator is the separator between section numbers; typically a period (".")
+	--khn-hnumber-separator:	"." ;
+	
+//	--khn-hnumber-suffix appears after the sequence of section numbers. The default is a terminal
+//		character, if any, and a pair of nonbreaking spaces.
+//		However, when the area of the hierarchical numbers is restyled later, this is overridden.
+	--khn-hnumber-suffix:		".\0000a0\0000a0" ;
+
+	--khn-hnumber-prefix:	"" ; /* Could be, e.g., "&sect;" */
+
+/*	Examples of valid values for the below format CSS variables are
+		decimal (default), lower-roman, upper-roman, lower-latin or lower-alpha, upper-latin or upper-alpha, lower-greek
+*/
+	--khn-hnumber-h2-format:	upper-roman	;
+	--khn-hnumber-h3-format:	upper-alpha ;
+	--khn-hnumber-h4-format:	decimal		;
+	--khn-hnumber-h5-format:	lower-alpha ;
+	--khn-hnumber-h6-format:	lower-greek ;	
+}
