@@ -27,10 +27,12 @@
         padding: 1em;
         &:after {
             display: block;
-            margin: 4em 0;
-            width: 33.33%;
+            margin: var( --khn-archive-page-inter-post-divider-margin-top) 0 var( --khn-archive-page-inter-post-divider-margin-bottom);
+//            width: 33.33%;
+			width: 100%;
             content: "";
-            border-bottom: 3px solid $color__grey_black;
+//            border-bottom: 3px solid var( --khn-color-background-archive ) ;
+            border-bottom: var( --khn-archive-page-inter-post-divider-thickness ) solid var( --khn-color-background-archive ) ;
         }
     }
 }
@@ -50,7 +52,7 @@
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 grid-gap: 8px;
-                background: $color__grey_light;
+                background: var( --khn-color-background-archive );
 
                 @media screen and (min-width: $query__wide) {
                     grid-template-columns: repeat(3, 1fr);
