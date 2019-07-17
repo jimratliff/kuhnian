@@ -1,0 +1,18 @@
+/*	New partial, specific to the Kuhn-CSSvars fork, and to Kuhnian, to hold the new CSS
+	variables 
+*/
+
+:root {
+/*	For footnotes (Modern Footnotes) */
+	--khn-margin-left-footnote:			1em	;
+	--khn-margin-right-footnote:		1em	;
+	--khn-margin-top-footnote:			1em	;
+	--khn-margin-bottom-footnote:		1em	;
+/*	--khn-font-family-footnote-text:	var( --khn-font-family-body ) ; */
+	--khn-font-family-footnote-text:	var( --khn-font-family-sans-serif ) ;
+	--khn-font-size-footnote-text:		0.9em ;
+	--khn-line-height-footnote-text:	1.2 ;
+	--khn-border-footnote:				none 2px orange ;
+	--khn-color-text-footnote:			var( --khn-color-text-default )	;
+	--khn-color-background-footnote:	var( --khn-color-theme-secondary-very-faded ) ;
+}
