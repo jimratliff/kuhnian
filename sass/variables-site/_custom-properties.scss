@@ -76,6 +76,16 @@
 /*	Navigation menu */
 	--khn-font-size-main-navigation:				0.9rem	;
 	--khn-content-before-main-navigation-children:	'• ' 	;
+	
+/*	Category links */
+	--khn-category-links-text-transform:	uppercase	;
+	--khn-category-links-background-color:	var( --khn-color-theme-secondary )			;
+	--khn-category-links-text-color:		var( --khn-color-theme-secondary-contrast )	;
+	--khn-category-links-font-size:			0.8em ;
+	--khn-category-links-margin-bottom:		0.5em ;
+	--khn-category-links-border-radius:		0.4em ;
+	--khn-category-links-padding:			0.25em 0.5em 0.25em 0.5em ;
+	
 /*	Transition times */
 	--khn-transition-time-links: 0.6s ;
 
