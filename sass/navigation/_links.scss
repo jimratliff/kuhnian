@@ -3,6 +3,7 @@ a {
 	background-color:	var(--khn-color-background-link-unvisited)	;
 	text-decoration:	var(--khn-text-decoration-link-unvisited)	;
 	outline:			var(--khn-outline-link-unvisited)			;
+	border-radius:		var( --khn-border-radius-link )				;
 
 	&:visited {
 /*		color: $color__link-visited; */

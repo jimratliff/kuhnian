@@ -75,5 +75,7 @@
 /*	Navigation menu */
 	--khn-font-size-main-navigation: 0.9rem;
 	--khn-content-before-main-navigation-children: '• ' ;
+/*	Links (except for color/decoration, for which see _custom-properties-colors.scss.) */
+	--khn-border-radius-link: 0.25em ;
 
 }
