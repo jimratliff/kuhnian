@@ -37,6 +37,13 @@
     }
 }
 
+/*	Begin jdr experiment, 2019_07_17_0848 */
+	body.archive-view article:hover {
+		border: 3px solid red ;
+		background-color: pink ;
+	}
+/*	End jdr experiment, 2019_07_17_0848 */
+
 @supports (grid-area: auto) {
     .archive-view .site-main {
         max-width: var( --khn-width-max-site-main-default ) ;
