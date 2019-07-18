@@ -14,17 +14,17 @@
 */
 .entry-content {
 
-	--khn-hnumber-suffix: "" ;
+	--khn-hnumber-suffixX: "" ;
 
 	& h2:not(.dont-number-heading), h3:not(.dont-number-heading), h4:not(.dont-number-heading),
 	  h5:not(.dont-number-heading), h6:not(.dont-number-heading) {
-		margin-top:		var( --khn-hnumber-default-margin-top ) ;
-		margin-bottom:	var( --khn-hnumber-default-margin-bottom ) ;
-		padding-left:	var( --khn-hnumber-default-padding-left ) ;
-		padding:		var( --khn-hnumber-default-padding-top )
-						var( --khn-hnumber-default-padding-right )
-						var( --khn-hnumber-default-padding-bottom )
-						var( --khn-hnumber-default-padding-left ) ;
+		margin-top:		var( --khn-hnumber-default-margin-topX ) ;
+		margin-bottom:	var( --khn-hnumber-default-margin-bottomX ) ;
+		padding-left:	var( --khn-hnumber-default-padding-leftX ) ;
+		padding:		var( --khn-hnumber-default-padding-topX )
+						var( --khn-hnumber-default-padding-rightX )
+						var( --khn-hnumber-default-padding-bottomX )
+						var( --khn-hnumber-default-padding-leftX ) ;
 		display: flex ;
 		flex-direction: row ;
 	}
@@ -38,12 +38,12 @@
 		height: 100% ;
 		font-size: 0.8em ;
 
-		left:	calc( -1 * var( --khn-hnumber-default-padding-left ) ) ;
-		top:	calc( -1 * var( --khn-hnumber-default-padding-top ) ) ;
-	  	min-width: var( --khn-hnumber-default-min-width ) ;
-//	  	padding: var( --khn-hnumber-default-before-padding ) ;
-//	  	padding-top: var( --khn-hnumber-default-padding-top ) ;
-//	  	padding-bottom: var( --khn-hnumber-default-padding-top ) ;
+		left:	calc( -1 * var( --khn-hnumber-default-padding-leftX ) ) ;
+		top:	calc( -1 * var( --khn-hnumber-default-padding-topX ) ) ;
+	  	min-width: var( --khn-hnumber-default-min-widthX ) ;
+//	  	padding: var( --khn-hnumber-default-before-paddingX ) ;
+//	  	padding-top: var( --khn-hnumber-default-padding-topX ) ;
+//	  	padding-bottom: var( --khn-hnumber-default-padding-topX ) ;
 		padding: 0 ;
 
 /*		See https://css-tricks.com/almanac/properties/b/border-radius/ */
@@ -52,82 +52,82 @@
 	}
 
 	& h2:not(.dont-number-heading) {
-		min-width:		var( --khn-hnumber-h2-min-width ) ;		
-		border-style:	var( --khn-hnumber-h2-border-style )	;
-		border-color:	var( --khn-hnumber-h2-auxiliary-color )	;
-		border-width:	var( --khn-hnumber-h2-border-width )	;
-		border-radius:	var( --khn-hnumber-h2-border-radius )	;
+		min-width:		var( --khn-hnumber-h2-min-widthX ) ;		
+		border-style:	var( --khn-hnumber-h2-border-styleX )	;
+		border-color:	var( --khn-hnumber-h2-auxiliary-colorX )	;
+		border-width:	var( --khn-hnumber-h2-border-widthX )	;
+		border-radius:	var( --khn-hnumber-h2-border-radiusX )	;
 	}
 
 	& h2:not(.dont-number-heading)::before {
-		left: 				calc( -1 * var( --khn-hnumber-h2-padding-left ) ) ;			
-		color:				var( --khn-hnumber-h2-auxiliary-color-contrast ) ;
-		background-color:	var( --khn-hnumber-h2-auxiliary-color ) ;		
-		border-radius:		var( --khn-hnumber-h2-before-border-radius ) ;
+		left: 				calc( -1 * var( --khn-hnumber-h2-padding-leftX ) ) ;			
+		color:				var( --khn-hnumber-h2-auxiliary-color-contrastX ) ;
+		background-color:	var( --khn-hnumber-h2-auxiliary-colorX ) ;		
+		border-radius:		var( --khn-hnumber-h2-before-border-radiusX ) ;
 	}
 
 /* ************************************** */
 
 	& h3:not(.dont-number-heading) {
-		min-width:		var( --khn-hnumber-h3-min-width ) ;		
-		border-style:	var( --khn-hnumber-h3-border-style )	;
-		border-color:	var( --khn-hnumber-h3-auxiliary-color )	;
-		border-width:	var( --khn-hnumber-h3-border-width )	;
-		border-radius:	var( --khn-hnumber-h3-border-radius )	;
+		min-width:		var( --khn-hnumber-h3-min-widthX ) ;		
+		border-style:	var( --khn-hnumber-h3-border-styleX )	;
+		border-color:	var( --khn-hnumber-h3-auxiliary-colorX )	;
+		border-width:	var( --khn-hnumber-h3-border-widthX )	;
+		border-radius:	var( --khn-hnumber-h3-border-radiusX )	;
 	}
 
 	& h3:not(.dont-number-heading)::before {
-		left: 				calc( -1 * var( --khn-hnumber-h3-padding-left ) ) ;				
-		color:				var( --khn-hnumber-h3-auxiliary-color-contrast ) ;
-		background-color:	var( --khn-hnumber-h3-auxiliary-color ) ;
-		border-radius:		var( --khn-hnumber-h3-before-border-radius ) ;
+		left: 				calc( -1 * var( --khn-hnumber-h3-padding-leftX ) ) ;				
+		color:				var( --khn-hnumber-h3-auxiliary-color-contrastX ) ;
+		background-color:	var( --khn-hnumber-h3-auxiliary-colorX ) ;
+		border-radius:		var( --khn-hnumber-h3-before-border-radiusX ) ;
 	}
 	
 /* ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ */
 
 	& h4:not(.dont-number-heading) {
-		min-width:		var( --khn-hnumber-h4-min-width ) ;		
-		border-style:	var( --khn-hnumber-h4-border-style )	;
-		border-color:	var( --khn-hnumber-h4-auxiliary-color )	;
-		border-width:	var( --khn-hnumber-h4-border-width )	;
-		border-radius:	var( --khn-hnumber-h4-border-radius )	;
+		min-width:		var( --khn-hnumber-h4-min-widthX ) ;		
+		border-style:	var( --khn-hnumber-h4-border-styleX )	;
+		border-color:	var( --khn-hnumber-h4-auxiliary-colorX )	;
+		border-width:	var( --khn-hnumber-h4-border-widthX )	;
+		border-radius:	var( --khn-hnumber-h4-border-radiusX )	;
 	}
 
 	& h4:not(.dont-number-heading)::before {
-		left: 				calc( -1 * var( --khn-hnumber-h4-padding-left ) ) ;				
-		color:				var( --khn-hnumber-h4-auxiliary-color-contrast ) ;
-		background-color:	var( --khn-hnumber-h4-auxiliary-color ) ;
-		border-radius:		var( --khn-hnumber-h4-before-border-radius ) ;
+		left: 				calc( -1 * var( --khn-hnumber-h4-padding-leftX ) ) ;				
+		color:				var( --khn-hnumber-h4-auxiliary-color-contrastX ) ;
+		background-color:	var( --khn-hnumber-h4-auxiliary-colorX ) ;
+		border-radius:		var( --khn-hnumber-h4-before-border-radiusX ) ;
 	}
 
 	& h5:not(.dont-number-heading) {
-		min-width:		var( --khn-hnumber-h5-min-width ) ;		
-		border-style:	var( --khn-hnumber-h5-border-style )	;
-		border-color:	var( --khn-hnumber-h5-auxiliary-color )	;
-		border-width:	var( --khn-hnumber-h5-border-width )	;
-		border-radius:	var( --khn-hnumber-h5-border-radius )	;
+		min-width:		var( --khn-hnumber-h5-min-widthX ) ;		
+		border-style:	var( --khn-hnumber-h5-border-styleX )	;
+		border-color:	var( --khn-hnumber-h5-auxiliary-colorX )	;
+		border-width:	var( --khn-hnumber-h5-border-widthX )	;
+		border-radius:	var( --khn-hnumber-h5-border-radiusX )	;
 	}
 
 	& h5:not(.dont-number-heading)::before {
-		left: 				calc( -1 * var( --khn-hnumber-h5-padding-left ) ) ;				
-		color:				var( --khn-hnumber-h5-auxiliary-color-contrast ) ;
-		background-color:	var( --khn-hnumber-h5-auxiliary-color ) ;
-		border-radius:		var( --khn-hnumber-h5-before-border-radius ) ;
+		left: 				calc( -1 * var( --khn-hnumber-h5-padding-leftX ) ) ;				
+		color:				var( --khn-hnumber-h5-auxiliary-color-contrastX ) ;
+		background-color:	var( --khn-hnumber-h5-auxiliary-colorX ) ;
+		border-radius:		var( --khn-hnumber-h5-before-border-radiusX ) ;
 	}
 
 	& h6:not(.dont-number-heading) {
-		min-width:		var( --khn-hnumber-h6-min-width ) ;		
-		border-style:	var( --khn-hnumber-h6-border-style )	;
-		border-color:	var( --khn-hnumber-h6-auxiliary-color )	;
-		border-width:	var( --khn-hnumber-h6-border-width )	;
-		border-radius:	var( --khn-hnumber-h6-border-radius )	;
+		min-width:		var( --khn-hnumber-h6-min-widthX ) ;		
+		border-style:	var( --khn-hnumber-h6-border-styleX )	;
+		border-color:	var( --khn-hnumber-h6-auxiliary-colorX )	;
+		border-width:	var( --khn-hnumber-h6-border-widthX )	;
+		border-radius:	var( --khn-hnumber-h6-border-radiusX )	;
 	}
 
 	& h6:not(.dont-number-heading)::before {
-		left: 				calc( -1 * var( --khn-hnumber-h6-padding-left ) ) ;				
-		color:				var( --khn-hnumber-h6-auxiliary-color-contrast ) ;
-		background-color:	var( --khn-hnumber-h6-auxiliary-color ) ;
-		border-radius:		var( --khn-hnumber-h6-before-border-radius ) ;
+		left: 				calc( -1 * var( --khn-hnumber-h6-padding-leftX ) ) ;				
+		color:				var( --khn-hnumber-h6-auxiliary-color-contrastX ) ;
+		background-color:	var( --khn-hnumber-h6-auxiliary-colorX ) ;
+		border-radius:		var( --khn-hnumber-h6-before-border-radiusX ) ;
 	}
 
 

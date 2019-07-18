@@ -5,31 +5,31 @@
 /*	--font-meta:				'Roboto Mono', sans-serif	;	*/
 /*	--font-code:				Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace	; */
 /*	--font-pre:					"Courier 10 Pitch", Courier, monospace	; */
-/*	--font-main:				var(--khn-font-family-sans-serif)	; */
-	--font-main:				var(--khn-font-family-sans-serif-alt)	;
-	--font-meta:				var(--khn-font-family-metadata)		;
-	--font-code:				var(--khn-font-family-code)			;
-	--font-pre:					var(--khn-font-family-pre)			;
+/*	--font-main:				var(--khn-font-family-sans-serifX)	; */
+	--font-main:				var(--khn-font-family-sans-serif-altX)	;
+	--font-meta:				var(--khn-font-family-metadataX)		;
+	--font-code:				var(--khn-font-family-codeX)			;
+	--font-pre:					var(--khn-font-family-preX)			;
 	
 /***	New CSS variables beyond any Sass variables defined in Kuhn ****/
 /*	Font families	*/
-	--khn-font-family-serif:			"Lora", "Times New Roman", serif		;
-	--khn-font-family-sans-serif:		"PT Sans", Arial, Helvetica, sans-serif		;
-	--khn-font-family-sans-serif-alt:	"Noto Sans", Arial, Helvetica, sans-serif	;  
-/*	--khn-font-family-sans-serif-alt:	"Open Sans", Arial, Helvetica, sans-serif	;   */
-	--khn-font-family-code:				"PT Mono", monospace						;
-	--khn-font-family-pre:				"PT Mono", monospace						;
+	--khn-font-family-serifX:			"Lora", "Times New Roman", serif		;
+	--khn-font-family-sans-serifX:		"PT Sans", Arial, Helvetica, sans-serif		;
+	--khn-font-family-sans-serif-altX:	"Noto Sans", Arial, Helvetica, sans-serif	;  
+/*	--khn-font-family-sans-serif-altX:	"Open Sans", Arial, Helvetica, sans-serif	;   */
+	--khn-font-family-codeX:				"PT Mono", monospace						;
+	--khn-font-family-preX:				"PT Mono", monospace						;
 /*	The below cursive font should probably be relegated to a child theme	*/
-	--khn-font-family-cursive:			"Petit Formal Script", cursive				;
+	--khn-font-family-cursiveX:			"Petit Formal Script", cursive				;
 
-	--khn-font-family-body:					var(--khn-font-family-serif)		;
-	--khn-font-family-headings:				var(--khn-font-family-sans-serif)	;
+	--khn-font-family-bodyX:					var(--khn-font-family-serifX)		;
+	--khn-font-family-headingsX:				var(--khn-font-family-sans-serifX)	;
 
-	--khn-font-family-generic-elements:		var(--khn-font-family-sans-serif)		;
-	--khn-font-family-metadata:				var(--khn-font-family-sans-serif)		;
-	--khn-font-family-menus:				var(--khn-font-family-sans-serif-alt)	;
-	--khn-font-weight-menus:				700; /* For Noto Sans 700 */
-	--khn-font-family-site-logo:			var(--khn-font-family-cursive)			;
+	--khn-font-family-generic-elementsX:		var(--khn-font-family-sans-serifX)		;
+	--khn-font-family-metadataX:				var(--khn-font-family-sans-serifX)		;
+	--khn-font-family-menusX:				var(--khn-font-family-sans-serif-altX)	;
+	--khn-font-weight-menusX:				700; /* For Noto Sans 700 */
+	--khn-font-family-site-logoX:			var(--khn-font-family-cursiveX)			;
 	
-	--khn-font-family-for-enumerate-embossed-text: var( --khn-font-family-sans-serif ) ;
+	--khn-font-family-for-enumerate-embossed-textX: var( --khn-font-family-sans-serifX ) ;
 }

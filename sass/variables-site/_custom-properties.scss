@@ -10,96 +10,96 @@
 
 :root {
 /*	For html root level */
-	--khn-font-size-base:				1rem	;
+	--khn-font-size-baseX:				1rem	;
 	
-	--font-line-height-body:	var( --khn-scalar-line-height-base )	;
+	--font-line-height-body:	var( --khn-scalar-line-height-baseX )	;
 	--font-line-height-pre:		1.6	;	
 
 /***	PARAGRAPH SETTINGS	***/
-	--khn-font-size-paragraph:				1em		;
-	--khn-line-height-paragraph:			1.5		;
-	--khn-length-indent-paragraph:			1.0em	;
-	--khn-length-margin-top-paragraph:		0		;
-	--khn-length-margin-bottom-paragraph:	0.6em	;
+	--khn-font-size-paragraphX:				1em		;
+	--khn-line-height-paragraphX:			1.5		;
+	--khn-length-indent-paragraphX:			1.0em	;
+	--khn-length-margin-top-paragraphX:		0		;
+	--khn-length-margin-bottom-paragraphX:	0.6em	;
 
 /*	Lengths for paragraphs */
-	--khn-font-size-body:				1.0rem	;
-	--khn-scalar-line-height-base:		1.5		;
+	--khn-font-size-bodyX:				1.0rem	;
+	--khn-scalar-line-height-baseX:		1.5		;
 	
 /*	Styling of post/page article titles */
 /*	Post-article titles appear both on single-post pages and archive pages; Page-article titles appear, I think, only on the page itself (not including menus, etc.)
 *	I want (a) a post-article title on a single-post page to be styled identically to (b) a page-article title on that page.
 */
-	--khn-font-size-entry-title:							1.3em	;
-	--khn-margin-entry-title:								0.125em 0 0.25em			;
-	--khn-scalar-line-height-article-title:					1.2							;
+	--khn-font-size-entry-titleX:							1.3em	;
+	--khn-margin-entry-titleX:								0.125em 0 0.25em			;
+	--khn-scalar-line-height-article-titleX:					1.2							;
 /*	For post-article or page-article title on its own page */
-	--khn-font-family-article-title-on-its-page:			var(--khn-font-family-serif);
-	--khn-font-size-article-title-on-its-page:				1.5em						;
-	--khn-font-size-article-title-on-its-page-medscreen:	2.5em						;
-	--khn-scalar-line-height-article-title-on-its-page:		var(--khn-scalar-line-height-article-title);
+	--khn-font-family-article-title-on-its-pageX:			var(--khn-font-family-serifX);
+	--khn-font-size-article-title-on-its-pageX:				1.5em						;
+	--khn-font-size-article-title-on-its-page-medscreenX:	2.5em						;
+	--khn-scalar-line-height-article-title-on-its-pageX:		var(--khn-scalar-line-height-article-titleX);
 					;
-	--khn-color-text-article-title-on-its-page:				var(--khn-color-theme-tertiary)	;
-	--khn-text-align-article-title-on-its-page:				center						;
-	--khn-text-transform-article-title-on-its-page:			none						;
-	--khn-text-decoration-article-title-on-its-page:		none						;
+	--khn-color-text-article-title-on-its-pageX:				var(--khn-color-theme-tertiaryX)	;
+	--khn-text-align-article-title-on-its-pageX:				center						;
+	--khn-text-transform-article-title-on-its-pageX:			none						;
+	--khn-text-decoration-article-title-on-its-pageX:		none						;
 /*	For post-article's title on an archive page */
-	--khn-font-family-post-title-on-archive-page:			var(--khn-font-family-serif);
-	--khn-font-size-post-title-on-archive-page:				1.5rem						;
-	--khn-scalar-line-height-title-on-archive-page:			var(--khn-scalar-line-height-article-title);
-	--khn-color-text-post-title-on-archive-page:			var(--khn-color-theme-tertiary)	;
-	--khn-text-align-post-title-on-archive-page:			center						;
-	--khn-text-transform-post-title-on-archive-page:		none						;
-	--khn-text-decoration-post-title-on-archive-page:		none						;
+	--khn-font-family-post-title-on-archive-pageX:			var(--khn-font-family-serifX);
+	--khn-font-size-post-title-on-archive-pageX:				1.5rem						;
+	--khn-scalar-line-height-title-on-archive-pageX:			var(--khn-scalar-line-height-article-titleX);
+	--khn-color-text-post-title-on-archive-pageX:			var(--khn-color-theme-tertiaryX)	;
+	--khn-text-align-post-title-on-archive-pageX:			center						;
+	--khn-text-transform-post-title-on-archive-pageX:		none						;
+	--khn-text-decoration-post-title-on-archive-pageX:		none						;
 
 /*	Margins */
 /* Margins for entry-meta */
-	--khn-font-size-entry-meta:								90%								;
-	--khn-margins-entry-meta:								1em 0em 1em						;
-	--khn-margins-entry-meta-medium-screen:					var(--khn-margins-entry-meta)	;
+	--khn-font-size-entry-metaX:								90%								;
+	--khn-margins-entry-metaX:								1em 0em 1em						;
+	--khn-margins-entry-meta-medium-screenX:					var(--khn-margins-entry-metaX)	;
 
 /*	Display */
 /*	"Leave a comment": In order to display, choose "inherit" */
-	--khn-display-comments-link:							none	;
+	--khn-display-comments-linkX:							none	;
 
 
 /*	Content */
 /*	Separator between elements in entry-meta (byline, etc.) */
-	--khn-content-entry-meta-separator:						" ★ "	;
+	--khn-content-entry-meta-separatorX:						" ★ "	;
 
 /*	Navigation Hamburger icon */
-	--khn-margins-top-bottom-hamburger-div: 4px 	;
-	--khn-width-hamburger-button:			4em		;
-	--khn-width-hamburger-div:				2.5em	;
-	--khn-height-hamburger-div:				2px		;
+	--khn-margins-top-bottom-hamburger-divX: 4px 	;
+	--khn-width-hamburger-buttonX:			4em		;
+	--khn-width-hamburger-divX:				2.5em	;
+	--khn-height-hamburger-divX:				2px		;
 
 /*	Navigation menu */
-	--khn-font-size-main-navigation:				0.9rem	;
-	--khn-content-before-main-navigation-children:	'• ' 	;
+	--khn-font-size-main-navigationX:				0.9rem	;
+	--khn-content-before-main-navigation-childrenX:	'• ' 	;
 	
 /*	Category links */
-	--khn-category-links-text-transform:	uppercase	;
-	--khn-category-links-background-color:	var( --khn-color-theme-secondary )			;
-	--khn-category-links-text-color:		var( --khn-color-theme-secondary-contrast )	;
-	--khn-category-links-font-size:			0.8em ;
-	--khn-category-links-margin-bottom:		0.5em ;
-	--khn-category-links-border-radius:		0.4em ;
-	--khn-category-links-padding:			0.25em 0.5em 0.25em 0.5em ;
+	--khn-category-links-text-transformX:	uppercase	;
+	--khn-category-links-background-colorX:	var( --khn-color-theme-secondaryX )			;
+	--khn-category-links-text-colorX:		var( --khn-color-theme-secondary-contrastX )	;
+	--khn-category-links-font-sizeX:			0.8em ;
+	--khn-category-links-margin-bottomX:		0.5em ;
+	--khn-category-links-border-radiusX:		0.4em ;
+	--khn-category-links-paddingX:			0.25em 0.5em 0.25em 0.5em ;
 	
 /*	Transition times */
-	--khn-transition-time-links: 0.6s ;
+	--khn-transition-time-linksX: 0.6s ;
 
 /*	Structural */
-	--khn-width-max-site-main-default:	40em ;
-	--khn-width-max-paragraph:			50em ; 
+	--khn-width-max-site-main-defaultX:	40em ;
+	--khn-width-max-paragraphX:			50em ; 
 
 /*	Archive pages */
-	--khn-archive-page-inter-post-divider-thickness:		3px ;
-	--khn-archive-page-inter-post-divider-margin-top:		2em ;
-	--khn-archive-page-inter-post-divider-margin-bottom:	1em ;
+	--khn-archive-page-inter-post-divider-thicknessX:		3px ;
+	--khn-archive-page-inter-post-divider-margin-topX:		2em ;
+	--khn-archive-page-inter-post-divider-margin-bottomX:	1em ;
 
 /*	Links (except for color/decoration, for which see _custom-properties-colors.scss.) */
-	--khn-border-radius-link: 0.25em ;
+	--khn-border-radius-linkX: 0.25em ;
 
 
 

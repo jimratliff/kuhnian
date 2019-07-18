@@ -2,10 +2,10 @@ p {
 /*	By default, all paragraphs are indented, unless reversed on other grounds */
 /*	margin-top: .5em; */
 /*	margin-bottom: 1em; */
-	margin-top:		var(--khn-length-margin-top-paragraph)		;
-	margin-bottom:	var(--khn-length-margin-bottom-paragraph)	;
-	text-indent:	var(--khn-length-indent-paragraph)			;
-	line-height:	var(--khn-line-height-paragraph)			;
+	margin-top:		var(--khn-length-margin-top-paragraphX)		;
+	margin-bottom:	var(--khn-length-margin-bottom-paragraphX)	;
+	text-indent:	var(--khn-length-indent-paragraphX)			;
+	line-height:	var(--khn-line-height-paragraphX)			;
 }
 
 /*	Reverse indentation if <p> immediately follows a blockquote, or any h# element.
@@ -27,7 +27,7 @@ h6 + p {
 /*	Force indentation when .force-indent class is specified for paragraph */
 p.force-indent,
 p.jdr-force-indent {
-	text-indent:	var(--khn-length-indent-paragraph)	!important	;
+	text-indent:	var(--khn-length-indent-paragraphX)	!important	;
 }
 
 /*	Force no indentation when .force-noindent class is specified for paragraph */

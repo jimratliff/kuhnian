@@ -4,15 +4,15 @@
 
 :root {
 /*	For footnotes (Modern Footnotes) */
-	--khn-margin-left-footnote:			1em	;
-	--khn-margin-right-footnote:		1em	;
-	--khn-margin-top-footnote:			1em	;
-	--khn-margin-bottom-footnote:		1em	;
-/*	--khn-font-family-footnote-text:	var( --khn-font-family-body ) ; */
-	--khn-font-family-footnote-text:	var( --khn-font-family-sans-serif ) ;
-	--khn-font-size-footnote-text:		0.9em ;
-	--khn-line-height-footnote-text:	1.2 ;
-	--khn-border-footnote:				none 2px orange ;
-	--khn-color-text-footnote:			var( --khn-color-text-default )	;
-	--khn-color-background-footnote:	var( --khn-color-theme-secondary-very-faded ) ;
+	--khn-margin-left-footnoteX:			1em	;
+	--khn-margin-right-footnoteX:		1em	;
+	--khn-margin-top-footnoteX:			1em	;
+	--khn-margin-bottom-footnoteX:		1em	;
+/*	--khn-font-family-footnote-textX:	var( --khn-font-family-bodyX ) ; */
+	--khn-font-family-footnote-textX:	var( --khn-font-family-sans-serifX ) ;
+	--khn-font-size-footnote-textX:		0.9em ;
+	--khn-line-height-footnote-textX:	1.2 ;
+	--khn-border-footnoteX:				none 2px orange ;
+	--khn-color-text-footnoteX:			var( --khn-color-text-defaultX )	;
+	--khn-color-background-footnoteX:	var( --khn-color-theme-secondary-very-fadedX ) ;
 }

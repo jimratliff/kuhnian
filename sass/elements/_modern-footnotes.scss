@@ -1,19 +1,19 @@
 /*	Revises CSS for Modern Footnotes, incorporating CSS variables from Kuhnian Theme */
 .modern-footnotes-footnote__note--expandable {
-  margin-top:		var( --khn-margin-top-footnote )		;
-  margin-bottom:	var( --khn-margin-bottom-footnote )		;
-  margin-left:		var( --khn-margin-left-footnote )		;
-  margin-right:		var( --khn-margin-right-footnote )		;
-  background-color:	var( --khn-color-background-footnote )	;
-  border:			var( --khn-border-footnote ) ;
+  margin-top:		var( --khn-margin-top-footnoteX )		;
+  margin-bottom:	var( --khn-margin-bottom-footnoteX )		;
+  margin-left:		var( --khn-margin-left-footnoteX )		;
+  margin-right:		var( --khn-margin-right-footnoteX )		;
+  background-color:	var( --khn-color-background-footnoteX )	;
+  border:			var( --khn-border-footnoteX ) ;
 }
 
 .modern-footnotes-footnote__note {
 //	Remove default text-indent. (Even the first paragraph of a footnote would be indented because it triggers the p + p rule.) 
   text-indent:	0 ; 
 //	Tighten the line-height for footnote text. 
-  line-height:	var( --khn-line-height-footnote-text ) ;
-  color:		var( --khn-color-text-footnote ) ;
-  font-size:	var( --khn-font-size-footnote-text ) ;
-  font-family:	var( --khn-font-family-footnote-text ) ;
+  line-height:	var( --khn-line-height-footnote-textX ) ;
+  color:		var( --khn-color-text-footnoteX ) ;
+  font-size:	var( --khn-font-size-footnote-textX ) ;
+  font-family:	var( --khn-font-family-footnote-textX ) ;
 }

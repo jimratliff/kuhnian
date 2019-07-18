@@ -27,12 +27,12 @@
         padding: 1em;
         &:after {
             display: block;
-            margin: var( --khn-archive-page-inter-post-divider-margin-top) 0 var( --khn-archive-page-inter-post-divider-margin-bottom);
+            margin: var( --khn-archive-page-inter-post-divider-margin-topX) 0 var( --khn-archive-page-inter-post-divider-margin-bottomX);
 //            width: 33.33%;
 			width: 100%;
             content: "";
-//            border-bottom: 3px solid var( --khn-color-background-archive ) ;
-            border-bottom: var( --khn-archive-page-inter-post-divider-thickness ) solid var( --khn-color-background-archive ) ;
+//            border-bottom: 3px solid var( --khn-color-background-archiveX ) ;
+            border-bottom: var( --khn-archive-page-inter-post-divider-thicknessX ) solid var( --khn-color-background-archiveX ) ;
         }
     }
 }
@@ -46,7 +46,7 @@
 
 @supports (grid-area: auto) {
     .archive-view .site-main {
-        max-width: var( --khn-width-max-site-main-default ) ;
+        max-width: var( --khn-width-max-site-main-defaultX ) ;
         padding: 1em;
     }
 
@@ -59,7 +59,7 @@
                 display: grid;
                 grid-template-columns: repeat(2, 1fr);
                 grid-gap: 8px;
-                background: var( --khn-color-background-archive );
+                background: var( --khn-color-background-archiveX );
 
                 @media screen and (min-width: $query__wide) {
                     grid-template-columns: repeat(3, 1fr);

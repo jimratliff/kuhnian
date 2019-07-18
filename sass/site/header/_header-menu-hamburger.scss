@@ -1,19 +1,19 @@
 nav#site-navigation button.kuhnian-hamburger {
-    background-color:	var( --khn-hamburger-color-background ) ;
-    position:	        var( --khn-hamburger-position-type ) ;
+    background-color:	var( --khn-hamburger-color-backgroundX ) ;
+    position:	        var( --khn-hamburger-position-typeX ) ;
     cursor:           	pointer ;
-    left:	            var( --khn-hamburger-left ) ;
-    top:				var( --khn-hamburger-top ) ;
-    padding:			var( --khn-hamburger-padding ) ; 
-    margin:		        var( --khn-hamburger-margin ) ;
-    width: 				var( --khn-hamburger-total-width-not-X ) ;
-    height: 			var( --khn-hamburger-total-height-not-X ) ;
-    outline-style: 		var( --khn-hamburger-outline-style ) ;
-    outline-width: 		var( --khn-hamburger-outline-width ) ;
-    outline-color: 		var( --khn-hamburger-outline-color ) ; 
-    border-style: 		var( --khn-hamburger-border-style ) ;
-    border-width: 		var( --khn-hamburger-border-width ) ;
-    border-color: 		var( --khn-hamburger-border-color ) ; 
+    left:	            var( --khn-hamburger-leftX ) ;
+    top:				var( --khn-hamburger-topX ) ;
+    padding:			var( --khn-hamburger-paddingX ) ; 
+    margin:		        var( --khn-hamburger-marginX ) ;
+    width: 				var( --khn-hamburger-total-width-not-XX ) ;
+    height: 			var( --khn-hamburger-total-height-not-XX ) ;
+    outline-style: 		var( --khn-hamburger-outline-styleX ) ;
+    outline-width: 		var( --khn-hamburger-outline-widthX ) ;
+    outline-color: 		var( --khn-hamburger-outline-colorX ) ; 
+    border-style: 		var( --khn-hamburger-border-styleX ) ;
+    border-width: 		var( --khn-hamburger-border-widthX ) ;
+    border-color: 		var( --khn-hamburger-border-colorX ) ; 
 }
 
 button.kuhnian-hamburger > span,
@@ -21,19 +21,19 @@ button.kuhnian-hamburger > span:before,
 button.kuhnian-hamburger > span:after {
     display:		    block ;
     cursor: 		    pointer ; 
-    height:			    var( --khn-hamburger-slice-thickness ) ;
-    width:			    var( --khn-hamburger-width ) ;
-    border-radius:  	var( --khn-hamburger-border-radius ) ;
-    background:	    	var( --khn-hamburger-color-hamburger ) ;
+    height:			    var( --khn-hamburger-slice-thicknessX ) ;
+    width:			    var( --khn-hamburger-widthX ) ;
+    border-radius:  	var( --khn-hamburger-border-radiusX ) ;
+    background:	    	var( --khn-hamburger-color-hamburgerX ) ;
     content:		    '' ;
-/*    transition: 	  	all var( --khn-hamburger-transition-time ) ease-in-out; */
+/*    transition: 	  	all var( --khn-hamburger-transition-timeX ) ease-in-out; */
 }
 
 button.kuhnian-hamburger > span ,
 button.kuhnian-hamburger > span:before ,
 button.kuhnian-hamburger > span:after ,
 ul#primary-menu {
-	transition: 	  	all var( --khn-hamburger-transition-time ) ease-in-out;
+	transition: 	  	all var( --khn-hamburger-transition-timeX ) ease-in-out;
 }
 
 .kuhnian-hamburger span {
@@ -50,21 +50,21 @@ ul#primary-menu {
 .kuhnian-hamburger span:before {
 //	Raises the top slice above the top of its containing block (viz., the middle slice)
     position:	absolute ;
-    top:		calc( -1 * var( --khn-hamburger-gap-between-slices ) ) ; 
+    top:		calc( -1 * var( --khn-hamburger-gap-between-slicesX ) ) ; 
 }
 
 //	The :after pseudo element is the bottom slice
 .kuhnian-hamburger span:after {
     position:	absolute ;
 //	Lowers the bottom slice through the bottom of the containing block (viz., the middle slice)
-    bottom:	  calc( -1 * var(--khn-hamburger-gap-between-slices) ) ; 
+    bottom:	  calc( -1 * var(--khn-hamburger-gap-between-slicesX) ) ; 
 }
 
 //	Implements animation by defining the hamburger-active class, which is added to the button's list of classes by JavaScript when the button (icon) is clicked. The CSS will smoothly transition to the new values for the redefined properties
 button#site-navigation.toggled-on {
 //	I am electing NOT to switch the height of the "X" button to its higher value when it's an "X" (compared to when it's a hamburger). This caused the following problem: "Note a remaining animation glitch. After the hamburger changes to an "X," it remains in that state until clicked. When clicked, the "X" takes a small sudden jump up a few pixels and then smoothly untransforms into a hamburger. I haven't figured out what causes the jump."
 //	Thus I comment out the next redefinition of `height`: 
-//	height:     var( --khn-hamburger-total-height-as-X ) ; 
+//	height:     var( --khn-hamburger-total-height-as-XX ) ; 
 }
 
 nav#site-navigation.toggled-on button.kuhnian-hamburger span {
@@ -73,11 +73,11 @@ nav#site-navigation.toggled-on button.kuhnian-hamburger span {
 }
 nav#site-navigation.toggled-on button.kuhnian-hamburger span:before {
 //  (a) Translates downwards the top slice to coincide with the original middle slice, and simultaneously (b) rotates the top slice clockwise
-    transform:	translateY( var( --khn-hamburger-gap-between-slices ) ) 
+    transform:	translateY( var( --khn-hamburger-gap-between-slicesX ) ) 
                 rotate(45deg);
 }
 nav#site-navigation.toggled-on button.kuhnian-hamburger span:after {
 //	(a) Translates upwards the bottom slice to coincide with the original middle slice, and simultaneously (b) rotates the bottom slice counterclockwise
-    transform:	translateY( calc( -1 * var(--khn-hamburger-gap-between-slices) ) )
+    transform:	translateY( calc( -1 * var(--khn-hamburger-gap-between-slicesX) ) )
                 rotate(-45deg);
 }

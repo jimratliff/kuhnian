@@ -49,7 +49,7 @@ body:not(.archive-view) {
 
 				.entry-meta {
 /*					margin: -1em 0 1em;	*/
-					margin: var(--khn-margins-entry-meta-medium-screen) ;
+					margin: var(--khn-margins-entry-meta-medium-screenX) ;
 				}
 
 				@media screen and (min-width: $query__wide) {
@@ -124,25 +124,25 @@ body:not(.archive-view) {
 }
 
 .cat-links {
-	margin-bottom:	var( --khn-category-links-margin-bottom ) ;
+	margin-bottom:	var( --khn-category-links-margin-bottomX ) ;
 	font-family:	$font__meta;
-	font-size:		var( --khn-category-links-font-size );
+	font-size:		var( --khn-category-links-font-sizeX );
 
 	a, a:visited, a:focus, a:hover, a:active {
-		border-radius:		var( --khn-category-links-border-radius ) ;
-		background-color:	var( --khn-category-links-background-color ) ;
-		color:				var( --khn-category-links-text-color ) ;
-		padding:			var( --khn-category-links-padding) ;
-		text-transform:		var( --khn-category-links-text-transform );
+		border-radius:		var( --khn-category-links-border-radiusX ) ;
+		background-color:	var( --khn-category-links-background-colorX ) ;
+		color:				var( --khn-category-links-text-colorX ) ;
+		padding:			var( --khn-category-links-paddingX) ;
+		text-transform:		var( --khn-category-links-text-transformX );
 		text-decoration:	none;
-		transition:			all var( --khn-transition-time-links ) ;
+		transition:			all var( --khn-transition-time-linksX ) ;
 	}
 
 /*	On focus or hover, inverts text and background colors, adding border */
 	a:focus, a:hover {
-		background-color:	var( --khn-category-links-text-color ) ;
-		color:				var( --khn-category-links-background-color ) ;
-		border:				1px solid var( --khn-category-links-background-color ) ;
+		background-color:	var( --khn-category-links-text-colorX ) ;
+		color:				var( --khn-category-links-background-colorX ) ;
+		border:				1px solid var( --khn-category-links-background-colorX ) ;
 	}
 }
 
@@ -153,45 +153,45 @@ body:not(.archive-view) {
 /*	text-transform: uppercase;	*/
 
 	
-	margin: var(--khn-margin-entry-title);
+	margin: var(--khn-margin-entry-titleX);
 	
 	
-	font-family:		var(--khn-font-family-article-title-on-its-page)	;
-	font-size:			var(--khn-font-size-article-title-on-its-page);
-	color:				var(--khn-color-text-article-title-on-its-page);
+	font-family:		var(--khn-font-family-article-title-on-its-pageX)	;
+	font-size:			var(--khn-font-size-article-title-on-its-pageX);
+	color:				var(--khn-color-text-article-title-on-its-pageX);
 
-	line-height:		var(--khn-scalar-line-height-article-title-on-its-page);
-	text-align:			var(--khn-text-align-article-title-on-its-page)			;
-	text-transform:		var(--khn-text-transform-article-title-on-its-page);
-	text-decoration:	var(--khn-text-decoration-article-title-on-its-page);
+	line-height:		var(--khn-scalar-line-height-article-title-on-its-pageX);
+	text-align:			var(--khn-text-align-article-title-on-its-pageX)			;
+	text-transform:		var(--khn-text-transform-article-title-on-its-pageX);
+	text-decoration:	var(--khn-text-decoration-article-title-on-its-pageX);
 
 	@media screen and (min-width: $query__medium) {
 /*		font-size: 3em; */
-		font-size: var(--khn-font-size-article-title-on-its-page-medscreen)
+		font-size: var(--khn-font-size-article-title-on-its-page-medscreenX)
 	}
 
 	a {
 /*		color: black;	*/
 /*		text-decoration: none; */
-		font-family:		var( --khn-font-family-post-title-on-archive-page)		;
-		font-size:			var( --khn-font-size-post-title-on-archive-page) 		;
-		color:				var( --khn-color-text-post-title-on-archive-page) 		;
+		font-family:		var( --khn-font-family-post-title-on-archive-pageX)		;
+		font-size:			var( --khn-font-size-post-title-on-archive-pageX) 		;
+		color:				var( --khn-color-text-post-title-on-archive-pageX) 		;
 
-		line-height:		var( --khn-scalar-line-height-title-on-archive-page)		;
-		text-align:			var( --khn-text-align-article-title-on-its-page)			;
-		text-transform:		var( --khn-text-transform-post-title-on-archive-page)	;
-		text-decoration:	var( --khn-text-decoration-post-title-on-archive-page)	;
-		transition:			all var( --khn-transition-time-links ) ;
+		line-height:		var( --khn-scalar-line-height-title-on-archive-pageX)		;
+		text-align:			var( --khn-text-align-article-title-on-its-pageX)			;
+		text-transform:		var( --khn-text-transform-post-title-on-archive-pageX)	;
+		text-decoration:	var( --khn-text-decoration-post-title-on-archive-pageX)	;
+		transition:			all var( --khn-transition-time-linksX ) ;
 
 		&:visited {
-//			color:			var(--khn-color-text-post-title-on-archive-page) 		;
+//			color:			var(--khn-color-text-post-title-on-archive-pageX) 		;
 			color:			inherit		;
 		}
 		
 		&:focus,
 		&:hover {
 //			border-bottom: 5px solid;
-			background-color: var(--khn-color-text-post-title-on-archive-page) 		;
+			background-color: var(--khn-color-text-post-title-on-archive-pageX) 		;
 			color:	var( --color-background-body ) ;
 		}
 	}
@@ -199,12 +199,12 @@ body:not(.archive-view) {
 
 
 .entry-meta {
-	margin:		var(--khn-margins-entry-meta)	;
+	margin:		var(--khn-margins-entry-metaX)	;
 }
 .entry-meta,
 .entry-footer {
 	font-family: $font__meta;
-	font-size: var(--khn-font-size-entry-meta);
+	font-size: var(--khn-font-size-entry-metaX);
 	color: hsl(0, 0%, 25%);
 
 	a {
@@ -224,7 +224,7 @@ body:not(.archive-view) {
 .byline {
 	&::after {
 /*		content: "|"; */
-		content: var(--khn-content-entry-meta-separator);
+		content: var(--khn-content-entry-meta-separatorX);
 		margin: 0 .5em;
 	}
 }
@@ -233,7 +233,7 @@ body:not(.archive-view) {
 .edit-link {
 	&::before {
 /*		content: "|";	*/
-		content: var(--khn-content-entry-meta-separator);
+		content: var(--khn-content-entry-meta-separatorX);
 		margin: 0 .5em;
 	}
 }
@@ -242,13 +242,13 @@ body:not(.archive-view) {
 .updated {
 	&::before {
 		content: "| Revised:";	
-/*		content: var(--khn-content-entry-meta-separator);*/
+/*		content: var(--khn-content-entry-meta-separatorX);*/
 		margin: 0 .5em;
 	}
 }
 
 .comments-link {
-	display:		var(--khn-display-comments-link);
+	display:		var(--khn-display-comments-linkX);
 }
 
 .byline,

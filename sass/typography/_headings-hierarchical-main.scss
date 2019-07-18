@@ -13,9 +13,9 @@
 			* the counter for that level of heading will not be incremented.
 			* the counter for the next level deeper will not be reset.
 			
-	If you globally want no heading numbers, set --khn-hnumber-null-content: none;
-		Otherwise, --khn-hnumber-null-content MUST NOT BE DEFINED AT ALL. (The appearance of heading
-		numbers relies on --khn-hnumber-null-content being undefined.)
+	If you globally want no heading numbers, set --khn-hnumber-null-contentX: none;
+		Otherwise, --khn-hnumber-null-contentX MUST NOT BE DEFINED AT ALL. (The appearance of heading
+		numbers relies on --khn-hnumber-null-contentX being undefined.)
 */
 .entry-content {
 /*	Resets h2counter just in case <h1> didn't already */
@@ -32,10 +32,10 @@
 
 	& h2:not(.dont-number-heading)::before {
 		counter-increment:			h2counter ;
-		--khn-hnumber-h2-content:	var( --khn-hnumber-prefix )
-									counter(h2counter, var( --khn-hnumber-h2-format ) )
-									var( --khn-hnumber-suffix ) ;									
-		content:					var( --khn-hnumber-null-content, var( --khn-hnumber-h2-content ) ) ;
+		--khn-hnumber-h2-contentX:	var( --khn-hnumber-prefixX )
+									counter(h2counter, var( --khn-hnumber-h2-formatX ) )
+									var( --khn-hnumber-suffixX ) ;									
+		content:					var( --khn-hnumber-null-contentX, var( --khn-hnumber-h2-contentX ) ) ;
 	}
 
 	h3:not(.dont-number-heading) {
@@ -44,11 +44,11 @@
 
 	& h3:not(.dont-number-heading)::before {
 		counter-increment:			h3counter ;
-		--khn-hnumber-h3-content:	var( --khn-hnumber-prefix )
-									counter(h2counter, var( --khn-hnumber-h2-format ) ) var( --khn-hnumber-separator )
-									counter(h3counter, var( --khn-hnumber-h3-format ) )
-									var( --khn-hnumber-suffix ) ;
-		content:					var( --khn-hnumber-null-content, var( --khn-hnumber-h3-content ) ) ;
+		--khn-hnumber-h3-contentX:	var( --khn-hnumber-prefixX )
+									counter(h2counter, var( --khn-hnumber-h2-formatX ) ) var( --khn-hnumber-separatorX )
+									counter(h3counter, var( --khn-hnumber-h3-formatX ) )
+									var( --khn-hnumber-suffixX ) ;
+		content:					var( --khn-hnumber-null-contentX, var( --khn-hnumber-h3-contentX ) ) ;
 		
 	}
 
@@ -58,12 +58,12 @@
 
 	& h4:not(.dont-number-heading)::before {
 		counter-increment:			h4counter ;
-		--khn-hnumber-h4-content:	var( --khn-hnumber-prefix )
-									counter(h2counter, var( --khn-hnumber-h2-format ) ) var( --khn-hnumber-separator )
-									counter(h3counter, var( --khn-hnumber-h3-format ) ) var( --khn-hnumber-separator )
-									counter(h4counter, var( --khn-hnumber-h4-format ) )
-									var( --khn-hnumber-suffix ) ;
-		content:					var( --khn-hnumber-null-content, var( --khn-hnumber-h4-content ) ) ;
+		--khn-hnumber-h4-contentX:	var( --khn-hnumber-prefixX )
+									counter(h2counter, var( --khn-hnumber-h2-formatX ) ) var( --khn-hnumber-separatorX )
+									counter(h3counter, var( --khn-hnumber-h3-formatX ) ) var( --khn-hnumber-separatorX )
+									counter(h4counter, var( --khn-hnumber-h4-formatX ) )
+									var( --khn-hnumber-suffixX ) ;
+		content:					var( --khn-hnumber-null-contentX, var( --khn-hnumber-h4-contentX ) ) ;
 	}
 
 	h5:not(.dont-number-heading) {
@@ -72,13 +72,13 @@
 
 	& h5:not(.dont-number-heading)::before {
 		counter-increment:			h5counter ;
-		--khn-hnumber-h5-content:	var( --khn-hnumber-prefix )
-									counter(h2counter, var( --khn-hnumber-h2-format ) ) var( --khn-hnumber-separator )
-									counter(h3counter, var( --khn-hnumber-h3-format ) ) var( --khn-hnumber-separator )
-									counter(h4counter, var( --khn-hnumber-h4-format ) ) var( --khn-hnumber-separator )
-									counter(h5counter, var( --khn-hnumber-h5-format ) )
-									var( --khn-hnumber-suffix ) ;
-		content:					var( --khn-hnumber-null-content, var( --khn-hnumber-h5-content ) ) ;
+		--khn-hnumber-h5-contentX:	var( --khn-hnumber-prefixX )
+									counter(h2counter, var( --khn-hnumber-h2-formatX ) ) var( --khn-hnumber-separatorX )
+									counter(h3counter, var( --khn-hnumber-h3-formatX ) ) var( --khn-hnumber-separatorX )
+									counter(h4counter, var( --khn-hnumber-h4-formatX ) ) var( --khn-hnumber-separatorX )
+									counter(h5counter, var( --khn-hnumber-h5-formatX ) )
+									var( --khn-hnumber-suffixX ) ;
+		content:					var( --khn-hnumber-null-contentX, var( --khn-hnumber-h5-contentX ) ) ;
 	}
 
 	h6:not(.dont-number-heading) {
@@ -87,13 +87,13 @@
 
 	& h6:not(.dont-number-heading)::before {
 		counter-increment:			h6counter ;
-		--khn-hnumber-h6-content:	var( --khn-hnumber-prefix )
-									counter(h2counter, var( --khn-hnumber-h2-format ) ) var( --khn-hnumber-separator )
-									counter(h3counter, var( --khn-hnumber-h3-format ) ) var( --khn-hnumber-separator )
-									counter(h4counter, var( --khn-hnumber-h4-format ) ) var( --khn-hnumber-separator )
-									counter(h5counter, var( --khn-hnumber-h5-format ) ) var( --khn-hnumber-separator )
-									counter(h6counter, var( --khn-hnumber-h6-format ) )
-									var( --khn-hnumber-suffix ) ;
-		content:					var( --khn-hnumber-null-content, var( --khn-hnumber-h6-content ) ) ;
+		--khn-hnumber-h6-contentX:	var( --khn-hnumber-prefixX )
+									counter(h2counter, var( --khn-hnumber-h2-formatX ) ) var( --khn-hnumber-separatorX )
+									counter(h3counter, var( --khn-hnumber-h3-formatX ) ) var( --khn-hnumber-separatorX )
+									counter(h4counter, var( --khn-hnumber-h4-formatX ) ) var( --khn-hnumber-separatorX )
+									counter(h5counter, var( --khn-hnumber-h5-formatX ) ) var( --khn-hnumber-separatorX )
+									counter(h6counter, var( --khn-hnumber-h6-formatX ) )
+									var( --khn-hnumber-suffixX ) ;
+		content:					var( --khn-hnumber-null-contentX, var( --khn-hnumber-h6-contentX ) ) ;
 	}
 }

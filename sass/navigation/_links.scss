@@ -1,40 +1,40 @@
 a {
-	color:				var(--khn-color-link-unvisited)				;
-	background-color:	var(--khn-color-background-link-unvisited)	;
-	text-decoration:	var(--khn-text-decoration-link-unvisited)	;
-	outline:			var(--khn-outline-link-unvisited)			;
-	border-radius:		var( --khn-border-radius-link )				;
+	color:				var(--khn-color-link-unvisitedX)				;
+	background-color:	var(--khn-color-background-link-unvisitedX)	;
+	text-decoration:	var(--khn-text-decoration-link-unvisitedX)	;
+	outline:			var(--khn-outline-link-unvisitedX)			;
+	border-radius:		var( --khn-border-radius-linkX )				;
 
 	&:visited {
 /*		color: $color__link-visited; */
-		color: 				var(--khn-color-link-visited)				;
-		background-color:	var(--khn-color-background-link-visited)	;
-		text-decoration:	var(--khn-text-decoration-link-visited)		;
-		outline:			var(--khn-outline-link-visited)				;
+		color: 				var(--khn-color-link-visitedX)				;
+		background-color:	var(--khn-color-background-link-visitedX)	;
+		text-decoration:	var(--khn-text-decoration-link-visitedX)		;
+		outline:			var(--khn-outline-link-visitedX)				;
 	}
 	
 	&:hover,
 	&:focus {
 /*		color: $color__link-hover;		*/
-		color: 				var(--khn-color-link-hover)					;
-		background-color:	var(--khn-color-background-link-hover)	;
-		text-decoration:	var(--khn-text-decoration-link-hover)	;
+		color: 				var(--khn-color-link-hoverX)					;
+		background-color:	var(--khn-color-background-link-hoverX)	;
+		text-decoration:	var(--khn-text-decoration-link-hoverX)	;
 	}
 	
 	&:active {
-		color: 				var(--khn-color-link-active)			;
-		background-color:	var(--khn-color-background-link-active)	;
-		text-decoration:	var(--khn-text-decoration-link-active)	;
-		outline:			var(--khn-outline-link-active)			;
+		color: 				var(--khn-color-link-activeX)			;
+		background-color:	var(--khn-color-background-link-activeX)	;
+		text-decoration:	var(--khn-text-decoration-link-activeX)	;
+		outline:			var(--khn-outline-link-activeX)			;
 	}
 	
 	&:hover {
-		outline:			var(--khn-outline-link-hover)			;
+		outline:			var(--khn-outline-link-hoverX)			;
 	}
 		
 	&:focus {
 /*		outline: thin dotted $color__grey_black;	*/
-		outline:			var(--khn-outline-link-focus)			;
+		outline:			var(--khn-outline-link-focusX)			;
 	}
 }
 

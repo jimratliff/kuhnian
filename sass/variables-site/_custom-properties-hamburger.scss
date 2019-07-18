@@ -4,81 +4,81 @@
 
 :root {
 //  Background color for entire hamburger button. Typically this would be transparent, but you can change it for diagnostic purposes because this area corresponds to the clickable area.
-    --khn-hamburger-color-background:	transparent ;
+    --khn-hamburger-color-backgroundX:	transparent ;
 
 //	Outline styling of button 
 //	Can be useful for diagnostic purposes. The outlined area appears to be the same as the background-color area, which is the same as the clickable region. In any case, these definitions are important in order to override the user-agent defaults.
-    --khn-hamburger-outline-style: none ;
-    --khn-hamburger-outline-width: 1px ;
-    --khn-hamburger-outline-color: powderblue ;
+    --khn-hamburger-outline-styleX: none ;
+    --khn-hamburger-outline-widthX: 1px ;
+    --khn-hamburger-outline-colorX: powderblue ;
 
 //	At a minimum, specifying border styles serves the purpose of overriding the default border specifications from the user-agent
-    --khn-hamburger-border-style:	none ;
-    --khn-hamburger-border-width:	1px ;
-    --khn-hamburger-border-color:	rebeccapurple ;
+    --khn-hamburger-border-styleX:	none ;
+    --khn-hamburger-border-widthX:	1px ;
+    --khn-hamburger-border-colorX:	rebeccapurple ;
 
 //  Positions/pads the hamburger
-    --khn-hamburger-position-type:	relative ;
-//  If --khn-hamburger-position-type is "absolute", these specify location of hamburger relative to its containing block (i.e., the ancestor relative to which the element is positioned.)
+    --khn-hamburger-position-typeX:	relative ;
+//  If --khn-hamburger-position-typeX is "absolute", these specify location of hamburger relative to its containing block (i.e., the ancestor relative to which the element is positioned.)
 
-    --khn-hamburger-left:  0em ;
-    --khn-hamburger-top:   0em ;
+    --khn-hamburger-leftX:  0em ;
+    --khn-hamburger-topX:   0em ;
 
 //  Sets padding around the button. Importantly, padding is included in the clickable area of the button.
-    --khn-hamburger-padding-top:	0px ;
-    --khn-hamburger-padding-bottom: 0px ;
-    --khn-hamburger-padding-left:	0px ;
-    --khn-hamburger-padding-right:	0px ;
-    --khn-hamburger-padding:		var( --khn-hamburger-padding-top )
-                                        var( --khn-hamburger-padding-right )
-                                        var( --khn-hamburger-padding-bottom )
-                                        var( --khn-hamburger-padding-left ) ;
+    --khn-hamburger-padding-topX:	0px ;
+    --khn-hamburger-padding-bottomX: 0px ;
+    --khn-hamburger-padding-leftX:	0px ;
+    --khn-hamburger-padding-rightX:	0px ;
+    --khn-hamburger-paddingX:		var( --khn-hamburger-padding-topX )
+                                        var( --khn-hamburger-padding-rightX )
+                                        var( --khn-hamburger-padding-bottomX )
+                                        var( --khn-hamburger-padding-leftX ) ;
 
-    --khn-hamburger-margin-top:		10px ;
-    --khn-hamburger-margin-bottom:	10px ;
-    --khn-hamburger-margin-left:	auto ;
-    --khn-hamburger-margin-right:	auto ;
-    --khn-hamburger-margin:         var( --khn-hamburger-margin-top )
-                                        var( --khn-hamburger-margin-right )
-                                        var( --khn-hamburger-margin-bottom )
-                                        var( --khn-hamburger-margin-left ) ;
+    --khn-hamburger-margin-topX:		10px ;
+    --khn-hamburger-margin-bottomX:	10px ;
+    --khn-hamburger-margin-leftX:	auto ;
+    --khn-hamburger-margin-rightX:	auto ;
+    --khn-hamburger-marginX:         var( --khn-hamburger-margin-topX )
+                                        var( --khn-hamburger-margin-rightX )
+                                        var( --khn-hamburger-margin-bottomX )
+                                        var( --khn-hamburger-margin-leftX ) ;
 
-//  The common width/height of the slices are determined by --khn-hamburger-width and --khn-hamburger-slice-thickness
-    --khn-hamburger-width:				44px ;
-    --khn-hamburger-slice-thickness:	3px ;
-    --khn-hamburger-gap-between-slices:	8px ;
+//  The common width/height of the slices are determined by --khn-hamburger-widthX and --khn-hamburger-slice-thicknessX
+    --khn-hamburger-widthX:				44px ;
+    --khn-hamburger-slice-thicknessX:	3px ;
+    --khn-hamburger-gap-between-slicesX:	8px ;
 
 //  The below larger sizes exist for diagnosing the clickable area
-//    --khn-hamburger-width:				88px ;
-//    --khn-hamburger-slice-thickness: 	10px ;
-//    --khn-hamburger-gap-between-slices: 20px ;
+//    --khn-hamburger-widthX:				88px ;
+//    --khn-hamburger-slice-thicknessX: 	10px ;
+//    --khn-hamburger-gap-between-slicesX: 20px ;
 
 //  Calculates total width and height, respectively, of hamburger, including any padding. Used to provide the horizontal dimension for the enclosing button in its hamburger configuration.
-    --khn-hamburger-total-width-not-X:
-        calc( var( --khn-hamburger-width ) +
-              var( --khn-hamburger-padding-left ) + 
-              var( --khn-hamburger-padding-right )
+    --khn-hamburger-total-width-not-XX:
+        calc( var( --khn-hamburger-widthX ) +
+              var( --khn-hamburger-padding-leftX ) + 
+              var( --khn-hamburger-padding-rightX )
             ) ;
 
-    --khn-hamburger-total-height-not-X:
-        calc( var( --khn-hamburger-slice-thickness ) + 
-              2 * var( --khn-hamburger-gap-between-slices ) +
-              var( --khn-hamburger-padding-bottom ) + 
-              var( --khn-hamburger-padding-top )
+    --khn-hamburger-total-height-not-XX:
+        calc( var( --khn-hamburger-slice-thicknessX ) + 
+              2 * var( --khn-hamburger-gap-between-slicesX ) +
+              var( --khn-hamburger-padding-bottomX ) + 
+              var( --khn-hamburger-padding-topX )
         ) ;
 //  Calculates total height, including padding, of the hamburger in its "X" configuration
 //	Note: 0.70707 = 1/SQRT(2). Ensures sufficient clickable area vertically.
-    --khn-hamburger-total-height-as-X:
-        calc(	0.70707 * var( --khn-hamburger-width ) +
-              var( --khn-hamburger-padding-bottom ) + 
-              var( --khn-hamburger-padding-top )
+    --khn-hamburger-total-height-as-XX:
+        calc(	0.70707 * var( --khn-hamburger-widthX ) +
+              var( --khn-hamburger-padding-bottomX ) + 
+              var( --khn-hamburger-padding-topX )
             ) ;
 
 //	Determines color of the hamburger slices
-    --khn-hamburger-color-hamburger:		var( --khn-color-text-site-header ) ;
+    --khn-hamburger-color-hamburgerX:		var( --khn-color-text-site-headerX ) ;
 //	Controls how rounded the corners of the hamburger bars are 
-    --khn-hamburger-border-radius:			7px ;
+    --khn-hamburger-border-radiusX:			7px ;
 
 //	Controls speed of animation 
-    --khn-hamburger-transition-time:		600ms ;
+    --khn-hamburger-transition-timeX:		600ms ;
 }

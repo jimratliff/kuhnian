@@ -1,8 +1,8 @@
 .main-navigation {
 	display: block;
-	font-family: var(--khn-font-family-menus);
-	font-weight: var(--khn-font-weight-menus);
-	font-size: var(--khn-font-size-main-navigation);
+	font-family: var(--khn-font-family-menusX);
+	font-weight: var(--khn-font-weight-menusX);
+	font-size: var(--khn-font-size-main-navigationX);
 	clear: left;
 
 	ul {
@@ -22,7 +22,7 @@
 			}
 
 		a {
-			color: var(--khn-color-theme-primary-contrast);
+			color: var(--khn-color-theme-primary-contrastX);
 		}
 
 		ul {
@@ -49,7 +49,7 @@
 
 					&:before {
 /*						content: "- "; */
-						content: var(--khn-content-before-main-navigation-children);
+						content: var(--khn-content-before-main-navigation-childrenX);
 					}
 				}
 
@@ -113,7 +113,7 @@ button.dropdown-toggle {
 	border: none;
 	background: inherit;
 /*	color: white; */
-	color: var(--khn-color-text-site-header);
+	color: var(--khn-color-text-site-headerX);
 	line-height: 1.5em;
 	padding: .4em 1em .4em .5em;
 }
@@ -126,14 +126,14 @@ button.dropdown-toggle {
 	padding: .6em .8em;
 	font-size: 80%;
 	text-transform: uppercase;
-	color: var(--khn-color-text-site-header); 
-	background-color: var(--khn-color-background-main-navigation); 
+	color: var(--khn-color-text-site-headerX); 
+	background-color: var(--khn-color-background-main-navigationX); 
 	border: none;
 	border-radius: 0;
 }
 
 button.menu-toggle {
-	width: var(--khn-width-hamburger-button);
+	width: var(--khn-width-hamburger-buttonX);
 	margin: auto;
 }
 
@@ -141,17 +141,17 @@ button.menu-toggle:hover,
 button.menu-toggle:active,
 button.menu-toggle:focus,
  	{
-		background: var(--khn-color-theme-secondary); 
-		color: var (--khn-color-background-site-header);
+		background: var(--khn-color-theme-secondaryX); 
+		color: var (--khn-color-background-site-headerX);
 	}
 
 
 
 .kuhnian-hamburger div {
-	width: var(--khn-width-hamburger-div);
-	height: var(--khn-height-hamburger-div);
-	background-color: var(--khn-color-text-site-header);
-	margin: var(--khn-margins-top-bottom-hamburger-div) 0;
+	width: var(--khn-width-hamburger-divX);
+	height: var(--khn-height-hamburger-divX);
+	background-color: var(--khn-color-text-site-headerX);
+	margin: var(--khn-margins-top-bottom-hamburger-divX) 0;
 }
 
 nav#site-navigation {margin: auto;}
@@ -199,7 +199,7 @@ nav#site-navigation {margin: auto;}
 
 			a {
 				padding: .4em 1em;
-				background: var(--khn-color-background-main-navigation);
+				background: var(--khn-color-background-main-navigationX);
 /*				background: hsla(0,0%,100%,.05); */
 
 			}
