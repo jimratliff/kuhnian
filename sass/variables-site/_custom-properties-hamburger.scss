@@ -3,50 +3,63 @@
 */
 
 :root {
-//  Background color for entire hamburger button. Typically this would be transparent, but you can change it for diagnostic purposes because this area corresponds to the clickable area.
-    --khn-hamburger-color-backgroundX:	transparent ;
+//  Background color for entire hamburger button. Typically this would be transparent, but
+//		you can change it for diagnostic purposes because this area corresponds to the clickable area.
+    --khn-hamburger-color-backgroundX:	var( --khn-hamburger-color-background ,	transparent	) ;
 
 //	Outline styling of button 
-//	Can be useful for diagnostic purposes. The outlined area appears to be the same as the background-color area, which is the same as the clickable region. In any case, these definitions are important in order to override the user-agent defaults.
-    --khn-hamburger-outline-styleX: none ;
-    --khn-hamburger-outline-widthX: 1px ;
-    --khn-hamburger-outline-colorX: powderblue ;
+//		Can be useful for diagnostic purposes. The outlined area appears to be the same as
+//		the background-color area, which is the same as the clickable region. In any case,
+//		these definitions are important in order to override the user-agent defaults.
+    --khn-hamburger-outline-styleX:	var( --khn-hamburger-outline-style ,		none		) ;
+    --khn-hamburger-outline-widthX:	var( --khn-hamburger-outline-width ,		2px			) ;
+    --khn-hamburger-outline-colorX: var( --khn-hamburger-outline-color ,		white	) ;
 
 //	At a minimum, specifying border styles serves the purpose of overriding the default border specifications from the user-agent
-    --khn-hamburger-border-styleX:	none ;
-    --khn-hamburger-border-widthX:	1px ;
-    --khn-hamburger-border-colorX:	rebeccapurple ;
+    --khn-hamburger-border-styleX:	var( --khn-hamburger-border-style ,			none			) ;
+    --khn-hamburger-border-widthX:	var( --khn-hamburger-border-width ,			1px	 			) ;
+    --khn-hamburger-border-colorX:	var( --khn-hamburger-border-color ,			rebeccapurple	) ;
 
 //  Positions/pads the hamburger
-    --khn-hamburger-position-typeX:	relative ;
-//  If --khn-hamburger-position-typeX is "absolute", these specify location of hamburger relative to its containing block (i.e., the ancestor relative to which the element is positioned.)
+    --khn-hamburger-position-typeX:	var( --khn-hamburger-position-type ,		relative	) ;
+//  If --khn-hamburger-position-typeX is "absolute", these specify location of hamburger
+//		relative to its containing block (i.e., the ancestor relative to which the element is positioned.)
 
-    --khn-hamburger-leftX:  0em ;
-    --khn-hamburger-topX:   0em ;
+    --khn-hamburger-leftX: 			var( --khn-hamburger-left ,					0em	) ;
+    --khn-hamburger-topX:   		var( --khn-hamburger-top ,					0em	) ;
 
 //  Sets padding around the button. Importantly, padding is included in the clickable area of the button.
-    --khn-hamburger-padding-topX:	0px ;
-    --khn-hamburger-padding-bottomX: 0px ;
-    --khn-hamburger-padding-leftX:	0px ;
-    --khn-hamburger-padding-rightX:	0px ;
-    --khn-hamburger-paddingX:		var( --khn-hamburger-padding-topX )
-                                        var( --khn-hamburger-padding-rightX )
-                                        var( --khn-hamburger-padding-bottomX )
-                                        var( --khn-hamburger-padding-leftX ) ;
+    --khn-hamburger-padding-topX:		var( --khn-hamburger-padding-top ,		0px	) ;
+    --khn-hamburger-padding-bottomX:	var( --khn-hamburger-padding-bottom ,	0px	) ;
+    --khn-hamburger-padding-leftX:		var( --khn-hamburger-padding-left ,		0px	) ;
+    --khn-hamburger-padding-rightX:		var( --khn-hamburger-padding-right ,	0px	) ;
 
-    --khn-hamburger-margin-topX:		10px ;
-    --khn-hamburger-margin-bottomX:	10px ;
-    --khn-hamburger-margin-leftX:	auto ;
-    --khn-hamburger-margin-rightX:	auto ;
-    --khn-hamburger-marginX:         var( --khn-hamburger-margin-topX )
-                                        var( --khn-hamburger-margin-rightX )
-                                        var( --khn-hamburger-margin-bottomX )
-                                        var( --khn-hamburger-margin-leftX ) ;
+//		The following construction allows end user to customize the padding either on a component-by-component basis
+//		or by redefining it in a single --khn-hamburger-padding assignment
+    --khn-hamburger-paddingX:			var( --khn-hamburger-padding ,
+    										var( --khn-hamburger-padding-topX )
+                                        	var( --khn-hamburger-padding-rightX )
+                                        	var( --khn-hamburger-padding-bottomX )
+                                        	var( --khn-hamburger-padding-leftX )
+                                        ) ;
+
+
+    --khn-hamburger-margin-topX:		var( --khn-hamburger-margin-top ,		10px	) ;
+    --khn-hamburger-margin-bottomX:		var( --khn-hamburger-margin-bottom ,	10px	) ;
+    --khn-hamburger-margin-leftX:		var( --khn-hamburger-margin-left ,		auto	) ;
+    --khn-hamburger-margin-rightX:		var( --khn-hamburger-margin-right ,		auto	) ;
+    --khn-hamburger-marginX:         	var( --khn-hamburger-margin ,
+    										var( --khn-hamburger-margin-topX )
+                                        	var( --khn-hamburger-margin-rightX )
+                                        	var( --khn-hamburger-margin-bottomX )
+                                        	var( --khn-hamburger-margin-leftX )
+                                        ) ;
+
 
 //  The common width/height of the slices are determined by --khn-hamburger-widthX and --khn-hamburger-slice-thicknessX
-    --khn-hamburger-widthX:				44px ;
-    --khn-hamburger-slice-thicknessX:	3px ;
-    --khn-hamburger-gap-between-slicesX:	8px ;
+    --khn-hamburger-widthX:					var( --khn-hamburger-width ,				44px	) ;
+    --khn-hamburger-slice-thicknessX:		var( --khn-hamburger-slice-thickness ,		3px		) ;
+    --khn-hamburger-gap-between-slicesX:	var( --khn-hamburger-gap-between-slices ,	8px		) ;
 
 //  The below larger sizes exist for diagnosing the clickable area
 //    --khn-hamburger-widthX:				88px ;
@@ -75,10 +88,11 @@
             ) ;
 
 //	Determines color of the hamburger slices
-    --khn-hamburger-color-hamburgerX:		var( --khn-color-text-site-headerX ) ;
+   --khn-hamburger-color-hamburgerX:	var( --khn-hamburger-color-hamburger ,	var( --khn-color-text-site-headerX )	) ;
+    
 //	Controls how rounded the corners of the hamburger bars are 
-    --khn-hamburger-border-radiusX:			7px ;
+    --khn-hamburger-border-radiusX:		var(  --khn-hamburger-border-radius ,	7px	) ;
 
 //	Controls speed of animation 
-    --khn-hamburger-transition-timeX:		600ms ;
+    --khn-hamburger-transition-timeX:	var(--khn-hamburger-transition-time ,	600ms	) ;
 }
