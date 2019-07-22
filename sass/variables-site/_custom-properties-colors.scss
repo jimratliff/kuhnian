@@ -113,6 +113,7 @@
 /*	Site header colors */
 	--khn-color-background-site-headerX:		var( --khn-color-background-site-header ,		var( --khn-color-theme-primaryX )	) ;
 	--khn-color-text-site-headerX:				var( --khn-color-text-site-header ,				var( --khn-color-theme-primary-contrastX )	) ;
+	--khn-color-text-site-titleX:				var( --khn-color-text-site-title ,				var( --khn-color-text-site-headerX )  ) ;
 /*	--khn-color-background-main-navigationX:		hsla(0,0%,100%,.05) ; */
 	--khn-color-background-main-navigationX:	var( --khn-color-background-main-navigation ,	hsla(0,0%,100%,0)	) ;
 	
